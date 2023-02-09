@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wonjongseo/screens/home/home_screen.dart';
+import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 import 'package:wonjongseo/screens/splash/splash_screen.dart';
 
 void main() {
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         getPages: [
           GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
           GetPage(name: HOME_PATH, page: () => const HomeScreen()),
+          GetPage(
+              name: PROJECT_DETAIL_PATH,
+              page: () => const ProjectDetailScrenn()),
         ]);
   }
 }

@@ -42,7 +42,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
           label!,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: sectionTitleStyle(context),
         ),
       ],
     );

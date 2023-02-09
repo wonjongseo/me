@@ -9,3 +9,5 @@ const bgColor = Color(0xFF1E1E28);
 const defaultPadding = 20.0;
 const defaultDuration = Duration(seconds: 1);
 const maxWidth = 1440.0;
+
+TextStyle sectionTitleStyle(context) => Theme.of(context).textTheme.subtitle2!;

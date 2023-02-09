@@ -19,7 +19,7 @@ class Coding extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
             'Coding',
-            style: Theme.of(context).textTheme.subtitle2,
+            style: sectionTitleStyle(context),
           ),
         ),
         Column(

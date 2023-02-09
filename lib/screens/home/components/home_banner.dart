@@ -21,7 +21,7 @@ class HomeBanner extends StatelessWidget {
             fit: BoxFit.cover,
           ),
           Container(
-            color: darkColor.withOpacity(0.66),
+            color: Colors.black.withOpacity(0.66),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),

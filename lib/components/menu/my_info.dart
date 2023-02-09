@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:wonjongseo/constants.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({super.key});
@@ -11,12 +12,12 @@ class MyInfo extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 1.23,
       child: Container(
-        color: Color(0xFF242430),
+        color: bgColor.withOpacity(0.1),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             const Spacer(),
-            CircleAvatar(
+            const CircleAvatar(
               radius: 50,
               // TODO
               backgroundColor: Colors.blue,
@@ -24,9 +25,9 @@ class MyInfo extends StatelessWidget {
             const Spacer(),
             Text(
               'Won Jong Seo',
-              style: Theme.of(context).textTheme.subtitle2,
+              style: sectionTitleStyle(context),
             ),
-            Text(
+            const Text(
               'Developer',
               textAlign: TextAlign.center,
               style: TextStyle(
