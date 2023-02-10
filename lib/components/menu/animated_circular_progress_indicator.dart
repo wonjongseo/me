@@ -71,7 +71,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                 children: [
                   Text(
                     label,
-                    style: TextStyle(color: Colors.white),
+                    style: const TextStyle(color: Colors.white),
                   ),
                   Text("${(value * 100).toInt()}%")
                 ],

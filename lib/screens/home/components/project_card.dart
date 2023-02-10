@@ -15,7 +15,8 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         padding: const EdgeInsets.all(defaultPadding),
-        color: secondaryColor,
+        // color: secondaryColor,
+        decoration: BoxDecoration(),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +39,7 @@ class ProjectCard extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   Get.toNamed(PROJECT_DETAIL_PATH,
-                      parameters: {'id': project.id});
+                      parameters: {'id': project.index});
                 },
                 child: const Text(
                   'Read More >>',

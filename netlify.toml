@@ -1,0 +1,3 @@
+[build]
+  command = "chmod 777 ./build.sh && ./build.sh"
+  publish = "build/web"

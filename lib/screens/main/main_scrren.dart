@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:wonjongseo/components/menu/side_menu.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:get/get.dart';
 
 class MainScreen extends StatelessWidget {
-  const MainScreen({super.key, required this.body});
-
+  MainScreen({super.key, required this.body, this.isHome});
+  bool? isHome;
   final Widget body;
   @override
   Widget build(BuildContext context) {
@@ -13,14 +14,21 @@ class MainScreen extends StatelessWidget {
       appBar: !Responsive.isDesktop(context)
           ? AppBar(
               backgroundColor: bgColor,
-              leading: Builder(
-                builder: (context) => IconButton(
-                  onPressed: () {
-                    Scaffold.of(context).openDrawer();
-                  },
-                  icon: const Icon(Icons.menu),
-                ),
-              ),
+              elevation: isHome == true ? 1 : 0,
+              leading: isHome != null
+                  ? Builder(
+                      builder: (context) => IconButton(
+                        onPressed: () {
+                          Scaffold.of(context).openDrawer();
+                        },
+                        icon: const Icon(Icons.menu),
+                      ),
+                    )
+                  : IconButton(
+                      onPressed: () {
+                        Get.back();
+                      },
+                      icon: const Icon(Icons.arrow_back_ios_rounded)),
             )
           : null,
       drawer: const SideMenu(),
@@ -36,7 +44,7 @@ class MainScreen extends StatelessWidget {
                     child: SideMenu(),
                   ),
                 const SizedBox(width: defaultPadding),
-                Expanded(child: body, flex: 7),
+                Expanded(flex: 7, child: body),
                 const SizedBox(width: defaultPadding)
               ],
             ),
