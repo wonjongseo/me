@@ -15,35 +15,39 @@ class ProjectDetailCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Description',
-          style: sectionTitleStyle(context).copyWith(fontSize: 16),
-        ),
-        const SizedBox(height: defaultPadding / 4),
-        Text(
-          project.description,
-          // textAlign: TextAlign.center,
-        ),
-        const SizedBox(height: defaultPadding * 2),
-        if (project.frontend != null)
-          ProjectDetailString(
-              detailTitle: project.frontend!, title: 'Front end'),
-        if (project.backend != null)
-          ProjectDetailString(detailTitle: project.backend!, title: 'Back end'),
-        if (project.homepagePath != null)
-          HomePageLinkCard(
-              projectTitle: project.title,
-              text: 'Try It',
-              path: project.homepagePath!),
-        if (project.specifications != null)
-          ProjectDetailList(
-              detailTitle: 'Specifications', list: project.specifications!),
-        if (project.useThat != null)
-          ProjectDetailList(detailTitle: 'Use It', list: project.useThat!),
-      ],
+    return SizedBox(
+      width: MediaQuery.of(context).size.width * 0.2,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Description',
+            style: sectionTitleStyle(context).copyWith(fontSize: 16),
+          ),
+          const SizedBox(height: defaultPadding / 4),
+          Text(
+            project.description,
+            // textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: defaultPadding * 2),
+          if (project.frontend != null)
+            ProjectDetailString(
+                detailTitle: project.frontend!, title: 'Front end'),
+          if (project.backend != null)
+            ProjectDetailString(
+                detailTitle: project.backend!, title: 'Back end'),
+          if (project.homepagePath != null)
+            HomePageLinkCard(
+                projectTitle: project.title,
+                text: 'Try It',
+                path: project.homepagePath!),
+          if (project.specifications != null)
+            ProjectDetailList(
+                detailTitle: 'Specifications', list: project.specifications!),
+          if (project.useThat != null)
+            ProjectDetailList(detailTitle: 'Use It', list: project.useThat!),
+        ],
+      ),
     );
   }
 }
