@@ -6,17 +6,15 @@ import 'package:wonjongseo/screens/project_detail/components/project_detail_stri
 import 'package:wonjongseo/screens/project_detail/components/project_detail_list.dart';
 
 class ProjectDetailCard extends StatelessWidget {
-  const ProjectDetailCard({
-    Key? key,
-    required this.project,
-  }) : super(key: key);
-
+  const ProjectDetailCard({Key? key, required this.project, this.width})
+      : super(key: key);
+  final double? width;
   final Project project;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.2,
+      width: width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

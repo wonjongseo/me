@@ -75,7 +75,10 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                           project: project,
                           currentIndex: currentIndex),
                       const SizedBox(width: defaultPadding * 2),
-                      ProjectDetailCard(project: project)
+                      ProjectDetailCard(
+                        project: project,
+                        width: MediaQuery.of(context).size.width * 0.2,
+                      )
                     ],
                   ),
                   const Spacer(flex: 1),
