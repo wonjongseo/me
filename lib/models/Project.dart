@@ -31,8 +31,8 @@ List<Project> demo_projects = [
       specifications: [
         'Saving My Voca',
         'Toggling like of a word',
-        'Studying toeic words a day '
-            'Testing toeic words',
+        'Studying toeic words a day',
+        'Testing toeic words',
         'Showing the example of word',
       ],
       images: [
@@ -50,7 +50,25 @@ List<Project> demo_projects = [
         'assets/project1/12.jpg',
         'assets/project1/13.jpg',
       ]),
-  Project(index: '12', title: "", description: "", images: []),
+  Project(
+      index: '1',
+      title: "Pet Detective Agency ",
+      description: "AI",
+      images: [
+        'assets/project2/1.jpg',
+        'assets/project2/2.jpg',
+        'assets/project2/3.jpg',
+        'assets/project2/4.jpg',
+        'assets/project2/5.jpg',
+        'assets/project2/6.jpg',
+        'assets/project2/7.jpg',
+        'assets/project2/8.jpg',
+        'assets/project2/9.jpg',
+        'assets/project2/10.jpg',
+        'assets/project2/11.jpg',
+        'assets/project2/12.jpg',
+        'assets/project2/13.jpg',
+      ]),
   Project(index: '12', title: "", description: "", images: []),
   Project(index: '12', title: "", description: "", images: []),
   Project(index: '12', title: "", description: "", images: []),
