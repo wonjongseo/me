@@ -33,7 +33,7 @@ class HighLightsInfo extends StatelessWidget {
           // ),
           HeighLight(
             counter: AnimatedCounter(
-              value: demo_projects.length,
+              value: my_projects.length,
               text: "+",
             ),
             label: "GitHub Projects",

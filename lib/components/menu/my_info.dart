@@ -19,8 +19,9 @@ class MyInfo extends StatelessWidget {
             const Spacer(),
             const CircleAvatar(
               radius: 50,
-              // TODO
-              backgroundColor: Colors.blue,
+              backgroundImage: AssetImage(
+                'assets/images/me.jpg',
+              ),
             ),
             const Spacer(),
             Text(
@@ -35,7 +36,7 @@ class MyInfo extends StatelessWidget {
                 height: 1.5,
               ),
             ),
-            Spacer(flex: 2)
+            const Spacer(flex: 2)
           ],
         ),
       ),

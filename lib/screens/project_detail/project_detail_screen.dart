@@ -34,9 +34,9 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
   void findProject() {
     var params = Get.parameters;
     if (params['id'] != null) {
-      project = demo_projects.elementAt(int.parse(params['id']!));
+      project = my_projects.elementAt(int.parse(params['id']!));
     } else {
-      project = demo_projects.elementAt(0);
+      project = my_projects.elementAt(0);
     }
   }
 

@@ -4,6 +4,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/responsive.dart';
 
 class HomeBanner extends StatelessWidget {
@@ -89,18 +90,22 @@ class MyBuildAnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
-      repeatForever: true,
-      animatedTexts: [
-        TyperAnimatedText('responsive web and mobile app.',
-            speed: const Duration(milliseconds: 60)),
-        TyperAnimatedText('Shopping moll App.',
-            speed: const Duration(milliseconds: 60)),
-        TyperAnimatedText('Toeic vocabulary App.',
-            speed: const Duration(milliseconds: 60)),
-        TyperAnimatedText('Real Amazon App.',
-            speed: const Duration(milliseconds: 60)),
-      ],
-    );
+        repeatForever: true,
+        animatedTexts: List.generate(
+          my_projects.length,
+          (index) => TyperAnimatedText(my_projects[index].title,
+              speed: const Duration(milliseconds: 60)),
+          // animatedTexts: [
+          //   TyperAnimatedText('responsive web and mobile app.',
+          //       speed: const Duration(milliseconds: 60)),
+          //   TyperAnimatedText('Shopping moll App.',
+          //       speed: const Duration(milliseconds: 60)),
+          //   TyperAnimatedText('Toeic vocabulary App.',
+          //       speed: const Duration(milliseconds: 60)),
+          //   TyperAnimatedText('Real Amazon App.',
+          //       speed: const Duration(milliseconds: 60)),
+          // ],
+        ));
   }
 }
 

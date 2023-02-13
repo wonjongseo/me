@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
                   bodyText1: const TextStyle(color: bodyTextColor),
                   bodyText2: const TextStyle(color: bodyTextColor),
                 )),
-        initialRoute: HOME_PATH,
+        initialRoute: SPLASH_PATH,
         getPages: [
           GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
           GetPage(name: HOME_PATH, page: () => const HomeScreen()),

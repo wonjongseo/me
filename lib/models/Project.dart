@@ -19,10 +19,10 @@ class Project {
   });
 }
 
-List<Project> demo_projects = [
+List<Project> my_projects = [
   Project(
       index: '0',
-      title: "Toeic vocabulary App",
+      title: "Toeic vocabulary App.",
       description:
           "You can easily learn TOEIC words, and you can improve metacognition by using a simple test. You can also learn and test your own words in addition to the built-in words.",
       homepagePath: 'https://wonjongseo.github.io/toeic/#/',
@@ -51,7 +51,7 @@ List<Project> demo_projects = [
       ]),
   Project(
       index: '1',
-      title: "Pet Detective Agency",
+      title: "Pet Detective Agency.",
       githubPath: 'https://github.com/IOSpring/PetDetective',
       description:
           "If a dog is lost, AI technology can analyze the characteristics of the dog and provide information on the dog to nearby users to prevent the loss of the dog.",
@@ -85,7 +85,7 @@ List<Project> demo_projects = [
       ]),
   Project(
       index: '2',
-      title: "Online Shopping mall",
+      title: "Online Shopping mall.",
       githubPath: 'https://github.com/wonjongseo/online-shoppingmall',
       backend: 'Spring frame work',
       useThat: [

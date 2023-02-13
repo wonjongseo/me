@@ -22,32 +22,32 @@ class Projects extends StatelessWidget {
         const SizedBox(height: defaultPadding),
         Responsive(
           mobile: ProjectGridView(
-            itemCount: demo_projects.length,
+            itemCount: my_projects.length,
             crossAxisCount: 1,
             childAspectRatio: 2,
             itemBuilder: (context, index) =>
-                ProjectCard(project: demo_projects[index]),
+                ProjectCard(project: my_projects[index]),
           ),
           mobileLarge: ProjectGridView(
-            itemCount: demo_projects.length,
+            itemCount: my_projects.length,
             crossAxisCount: 1,
             childAspectRatio: 3,
             itemBuilder: (context, index) =>
-                ProjectCard(project: demo_projects[index]),
+                ProjectCard(project: my_projects[index]),
           ),
           tablet: ProjectGridView(
-            itemCount: demo_projects.length,
+            itemCount: my_projects.length,
             crossAxisCount: MediaQuery.of(context).size.width < 900 ? 2 : 3,
             childAspectRatio: MediaQuery.of(context).size.width < 900 ? 2 : 1.3,
             itemBuilder: (context, index) =>
-                ProjectCard(project: demo_projects[index]),
+                ProjectCard(project: my_projects[index]),
           ),
           desktop: ProjectGridView(
-            itemCount: demo_projects.length,
+            itemCount: my_projects.length,
             crossAxisCount: 3,
             childAspectRatio: 1.3,
             itemBuilder: (context, index) =>
-                ProjectCard(project: demo_projects[index]),
+                ProjectCard(project: my_projects[index]),
           ),
         ),
       ],
