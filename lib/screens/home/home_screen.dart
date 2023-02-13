@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/screens/home/components/high_lights_info.dart';
 import 'package:wonjongseo/screens/home/components/home_banner.dart';

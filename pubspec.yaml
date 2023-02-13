@@ -51,6 +51,7 @@ dev_dependencies:
   google_fonts: ^4.0.3
   get: ^4.6.5
   carousel_slider: ^4.2.1
+  url_launcher: ^6.1.9
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
