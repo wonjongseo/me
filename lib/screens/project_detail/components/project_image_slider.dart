@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:wonjongseo/responsive.dart';
 
 import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 
@@ -25,16 +26,17 @@ class ProjectImageSlider extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        IconButton(
-            style: IconButton.styleFrom(
-              padding: EdgeInsets.zero,
-            ),
-            onPressed: () {
-              carouselController.previousPage(
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut);
-            },
-            icon: const Icon(Icons.arrow_left)),
+        if (!Responsive.isMobile(context))
+          IconButton(
+              style: IconButton.styleFrom(
+                padding: EdgeInsets.zero,
+              ),
+              onPressed: () {
+                carouselController.previousPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut);
+              },
+              icon: const Icon(Icons.arrow_left)),
         SizedBox(
           width: 350,
           height: 650,
@@ -112,13 +114,14 @@ class ProjectImageSlider extends StatelessWidget {
             ],
           ),
         ),
-        IconButton(
-            onPressed: () {
-              carouselController.nextPage(
-                  duration: const Duration(milliseconds: 500),
-                  curve: Curves.easeInOut);
-            },
-            icon: const Icon(Icons.arrow_right)),
+        if (!Responsive.isMobile(context))
+          IconButton(
+              onPressed: () {
+                carouselController.nextPage(
+                    duration: const Duration(milliseconds: 500),
+                    curve: Curves.easeInOut);
+              },
+              icon: const Icon(Icons.arrow_right)),
       ],
     );
 
