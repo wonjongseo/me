@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'dart:js' as js;
+import 'package:url_launcher/url_launcher.dart';
 
 import 'package:wonjongseo/constants.dart';
 
@@ -14,15 +14,16 @@ class Contacts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(top: defaultPadding / 2),
-      color: Color(0xFF24242E),
+      color: const Color(0xFF24242E),
       child: Row(
         children: [
-          Spacer(),
+          const Spacer(),
           IconButton(
             padding: EdgeInsets.zero,
             onPressed: () {
-              js.context
-                  .callMethod('open', ['https://www.instagram.com/w_jong_s/']);
+              launchUrl(
+                Uri.parse('https://www.instagram.com/w_jong_s/'),
+              );
             },
             icon: SvgPicture.asset(
               "assets/icons/instagram.svg",
@@ -33,13 +34,17 @@ class Contacts extends StatelessWidget {
           ),
           IconButton(
             onPressed: () {
-              js.context.callMethod('open', ['https://github.com/wonjongseo']);
+              launchUrl(
+                Uri.parse('https://github.com/wonjongseo'),
+              );
             },
             icon: SvgPicture.asset("assets/icons/github.svg"),
           ),
           IconButton(
             onPressed: () {
-              js.context.callMethod('open', ['https://github.com/wonjongseo']);
+              launchUrl(
+                Uri.parse('https://github.com/wonjongseo'),
+              );
             },
             icon: SvgPicture.asset("assets/icons/notion.svg"),
           ),
@@ -47,7 +52,7 @@ class Contacts extends StatelessWidget {
             onPressed: () {},
             icon: SvgPicture.asset("assets/icons/behance.svg"),
           ),
-          Spacer(),
+          const Spacer(),
         ],
       ),
     );

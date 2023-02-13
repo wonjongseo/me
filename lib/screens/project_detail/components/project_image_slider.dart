@@ -23,6 +23,9 @@ class ProjectImageSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (project.images.isEmpty) {
+      return Container();
+    }
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -89,28 +92,29 @@ class ProjectImageSlider extends StatelessWidget {
                   ),
                 ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: project.images.asMap().entries.map((entry) {
-                  return GestureDetector(
-                    onTap: () => carouselController.animateToPage(entry.key),
-                    child: Container(
-                      width: 12.0,
-                      height: 12.0,
-                      margin: const EdgeInsets.symmetric(
-                          vertical: 8.0, horizontal: 4.0),
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color:
-                              (Theme.of(context).brightness == Brightness.dark
-                                      ? Colors.white
-                                      : Colors.black)
-                                  .withOpacity(
-                                      currentIndex == entry.key ? 0.9 : 0.4)),
-                    ),
-                  );
-                }).toList(),
-              )
+              if (project.images.length <= 20)
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: project.images.asMap().entries.map((entry) {
+                    return GestureDetector(
+                      onTap: () => carouselController.animateToPage(entry.key),
+                      child: Container(
+                        width: 12.0,
+                        height: 12.0,
+                        margin: const EdgeInsets.symmetric(
+                            vertical: 8.0, horizontal: 4.0),
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color:
+                                (Theme.of(context).brightness == Brightness.dark
+                                        ? Colors.white
+                                        : Colors.black)
+                                    .withOpacity(
+                                        currentIndex == entry.key ? 0.9 : 0.4)),
+                      ),
+                    );
+                  }).toList(),
+                )
             ],
           ),
         ),

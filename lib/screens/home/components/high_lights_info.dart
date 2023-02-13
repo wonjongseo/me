@@ -2,8 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:wonjongseo/components/menu/animated_counter.dart';
+import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/responsive.dart';
 
 class HighLightsInfo extends StatelessWidget {
@@ -15,7 +16,7 @@ class HighLightsInfo extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: const [
+        children: [
           // HeighLight(
           //   counter: AnimatedCounter(
           //     value: 119,
@@ -32,7 +33,7 @@ class HighLightsInfo extends StatelessWidget {
           // ),
           HeighLight(
             counter: AnimatedCounter(
-              value: 4,
+              value: demo_projects.length,
               text: "+",
             ),
             label: "GitHub Projects",

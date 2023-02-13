@@ -6,18 +6,20 @@ class HomePageLinkCard extends StatelessWidget {
   const HomePageLinkCard({
     Key? key,
     required this.path,
-    required this.title,
+    required this.text,
+    required this.projectTitle,
   }) : super(key: key);
 
+  final String projectTitle;
   final String path;
-  final String title;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          title,
+          text,
           style: sectionTitleStyle(context).copyWith(fontSize: 16),
         ),
         const SizedBox(height: defaultPadding / 4),
@@ -35,7 +37,7 @@ class HomePageLinkCard extends StatelessWidget {
                 minimumSize: MaterialStateProperty.all(Size.zero),
                 tapTargetSize: MaterialTapTargetSize.shrinkWrap,
               ),
-              child: const Text('Jongseo Toeic'),
+              child: Text(projectTitle),
             ),
           ],
         ),

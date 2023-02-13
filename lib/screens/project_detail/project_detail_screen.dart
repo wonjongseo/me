@@ -33,7 +33,7 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
 
   void findProject() {
     var params = Get.parameters;
-    if (params != null && params['id'] != null) {
+    if (params['id'] != null) {
       project = demo_projects.elementAt(int.parse(params['id']!));
     } else {
       project = demo_projects.elementAt(0);
@@ -84,6 +84,7 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
             )
           : SingleChildScrollView(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     project.title,

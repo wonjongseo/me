@@ -39,7 +39,7 @@ class ProjectCard extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   Get.toNamed(PROJECT_DETAIL_PATH,
-                      parameters: {'id': project.index});
+                      parameters: {'id': project.index!});
                 },
                 child: const Text(
                   'Read More >>',

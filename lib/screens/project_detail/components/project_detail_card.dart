@@ -25,7 +25,7 @@ class ProjectDetailCard extends StatelessWidget {
         const SizedBox(height: defaultPadding / 4),
         Text(
           project.description,
-          textAlign: TextAlign.center,
+          // textAlign: TextAlign.center,
         ),
         const SizedBox(height: defaultPadding * 2),
         if (project.frontend != null)
@@ -34,7 +34,10 @@ class ProjectDetailCard extends StatelessWidget {
         if (project.backend != null)
           ProjectDetailString(detailTitle: project.backend!, title: 'Back end'),
         if (project.homepagePath != null)
-          HomePageLinkCard(title: 'Try It', path: project.homepagePath!),
+          HomePageLinkCard(
+              projectTitle: project.title,
+              text: 'Try It',
+              path: project.homepagePath!),
         if (project.specifications != null)
           ProjectDetailList(
               detailTitle: 'Specifications', list: project.specifications!),
