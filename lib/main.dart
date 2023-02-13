@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:wonjongseo/screens/home/home_screen.dart';
 import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 import 'package:wonjongseo/screens/splash/splash_screen.dart';
+import '';
 
 void main() {
   runApp(const MyApp());
