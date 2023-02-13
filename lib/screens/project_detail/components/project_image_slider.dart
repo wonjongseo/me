@@ -12,9 +12,10 @@ class ProjectImageSlider extends StatelessWidget {
     required this.project,
     required this.currentIndex,
     required this.setState,
+    required this.carouselController,
   }) : super(key: key);
 
-  CarouselController carouselController = CarouselController();
+  final CarouselController carouselController;
   final Project project;
   final int currentIndex;
   final void Function(int) setState;
@@ -22,6 +23,7 @@ class ProjectImageSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
             style: IconButton.styleFrom(
@@ -93,8 +95,8 @@ class ProjectImageSlider extends StatelessWidget {
                     child: Container(
                       width: 12.0,
                       height: 12.0,
-                      margin:
-                          EdgeInsets.symmetric(vertical: 8.0, horizontal: 4.0),
+                      margin: const EdgeInsets.symmetric(
+                          vertical: 8.0, horizontal: 4.0),
                       decoration: BoxDecoration(
                           shape: BoxShape.circle,
                           color:

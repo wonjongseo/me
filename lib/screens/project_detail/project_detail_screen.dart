@@ -25,7 +25,7 @@ class ProjectDetailScrenn extends StatefulWidget {
 class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
   late Project project;
   int currentIndex = 0;
-
+  late CarouselController carouselController = CarouselController();
   @override
   void initState() {
     super.initState();
@@ -50,98 +50,154 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
   @override
   Widget build(BuildContext context) {
     return MainScreen(
-      body: SizedBox(
-        width: MediaQuery.of(context).size.width * 0.7 - 100,
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(top: defaultPadding * 2),
-              child: Text(
-                project.title,
-                style: sectionTitleStyle(context).copyWith(
-                  fontSize: 30,
-                ),
+      body: Responsive.isDesktop(context)
+          ? SizedBox(
+              width: MediaQuery.of(context).size.width * 0.7 - 100,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(top: defaultPadding * 2),
+                    child: Text(
+                      project.title,
+                      style: sectionTitleStyle(context).copyWith(
+                        fontSize: 30,
+                      ),
+                    ),
+                  ),
+                  const Spacer(flex: 1),
+                  const SizedBox(height: defaultPadding * 2),
+                  // Responsive.isDesktop(context)
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      ProjectImageSlider(
+                          carouselController: carouselController,
+                          setState: changeIndexOfSlider,
+                          project: project,
+                          currentIndex: currentIndex),
+                      const SizedBox(width: defaultPadding * 2),
+                      ProjectDetailCard(project: project)
+                    ],
+                  ),
+                  // SingleChildScrollView(
+                  //     child: Column(
+                  //       children: [
+                  //         ProjectImageSlider(
+                  //             carouselController: carouselController,
+                  //             setState: changeIndexOfSlider,
+                  //             project: project,
+                  //             currentIndex: currentIndex),
+                  //         ProjectDetailCard(project: project)
+                  //       ],
+                  //     ),
+                  //   ),
+                  const Spacer(flex: 1),
+                ],
+              ),
+            )
+          : SingleChildScrollView(
+              child: Column(
+                children: [
+                  Text(
+                    project.title,
+                    style: sectionTitleStyle(context).copyWith(
+                      fontSize: 30,
+                    ),
+                  ),
+                  const SizedBox(height: defaultPadding * 2),
+                  ProjectImageSlider(
+                      carouselController: carouselController,
+                      setState: changeIndexOfSlider,
+                      project: project,
+                      currentIndex: currentIndex),
+                  ProjectDetailCard(project: project)
+                ],
               ),
             ),
-            const Spacer(flex: 1),
-            const SizedBox(height: defaultPadding * 2),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ProjectImageSlider(
-                    setState: changeIndexOfSlider,
-                    project: project,
-                    currentIndex: currentIndex),
-                const SizedBox(width: defaultPadding * 2),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Description',
-                      style: sectionTitleStyle(context).copyWith(fontSize: 16),
-                    ),
-                    const SizedBox(height: defaultPadding / 4),
-                    Text(
-                      project.description,
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: defaultPadding * 2),
-                    if (project.frontend != null)
-                      ProjectDetailString(
-                          detailTitle: project.frontend!, title: 'Front end'),
-                    if (project.backend != null)
-                      ProjectDetailString(
-                          detailTitle: project.backend!, title: 'Back end'),
-                    if (project.homepagePath != null)
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Try It',
-                            style: sectionTitleStyle(context)
-                                .copyWith(fontSize: 16),
-                          ),
-                          const SizedBox(height: defaultPadding / 4),
-                          Row(
-                            children: [
-                              const Text('Go to '),
-                              TextButton(
-                                onPressed: () {
-                                  launchUrl(
-                                    Uri.parse(project.homepagePath!),
-                                  );
-                                },
-                                style: ButtonStyle(
-                                  padding: MaterialStateProperty.all(
-                                      EdgeInsets.zero),
-                                  minimumSize:
-                                      MaterialStateProperty.all(Size.zero),
-                                  tapTargetSize:
-                                      MaterialTapTargetSize.shrinkWrap,
-                                ),
-                                child: const Text('Jongseo Toeic'),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: defaultPadding * 2),
-                        ],
-                      ),
-                    if (project.specifications != null)
-                      ProjectDetailList(
-                          detailTitle: 'Specifications',
-                          list: project.specifications!),
-                    if (project.useThat != null)
-                      ProjectDetailList(
-                          detailTitle: 'Use It', list: project.useThat!),
-                  ],
-                )
-              ],
+    );
+  }
+}
+
+class ProjectDetailCard extends StatelessWidget {
+  const ProjectDetailCard({
+    Key? key,
+    required this.project,
+  }) : super(key: key);
+
+  final Project project;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Description',
+          style: sectionTitleStyle(context).copyWith(fontSize: 16),
+        ),
+        const SizedBox(height: defaultPadding / 4),
+        Text(
+          project.description,
+          textAlign: TextAlign.center,
+        ),
+        const SizedBox(height: defaultPadding * 2),
+        if (project.frontend != null)
+          ProjectDetailString(
+              detailTitle: project.frontend!, title: 'Front end'),
+        if (project.backend != null)
+          ProjectDetailString(detailTitle: project.backend!, title: 'Back end'),
+        if (project.homepagePath != null)
+          HomePageLinkCard(title: 'Try It', path: project.homepagePath!),
+        if (project.specifications != null)
+          ProjectDetailList(
+              detailTitle: 'Specifications', list: project.specifications!),
+        if (project.useThat != null)
+          ProjectDetailList(detailTitle: 'Use It', list: project.useThat!),
+      ],
+    );
+  }
+}
+
+class HomePageLinkCard extends StatelessWidget {
+  const HomePageLinkCard({
+    Key? key,
+    required this.path,
+    required this.title,
+  }) : super(key: key);
+
+  final String path;
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          title,
+          style: sectionTitleStyle(context).copyWith(fontSize: 16),
+        ),
+        const SizedBox(height: defaultPadding / 4),
+        Row(
+          children: [
+            const Text('Go to '),
+            TextButton(
+              onPressed: () {
+                launchUrl(
+                  Uri.parse(path),
+                );
+              },
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(EdgeInsets.zero),
+                minimumSize: MaterialStateProperty.all(Size.zero),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+              child: const Text('Jongseo Toeic'),
             ),
-            const Spacer(flex: 1),
           ],
         ),
-      ),
+        const SizedBox(height: defaultPadding * 2),
+      ],
     );
   }
 }
