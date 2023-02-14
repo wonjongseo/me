@@ -4,8 +4,10 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
 
 class HighLightsInfo extends StatelessWidget {
   const HighLightsInfo({super.key});
@@ -15,22 +17,16 @@ class HighLightsInfo extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: defaultPadding),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        // mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // HeighLight(
-          //   counter: AnimatedCounter(
-          //     value: 119,
-          //     text: "K+",
-          //   ),
-          //   label: "Subscribers",
-          // ),
-          // HeighLight(
-          //   counter: AnimatedCounter(
-          //     value: 40,
-          //     text: "+",
-          //   ),
-          //   label: "Videos",
-          // ),
+          HeighLight(
+            counter: AnimatedCounter(
+              value: corporation_projects.length,
+              text: "+",
+            ),
+            label: "Corporation Projects",
+          ),
+          const SizedBox(width: defaultPadding),
           HeighLight(
             counter: AnimatedCounter(
               value: my_projects.length,
@@ -47,31 +43,6 @@ class HighLightsInfo extends StatelessWidget {
           // ),
         ],
       ),
-    );
-  }
-}
-
-class HeighLight extends StatelessWidget {
-  const HeighLight({
-    Key? key,
-    required this.counter,
-    required this.label,
-  }) : super(key: key);
-
-  final Widget counter;
-  final String? label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        counter,
-        const SizedBox(width: defaultPadding / 2),
-        Text(
-          label!,
-          style: Theme.of(context).textTheme.subtitle2,
-        )
-      ],
     );
   }
 }

@@ -7,7 +7,7 @@ import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
-import 'package:wonjongseo/screens/main/main_scrren.dart';
+import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:wonjongseo/utils/dialog.dart';
 import 'package:wonjongseo/utils/language_switch_card.dart';
 

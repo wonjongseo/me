@@ -24,7 +24,7 @@ class ProjectImageSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (project.images.isEmpty) {
-      return Container();
+      return const SizedBox(height: 650 / 4);
     }
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,

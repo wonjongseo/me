@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/responsive.dart';
-import 'package:wonjongseo/screens/main/main_scrren.dart';
+import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_detail_card.dart';
