@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
-import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:wonjongseo/utils/dialog.dart';
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
@@ -64,11 +61,11 @@ class HomeBanner extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: defaultPadding),
+                const SizedBox(height: defaultPadding),
                 if (!Responsive.isMobileLarge(context))
                   ElevatedButton(
                     style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                           horizontal: defaultPadding * 2,
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
@@ -76,7 +73,7 @@ class HomeBanner extends StatelessWidget {
                     onPressed: () {
                       openDialog(title: 'EXPLORE NOW', content: 'Not Ready');
                     },
-                    child: Text(
+                    child: const Text(
                       'EXPLORE NOW',
                       style: TextStyle(color: darkColor),
                     ),
@@ -103,22 +100,18 @@ class MyBuildAnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
-        repeatForever: true,
-        animatedTexts: List.generate(
-          my_projects.length,
-          (index) => TyperAnimatedText(my_projects[index].title,
-              speed: const Duration(milliseconds: 60)),
-          // animatedTexts: [
-          //   TyperAnimatedText('responsive web and mobile app.',
-          //       speed: const Duration(milliseconds: 60)),
-          //   TyperAnimatedText('Shopping moll App.',
-          //       speed: const Duration(milliseconds: 60)),
-          //   TyperAnimatedText('Toeic vocabulary App.',
-          //       speed: const Duration(milliseconds: 60)),
-          //   TyperAnimatedText('Real Amazon App.',
-          //       speed: const Duration(milliseconds: 60)),
-          // ],
-        ));
+      repeatForever: true,
+      animatedTexts: [
+        ...List.generate(
+            my_projects.length,
+            (index) => TyperAnimatedText(my_projects[index].title,
+                speed: const Duration(milliseconds: 60))),
+        ...List.generate(
+            corporation_projects.length,
+            (index) => TyperAnimatedText(corporation_projects[index].source,
+                speed: const Duration(milliseconds: 60))),
+      ],
+    );
   }
 }
 

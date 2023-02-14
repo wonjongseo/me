@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         scrollBehavior: GetPlatform.isDesktop
-            ? MaterialScrollBehavior()
+            ? const MaterialScrollBehavior()
                 .copyWith(dragDevices: {PointerDeviceKind.mouse})
             : null,
         translations: Languagues(),
@@ -40,40 +40,11 @@ class MyApp extends StatelessWidget {
         // initialRoute: '/test',
         initialRoute: HOME_PATH,
         getPages: [
-          GetPage(name: '/test', page: () => const TestPage()),
           GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
           GetPage(name: HOME_PATH, page: () => const HomeScreen()),
           GetPage(
               name: PROJECT_DETAIL_PATH,
               page: () => const ProjectDetailScrenn()),
         ]);
-  }
-}
-
-class TestPage extends StatelessWidget {
-  const TestPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Column(
-          children: [
-            Text('greeting'.tr),
-            OutlinedButton(
-                onPressed: () {
-                  Get.updateLocale(const Locale('ko', 'KR'));
-                },
-                child: Text('KOREA')),
-            OutlinedButton(
-                onPressed: () {
-                  Get.updateLocale(const Locale('ko', 'KR'));
-                  Get.updateLocale(const Locale('en', 'US'));
-                },
-                child: Text('English')),
-          ],
-        ),
-      ),
-    );
   }
 }

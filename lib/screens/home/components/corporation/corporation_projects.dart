@@ -1,13 +1,10 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
 import 'package:wonjongseo/utils/dialog.dart';
+import 'package:get/get.dart';
 
 class CorporationProjects extends StatelessWidget {
   const CorporationProjects({super.key});
@@ -35,13 +32,14 @@ class CorporationProjects extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: List.generate(
-                corporation_projects.length,
-                (index) => Padding(
-                      padding: const EdgeInsets.only(right: defaultPadding),
-                      child: CorporationProjectCard(
-                        corporationProject: corporation_projects[index],
-                      ),
-                    )),
+              corporation_projects.length,
+              (index) => Padding(
+                padding: const EdgeInsets.only(right: defaultPadding),
+                child: CorporationProjectCard(
+                  corporationProject: corporation_projects[index],
+                ),
+              ),
+            ),
           ),
         )
       ],
@@ -56,10 +54,16 @@ class CorporationProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        openDialog(title: corporationProject.name, content: 'Not Ready');
+        openProjectDialog(context, corporationProject, actions: [
+          IconButton(
+              onPressed: () {
+                Get.back();
+              },
+              icon: const Icon(Icons.arrow_back_ios))
+        ]);
       },
       child: Container(
-        width: 400,
+        width: 350,
         padding: const EdgeInsets.all(defaultPadding),
         color: secondaryColor,
         child: Column(
@@ -74,7 +78,7 @@ class CorporationProjectCard extends StatelessWidget {
             Text(
               corporationProject.description!,
               maxLines: 4,
-              style: TextStyle(height: 1.5),
+              style: const TextStyle(height: 1.5),
               overflow: TextOverflow.ellipsis,
             )
           ],
