@@ -30,8 +30,8 @@ class ProjectCard extends StatelessWidget {
                     defaultPadding / (Responsive.isDesktop(context) ? 1 : 2)),
             Expanded(
               child: Text(
-                project.description!,
-                style: TextStyle(height: 1.5),
+                project.descriptionToLocale(project.index),
+                style: const TextStyle(height: 1.5),
               ),
             ),
             if (Responsive.isDesktop(context))

@@ -25,10 +25,6 @@ class Project {
     return 'index_${index}_description'.tr;
   }
 
-  String titleToLocale(String index) {
-    return 'index_${index}_title'.tr;
-  }
-
   String specificationsToLocale(String index, int specificationsIndex) {
     return 'index_${index}_specifications_$specificationsIndex'.tr;
   }
@@ -37,6 +33,21 @@ class Project {
 List<Project> my_projects = [
   Project(
       index: '0',
+      title: "Responsive Portfolio Web",
+      description: "",
+      frontend: 'Flutter',
+      specifications: [
+        'Responsive Web Page',
+        'Supporting multi lanauge',
+      ],
+      useThat: [
+        'get'
+            'carousel_slider',
+        'animated_text_kit'
+      ],
+      images: []),
+  Project(
+      index: '1',
       title: "Toeic vocabulary App.",
       description:
           "You can easily learn TOEIC words, and you can improve metacognition by using a simple test. You can also learn and test your own words in addition to the built-in words.",
@@ -64,8 +75,9 @@ List<Project> my_projects = [
         'assets/project1/12.jpg',
         'assets/project1/13.jpg',
       ]),
+
   Project(
-      index: '1',
+      index: '2',
       title: "Pet Detective Agency.",
       githubPath: 'https://github.com/IOSpring/PetDetective',
       description:
@@ -99,7 +111,7 @@ List<Project> my_projects = [
         'assets/project2/12.png',
       ]),
   Project(
-      index: '2',
+      index: '3',
       title: "Online Shopping mall.",
       githubPath: 'https://github.com/wonjongseo/online-shoppingmall',
       backend: 'Spring frame work',
@@ -113,12 +125,12 @@ List<Project> my_projects = [
       ],
       specifications: [
         'authentication',
-        'reviewing projects',
-        'changing the user infomation',
-        'adding products to the basket',
-        'managing users',
-        'managing products',
-        'managing a banner'
+        'Reviewing projects',
+        'Changing the user infomation',
+        'Adding products to the basket',
+        'Managing users',
+        'Managing products',
+        'Managing a banner'
       ],
       description:
           "It is an online shopping mall project to improve skills using spring and JPA.",
@@ -166,10 +178,10 @@ List<Project> my_projects = [
       ]),
 
   Project(
-      index: '3',
+      index: '4',
       title: 'Netflix Clone Coding.',
       description:
-          'Build The Netflix Clone Coding Project for Flexible Use of React JS',
+          'It is The Netflix Clone Coding Project for improving Skill of React JS',
       frontend: 'React Js',
       useThat: ['axois', 'prop-types', 'styled-components'],
       githubPath: 'https://github.com/wonjongseo/netfilx',
@@ -177,10 +189,10 @@ List<Project> my_projects = [
       images: []),
 
   Project(
-      index: '4',
+      index: '5',
       title: 'Instagram Clone Coding.',
       description:
-          'Build The Instagram Clone Coding Project for Flexible Use of Graph Ql and React JS',
+          'It is The Instagram Clone Coding Project for improving Skill of Graph Ql and React JS',
       backend: 'Graph QL',
       frontend: 'React Js',
       useThat: ['githubPathollo/client', 'graphql', 'styled-components'],

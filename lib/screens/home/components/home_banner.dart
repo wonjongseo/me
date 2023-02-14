@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
-import 'package:get/get.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
@@ -32,7 +32,7 @@ class HomeBanner extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "page_title".tr,
+                  toTr('page_title'),
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold)

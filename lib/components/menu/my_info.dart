@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/languages.dart';
 
 class MyInfo extends StatelessWidget {
   const MyInfo({super.key});
@@ -25,7 +26,7 @@ class MyInfo extends StatelessWidget {
             ),
             const Spacer(),
             Text(
-              'Won Jong Seo',
+              toTr('programmer_name'),
               style: sectionTitleStyle(context),
             ),
             const Text(

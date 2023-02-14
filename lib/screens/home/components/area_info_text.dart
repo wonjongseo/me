@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/models/languages.dart';
 
 class AreaInfoText extends StatelessWidget {
   const AreaInfoText({
@@ -23,7 +24,7 @@ class AreaInfoText extends StatelessWidget {
               color: Colors.white,
             ),
           ),
-          Text(text!),
+          Text(toTr(text!)),
         ],
       ),
     );

@@ -23,12 +23,7 @@ class ProjectDetailCard extends StatelessWidget {
             style: sectionTitleStyle(context).copyWith(fontSize: 16),
           ),
           const SizedBox(height: defaultPadding / 4),
-          Text(
-            project.index == '0' || project.index == '1'
-                ? project.descriptionToLocale(project.index)
-                : project.description,
-            // textAlign: TextAlign.center,
-          ),
+          Text(project.descriptionToLocale(project.index)),
           const SizedBox(height: defaultPadding * 2),
           if (project.frontend != null)
             ProjectDetailString(

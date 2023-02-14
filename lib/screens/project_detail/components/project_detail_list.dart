@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:get/get.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/languages.dart';
 
 class ProjectDetailList extends StatelessWidget {
   const ProjectDetailList({
@@ -29,10 +28,8 @@ class ProjectDetailList extends StatelessWidget {
           (index) => Padding(
             padding: const EdgeInsets.only(bottom: defaultPadding / 2),
             child: Text(
-              projectIndex == '0' && detailTitle == 'Specifications' ||
-                      projectIndex == '1' && detailTitle == 'Specifications'
-                  ? '${index + 1}.' +
-                      'index_${projectIndex}_specifications_$index'.tr
+              detailTitle == 'Specifications'
+                  ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
                   : '${index + 1}. ${list[index]}',
               style: const TextStyle(fontSize: 12),
             ),
