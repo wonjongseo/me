@@ -65,7 +65,7 @@ class Languagues extends Translations {
           'programmer_city': '東京',
           'programmer_residence': '日本',
           'programmer_age': '25',
-          'page_title': '今この瞬間に集中する',
+          'page_title': '今この瞬間に集中しよう.',
           // ----------- 0 ------------
           'index_0_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
           'index_0_specifications_0': '反応型のウェブページ',

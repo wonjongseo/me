@@ -22,11 +22,11 @@ class HomeBanner extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           Image.asset(
-            "assets/images/bg.jpeg",
+            "assets/images/background.jpg",
             fit: BoxFit.cover,
           ),
           Container(
-            color: Colors.black.withOpacity(0.66),
+            color: Colors.black.withOpacity(0.33),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
