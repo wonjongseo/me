@@ -24,7 +24,9 @@ class ProjectDetailCard extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding / 4),
           Text(
-            project.description,
+            project.index == '0' || project.index == '1'
+                ? project.descriptionToLocale(project.index)
+                : project.description,
             // textAlign: TextAlign.center,
           ),
           const SizedBox(height: defaultPadding * 2),
@@ -41,9 +43,16 @@ class ProjectDetailCard extends StatelessWidget {
                 path: project.homepagePath!),
           if (project.specifications != null)
             ProjectDetailList(
-                detailTitle: 'Specifications', list: project.specifications!),
+              detailTitle: 'Specifications',
+              list: project.specifications!,
+              projectIndex: project.index,
+            ),
           if (project.useThat != null)
-            ProjectDetailList(detailTitle: 'Use It', list: project.useThat!),
+            ProjectDetailList(
+              detailTitle: 'Use It',
+              list: project.useThat!,
+              projectIndex: project.index,
+            ),
         ],
       ),
     );

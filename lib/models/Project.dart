@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class Project {
   final String index, title, description;
   final String? homepagePath, githubPath;
@@ -5,6 +7,7 @@ class Project {
   final List<String>? useThat;
   final List<String>? specifications;
   final List<String> images;
+
   Project({
     required this.index,
     required this.title,
@@ -17,6 +20,18 @@ class Project {
     this.specifications,
     this.githubPath,
   });
+
+  String descriptionToLocale(String index) {
+    return 'index_${index}_description'.tr;
+  }
+
+  String titleToLocale(String index) {
+    return 'index_${index}_title'.tr;
+  }
+
+  String specificationsToLocale(String index, int specificationsIndex) {
+    return 'index_${index}_specifications_$specificationsIndex'.tr;
+  }
 }
 
 List<Project> my_projects = [
@@ -54,7 +69,7 @@ List<Project> my_projects = [
       title: "Pet Detective Agency.",
       githubPath: 'https://github.com/IOSpring/PetDetective',
       description:
-          "If a dog is lost, AI technology can analyze the characteristics of the dog and provide information on the dog to nearby users to prevent the loss of the dog.",
+          "If a pet is lost, AI technology can analyze the characteristics of the pet and provide information on the pet to nearby users to prevent the loss of the pet.",
       backend: 'Spring Frame Work, Express',
       useThat: [
         'Spring Boot',
@@ -66,7 +81,7 @@ List<Project> my_projects = [
         'authentication',
         'Uploading posts',
         'Watching posts',
-        'pushing a notification to nearby users',
+        'Pushing a notification to nearby users',
         'analyzing images'
       ],
       images: [

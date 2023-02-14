@@ -10,9 +10,31 @@ class MainScreen extends StatelessWidget {
   final Widget body;
   @override
   Widget build(BuildContext context) {
+    String locale = Get.locale!.toLanguageTag();
+
     return Scaffold(
       appBar: !Responsive.isDesktop(context)
           ? AppBar(
+              actions: [
+                if (locale != 'ko-KR')
+                  TextButton(
+                      onPressed: () {
+                        Get.updateLocale(const Locale('ko', 'KR'));
+                      },
+                      child: const Text('KR')),
+                if (locale != 'en-US')
+                  TextButton(
+                      onPressed: () {
+                        Get.updateLocale(const Locale('en', 'US'));
+                      },
+                      child: const Text('EN')),
+                if (locale != 'ja' && locale != 'ja-JP')
+                  TextButton(
+                      onPressed: () {
+                        Get.updateLocale(const Locale('ja', 'JP'));
+                      },
+                      child: const Text('JP'))
+              ],
               backgroundColor: bgColor,
               elevation: isHome == true ? 1 : 0,
               leading: isHome != null
