@@ -73,7 +73,7 @@ class Languagues extends Translations {
 
           // ----------- 1 ------------
           'index_1_description':
-              'あなたはTOEICの単語を簡単に学ぶことができ、簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも、自分の単語を学んでテストすることもできる。',
+              'あなたはTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます. 内蔵された単語の他にも, 自分の単語を学んでテストすることもできる.',
           'index_1_specifications_0': 'マイボカの保存',
           'index_1_specifications_1': '言葉のようにトグルする',
           'index_1_specifications_2': '1日にtoeicの単語を勉強する',

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         scrollBehavior: GetPlatform.isDesktop
             ? MaterialScrollBehavior()
                 .copyWith(dragDevices: {PointerDeviceKind.mouse})
-            : MaterialScrollBehavior(),
+            : null,
         translations: Languagues(),
         locale: Get.deviceLocale,
         fallbackLocale: const Locale('en', 'US'),
