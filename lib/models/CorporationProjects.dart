@@ -12,6 +12,7 @@ class Corporation {
 
   Corporation(
       {this.useIt,
+      required this.index,
       required this.startTiem,
       required this.endTiem,
       required this.investigativeAnalysis,
@@ -45,6 +46,7 @@ class Corporation {
 
 final List<Corporation> corporation_projects = [
   Corporation(
+    index: '0',
     name: "T社",
     source: "再エネシステム(蓄電池発電所向け開発)",
     description: "アービトラージタイムシフト",
@@ -65,6 +67,7 @@ final List<Corporation> corporation_projects = [
     operationalTesting: false,
   ),
   Corporation(
+    index: '1',
     startTiem: DateTime(2022, 11),
     endTiem: DateTime(2023, 1),
     name: "T社",
@@ -85,6 +88,7 @@ final List<Corporation> corporation_projects = [
     operationalTesting: false,
   ),
   Corporation(
+    index: '1',
     name: "T社",
     source: "再エネシステム(蓄電池発電所向け開発)",
     description: "アービトラージタイムシフト",
@@ -105,6 +109,7 @@ final List<Corporation> corporation_projects = [
     operationalTesting: false,
   ),
   Corporation(
+    index: '2',
     name: "T社",
     source: "再エネシステム(蓄電池発電所向け開発)",
     description: "アービトラージタイムシフト",
@@ -125,6 +130,7 @@ final List<Corporation> corporation_projects = [
     operationalTesting: false,
   ),
   Corporation(
+    index: '3',
     name: "T社",
     source: "再エネシステム(蓄電池発電所向け開発)",
     description: "アービトラージタイムシフト",
