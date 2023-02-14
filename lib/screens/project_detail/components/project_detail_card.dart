@@ -31,6 +31,11 @@ class ProjectDetailCard extends StatelessWidget {
           if (project.backend != null)
             ProjectDetailString(
                 detailTitle: project.backend!, title: 'Back end'),
+          if (project.githubPath != null)
+            HomePageLinkCard(
+                projectTitle: project.title,
+                text: 'Git Url',
+                path: project.githubPath!),
           if (project.homepagePath != null)
             HomePageLinkCard(
                 projectTitle: project.title,

@@ -67,9 +67,12 @@ flutter:
   assets:
     - assets/icons/
     - assets/images/
-    - assets/project1/
-    - assets/project2/    
-    - assets/project3/    
+    - assets/toeic/
+    - assets/pet/
+    - assets/shopping/
+    - assets/responsive/
+    - assets/youtube/
+    - assets/japan_java_swing/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

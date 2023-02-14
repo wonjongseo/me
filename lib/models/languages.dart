@@ -41,10 +41,23 @@ class Languagues extends Translations {
           'index_3_specifications_5': '상품 관리',
           'index_3_specifications_6': '배너 관리',
           // ----------- 4 ------------
-          'index_4_description': 'React JS의 실력을 향상 시키기 위한 Netflix  클론 코딩 ',
+          'index_4_description': 'React JS의 실력을 향상 시키기 위한 Netflix  클론 코딩.',
           // ----------- 5 ------------
           'index_5_description':
-              'React JS과 Graph QL 의 실력을 향상 시키기 위한 Instagram  클론 코딩 ',
+              'React JS과 Graph QL 의 실력을 향상 시키기 위한 Instagram  클론 코딩.',
+          // ----------- 6 ------------
+          'index_6_description':
+              'Express, MongoDb과 Java Script 의 실력을 향상 시키기 위한 Youtube  클론 코딩.',
+          'index_6_specifications_0': '동영상 시청',
+          'index_6_specifications_1': '동영상 녹화',
+          'index_6_specifications_2': '동영상 업로드',
+          'index_6_specifications_3': '동영상 편집',
+          'index_6_specifications_4': '동영상 삭제',
+          // ----------- 10 ------------
+          'index_7_description': '자바Swing을 이용한 XML-Maker 프로그램',
+          // ----------- 11 ------------
+          'index_8_description':
+              '단어를 외운 것인지 단어의 순서를 외운 것인지 헷갈리는 사람들을 위한 JLPT 단어 외우기 프로그램.',
         },
         /////////////////////////////////////////////////////
         'ja_JP': {
@@ -89,6 +102,19 @@ class Languagues extends Translations {
           // ----------- 5 ------------
           'index_5_description':
               'React JS と Graph QL の実力を向上するのための Instagram Clone Codingプロジェクト',
+
+          // ----------- 6 ------------
+          'index_6_description':
+              'Express と MongoDb と JavaScript の実力を向上するのための Youtube Clone Codingプロジェクト',
+          'index_6_specifications_0': '動画を見ること',
+          'index_6_specifications_1': '動画を録音こと',
+          'index_6_specifications_2': '動画を乗せること',
+          'index_6_specifications_3': '動画を編集すること',
+          'index_6_specifications_4': '動画を削除すること',
+
+          // ----------- 6 ------------
+          'index_7_description': 'Java の Swing を利用して作った XML-Maker プログラム',
+          'index_8_description': '単語を覚えたのか単語の順を覚えたのか紛れる人のためのJLPT単語を覚えるプログラム.',
         },
 
         /////////////////////////////////////////////////////
@@ -132,10 +158,25 @@ class Languagues extends Translations {
           'index_3_specifications_6': 'Managing a banner',
           // ----------- 4 ------------
           'index_4_description':
-              'It is The Netflix Clone Coding Project for improving Skill of React JS',
+              'It is The Netflix Clone Coding Project for improving Skill of React JS.',
           // ----------- 5 ------------
           'index_5_description':
-              'It is The Instagram Clone Coding Project for improving Skill of Graph QL and React JS',
+              'It is The Instagram Clone Coding Project for improving Skill of Graph QL and React JS.',
+
+          // ----------- 6 ------------
+          'index_6_description':
+              'It is The Youtube Clone Coding Project for improving Skill of Express, MongoDB and Java Script.',
+          'index_6_specifications_0': 'Watching a Video',
+          'index_6_specifications_1': 'Recording a Video',
+          'index_6_specifications_2': 'Uploading a Video',
+          'index_6_specifications_3': 'Editing a Video',
+          'index_6_specifications_4': 'Deleting a Video',
+
+          'index_7_description':
+              'It is The XML Maker Program using Swing of Java.',
+
+          'index_8_description':
+              'A program for memorizing JLPT words for those who are confused about whether they have memorized words or the order of words.',
         }
       };
 }

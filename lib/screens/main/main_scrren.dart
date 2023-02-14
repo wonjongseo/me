@@ -10,31 +10,12 @@ class MainScreen extends StatelessWidget {
   final Widget body;
   @override
   Widget build(BuildContext context) {
-    String locale = Get.locale!.toLanguageTag();
+    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: !Responsive.isDesktop(context)
+      appBar: !Responsive.isDesktop(context) && Responsive.toggleMobile
           ? AppBar(
-              actions: [
-                if (locale != 'ko-KR')
-                  TextButton(
-                      onPressed: () {
-                        Get.updateLocale(const Locale('ko', 'KR'));
-                      },
-                      child: const Text('KR')),
-                if (locale != 'en-US')
-                  TextButton(
-                      onPressed: () {
-                        Get.updateLocale(const Locale('en', 'US'));
-                      },
-                      child: const Text('EN')),
-                if (locale != 'ja' && locale != 'ja-JP')
-                  TextButton(
-                      onPressed: () {
-                        Get.updateLocale(const Locale('ja', 'JP'));
-                      },
-                      child: const Text('JP'))
-              ],
+              actions: [LanaguesSwitchCard()],
               backgroundColor: bgColor,
               elevation: isHome == true ? 1 : 0,
               leading: isHome != null
@@ -73,6 +54,57 @@ class MainScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class LanaguesSwitchCard extends StatelessWidget {
+  const LanaguesSwitchCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    String locale = Get.locale!.toLanguageTag();
+
+    return Row(
+      children: [
+        TextButton(
+            onPressed: () {
+              Responsive.text();
+            },
+            child: const Text(
+              'Mobile',
+              style: TextStyle(color: primaryColor),
+            )),
+        if (locale != 'ko-KR')
+          TextButton(
+              onPressed: () {
+                Get.updateLocale(const Locale('ko', 'KR'));
+              },
+              child: const Text(
+                'KR',
+                style: TextStyle(color: primaryColor),
+              )),
+        if (locale != 'en-US')
+          TextButton(
+              onPressed: () {
+                Get.updateLocale(const Locale('en', 'US'));
+              },
+              child: const Text(
+                'EN',
+                style: TextStyle(color: primaryColor),
+              )),
+        if (locale != 'ja' && locale != 'ja-JP')
+          TextButton(
+              onPressed: () {
+                Get.updateLocale(const Locale('ja', 'JP'));
+              },
+              child: const Text(
+                'JP',
+                style: TextStyle(color: primaryColor),
+              ))
+      ],
     );
   }
 }

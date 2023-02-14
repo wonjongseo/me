@@ -16,8 +16,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    String locale = Get.deviceLocale!.toLanguageTag();
-    print(locale);
     return GetMaterialApp(
         translations: Languagues(),
         locale: Get.deviceLocale,

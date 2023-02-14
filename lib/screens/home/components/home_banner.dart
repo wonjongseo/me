@@ -7,6 +7,7 @@ import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:wonjongseo/screens/main/main_scrren.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
@@ -78,7 +79,14 @@ class HomeBanner extends StatelessWidget {
                   ),
               ],
             ),
-          )
+          ),
+          if (Responsive.isDesktop(context))
+            const Positioned(
+                right: 0,
+                top: 0,
+                child: Padding(
+                    padding: EdgeInsets.all(defaultPadding / 2),
+                    child: LanaguesSwitchCard()))
         ],
       ),
     );
