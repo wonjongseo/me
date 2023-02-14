@@ -18,8 +18,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        scrollBehavior: MaterialScrollBehavior()
-            .copyWith(dragDevices: {PointerDeviceKind.mouse}),
+        scrollBehavior: GetPlatform.isDesktop
+            ? MaterialScrollBehavior()
+                .copyWith(dragDevices: {PointerDeviceKind.mouse})
+            : MaterialScrollBehavior(),
         translations: Languagues(),
         locale: Get.deviceLocale,
         fallbackLocale: const Locale('en', 'US'),
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
                   bodyText2: const TextStyle(color: bodyTextColor),
                 )),
         // initialRoute: '/test',
-        initialRoute: SPLASH_PATH,
+        initialRoute: HOME_PATH,
         getPages: [
           GetPage(name: '/test', page: () => const TestPage()),
           GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),

@@ -39,6 +39,58 @@ final List<Corporation> corporation_projects = [
         'AWS',
         'Docker',
       ]),
+
+  Corporation(
+      name: "T社",
+      source: "再エネシステム(蓄電池発電所向け開発)",
+      description: "アービトラージタイムシフト",
+      useIt: [
+        'Spring Frame Work',
+        'Vue JS',
+        'AWS',
+        'Docker',
+      ]),
+
+  Corporation(
+      name: "T社",
+      source: "再エネシステム(蓄電池発電所向け開発)",
+      description: "アービトラージタイムシフト",
+      useIt: [
+        'Spring Frame Work',
+        'Vue JS',
+        'AWS',
+        'Docker',
+      ]),
+  Corporation(
+      name: "T社",
+      source: "再エネシステム(蓄電池発電所向け開発)",
+      description: "アービトラージタイムシフト",
+      useIt: [
+        'Spring Frame Work',
+        'Vue JS',
+        'AWS',
+        'Docker',
+      ]),
+  Corporation(
+      name: "T社",
+      source: "再エネシステム(蓄電池発電所向け開発)",
+      description: "アービトラージタイムシフト",
+      useIt: [
+        'Spring Frame Work',
+        'Vue JS',
+        'AWS',
+        'Docker',
+      ]),
+  Corporation(
+      name: "T社",
+      source: "再エネシステム(蓄電池発電所向け開発)",
+      description: "アービトラージタイムシフト",
+      useIt: [
+        'Spring Frame Work',
+        'Vue JS',
+        'AWS',
+        'Docker',
+      ]),
   // Corporation(
   //   name: "Corporation 2",
   //   source: "Won Jong Seo",
