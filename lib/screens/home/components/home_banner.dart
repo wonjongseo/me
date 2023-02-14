@@ -8,6 +8,8 @@ import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/main/main_scrren.dart';
+import 'package:wonjongseo/utils/dialog.dart';
+import 'package:wonjongseo/utils/language_switch_card.dart';
 
 class HomeBanner extends StatelessWidget {
   const HomeBanner({super.key});
@@ -71,7 +73,9 @@ class HomeBanner extends StatelessWidget {
                           vertical: defaultPadding),
                       backgroundColor: primaryColor,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      openDialog(title: 'EXPLORE NOW', content: 'Not Ready');
+                    },
                     child: Text(
                       'EXPLORE NOW',
                       style: TextStyle(color: darkColor),

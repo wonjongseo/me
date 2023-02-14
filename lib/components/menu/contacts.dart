@@ -26,31 +26,42 @@ class Contacts extends StatelessWidget {
               );
             },
             icon: SvgPicture.asset(
-              "assets/icons/instagram.svg",
+              "assets/icons/icons8-instagram.svg",
               width: 30,
-              height: 30,
-              color: Colors.white,
+              color: Colors.grey,
             ),
           ),
-          IconButton(
-            onPressed: () {
-              launchUrl(
-                Uri.parse('https://github.com/wonjongseo'),
-              );
-            },
-            icon: SvgPicture.asset("assets/icons/github.svg"),
-          ),
-          IconButton(
-            onPressed: () {
-              launchUrl(
-                Uri.parse('https://github.com/wonjongseo'),
-              );
-            },
-            icon: SvgPicture.asset("assets/icons/notion.svg"),
-          ),
+          const SizedBox(width: defaultPadding / 3),
           IconButton(
             onPressed: () {},
-            icon: SvgPicture.asset("assets/icons/behance.svg"),
+            icon: SvgPicture.asset(
+              "assets/icons/icons8-facebook.svg",
+              color: Colors.grey,
+            ),
+          ),
+          const SizedBox(width: defaultPadding / 3),
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse('https://github.com/wonjongseo'),
+              );
+            },
+            icon: SvgPicture.asset(
+              "assets/icons/icons8-notion.svg",
+              color: Colors.grey,
+            ),
+          ),
+          const SizedBox(width: defaultPadding / 3),
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse('https://github.com/wonjongseo'),
+              );
+            },
+            icon: SvgPicture.asset(
+              "assets/icons/icons8-github.svg",
+              color: Colors.grey,
+            ),
           ),
           const Spacer(),
         ],

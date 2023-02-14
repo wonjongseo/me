@@ -8,6 +8,7 @@ import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/datas.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wonjongseo/screens/home/components/area_info_text.dart';
+import 'package:wonjongseo/utils/dialog.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
@@ -35,7 +36,9 @@ class SideMenu extends StatelessWidget {
                     const Knowledges(),
                     const Divider(),
                     TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        openDialog(title: 'DOWNLOAD CV', content: 'Not Ready');
+                      },
                       child: FittedBox(
                         child: Row(
                           children: [
