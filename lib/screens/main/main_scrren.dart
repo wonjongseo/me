@@ -13,7 +13,7 @@ class MainScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: !Responsive.isDesktop(context) && Responsive.toggleMobile
+      appBar: !Responsive.isDesktop(context)
           ? AppBar(
               actions: [LanaguesSwitchCard()],
               backgroundColor: bgColor,
@@ -69,14 +69,6 @@ class LanaguesSwitchCard extends StatelessWidget {
 
     return Row(
       children: [
-        TextButton(
-            onPressed: () {
-              Responsive.text();
-            },
-            child: const Text(
-              'Mobile',
-              style: TextStyle(color: primaryColor),
-            )),
         if (locale != 'ko-KR')
           TextButton(
               onPressed: () {
