@@ -25,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Won Jong Seo',
+              'Welcome to My Friends',
               style: Theme.of(context).textTheme.subtitle1,
             ),
             const SizedBox(height: defaultPadding),

@@ -37,7 +37,8 @@ class SideMenu extends StatelessWidget {
                     const Divider(),
                     TextButton(
                       onPressed: () {
-                        openDialog(title: 'DOWNLOAD CV', content: 'Not Ready');
+                        openDialog(
+                            title: 'DOWNLOAD CV', content: 'DOWNLOADING...');
                       },
                       child: FittedBox(
                         child: Row(
