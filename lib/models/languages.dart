@@ -9,11 +9,18 @@ class Languagues extends Translations {
           'description': '설명',
           'corporation_project': '회사 프로젝트',
           'read_more': '더보기',
+
           'project_completion_report': '프로젝트 완료 보고서',
+          'author': '작성자 (계급 및 성명)',
+          'date_writed': '작성 일자',
           'project_name': '프로젝트 명',
-          'project_period': '수행 기간',
-          'project_assigned_task': '담당 업무',
-          'project_assigned_task': '운영 환경',
+
+          'performance_period': '수행 기간',
+          'assigned_task': '담당 업무',
+          'operating_environment': '운영 환경',
+          'used_learned': '사용한 것 (배운 것)',
+          'problems_future_countermeasures': '문제점\n향후 대응방안',
+          'point_me_felt': '느낀점',
 
           'programmer_name': '원종서',
           'programmer_city': '도쿄',
@@ -73,7 +80,18 @@ class Languagues extends Translations {
           'description': '説明',
           'corporation_project': '`会社のプロジェクト',
           'read_more': 'もっとみる',
+
           'project_completion_report': 'プロジェクト完了レポート',
+          'project_name': 'プロジェクト名',
+          'performance_period': '遂行期間',
+          'author': '作成者(階級及び氏名)',
+          'date_writed': '作成日付',
+
+          'assigned_task': '担当業務',
+          'operating_environment': '運営環境',
+          'used_learned': '使ったこと（習った）',
+          'problems_future_countermeasures': '問題点\n今後の対応策',
+          'point_me_felt': '感じた点',
 
           'programmer_name': 'ウォンジョンソ',
           'programmer_city': '東京',
@@ -142,6 +160,16 @@ class Languagues extends Translations {
           'read_more': 'Read More',
 
           'project_completion_report': 'Project Completion Report',
+          'author': 'Author (class and name)',
+          'date_writed': 'Date Writed',
+          'project_name': 'Project Name',
+          'performance_period': 'Performance Period',
+          'assigned_task': 'Assigned task',
+          'operating_environment': 'Operating Environment',
+          'used_learned': 'Used (learned)',
+          'problems_future_countermeasures': 'Problems\nFuture Countermeasures',
+          'point_me_felt': 'Point me felt',
+
           'programmer_name': 'Jong seo Won',
           'programmer_city': 'Tokyo',
           'programmer_residence': 'Japan',

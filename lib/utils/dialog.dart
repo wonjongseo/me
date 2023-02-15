@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:wonjongseo/screens/report/report_screen.dart';
 
 void openDialog({title, content, List<Widget>? actions}) async {
   Get.dialog(AlertDialog(
@@ -26,24 +27,28 @@ void openDialog({title, content, List<Widget>? actions}) async {
 }
 
 void openProjectDialog(BuildContext context, Corporation corporation,
-    {List<Widget>? actions, Widget? child}) async {
-  Get.dialog(AlertDialog(
-    title: Text(corporation.name),
-    content: SizedBox(
-      width: Responsive.isDesktop(context)
-          ? MediaQuery.of(context).size.width - 300
-          : MediaQuery.of(context).size.width - 150,
-      child: child != null
-          ? child
-          : Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(corporation.source),
-                Text(corporation.description)
-              ],
-            ),
-    ),
-    actions: actions,
-  ));
+    {List<Widget>? actions, Widget? child}) {
+  if (GetPlatform.isMobile || Responsive.isMobile(context)) {
+    Get.to(() => ReportSceen(corporation: corporation));
+  } else {
+    Get.dialog(AlertDialog(
+      title: Text(corporation.name),
+      content: SizedBox(
+        width: Responsive.isDesktop(context)
+            ? MediaQuery.of(context).size.width - 300
+            : null,
+        child: child != null
+            ? child
+            : Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(corporation.source),
+                  Text(corporation.description)
+                ],
+              ),
+      ),
+      actions: actions,
+    ));
+  }
 }

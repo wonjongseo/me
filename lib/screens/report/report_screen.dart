@@ -10,36 +10,51 @@ import 'package:wonjongseo/screens/company/company_screen.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:wonjongseo/screens/report/components/setting_card.dart';
+import 'package:get/get.dart';
 
 const String REPORT_PATH = '/report';
 
 class ReportSceen extends StatelessWidget {
-  const ReportSceen({super.key, required this.corporation});
+  const ReportSceen({required this.corporation});
 
   final Corporation corporation;
-
   @override
   Widget build(BuildContext context) {
     EdgeInsets paddingValue = Responsive.isDesktop(context)
         ? const EdgeInsets.symmetric(
             horizontal: defaultPadding * 10, vertical: defaultPadding * 4)
         : const EdgeInsets.symmetric(
-            horizontal: defaultPadding * 2, vertical: defaultPadding * 4);
+            horizontal: defaultPadding * 1, vertical: defaultPadding * 2);
 
-    return Scaffold(
-      body: SafeArea(
-        child: Container(
-          color: Colors.white,
-          child: Padding(
-            padding: paddingValue,
-            child: SingleChildScrollView(
-                child: ReportCard(
-              corporation: corporation,
-            )),
-          ),
-        ),
-      ),
-    );
+    return GetPlatform.isMobile || Responsive.isMobile(context)
+        ? MainScreen(
+            body: SafeArea(
+              child: Container(
+                color: Colors.white,
+                child: Padding(
+                  padding: paddingValue,
+                  child: SingleChildScrollView(
+                      child: ReportCard(
+                    corporation: corporation,
+                  )),
+                ),
+              ),
+            ),
+          )
+        : Scaffold(
+            body: SafeArea(
+              child: Container(
+                color: Colors.white,
+                child: Padding(
+                  padding: paddingValue,
+                  child: SingleChildScrollView(
+                      child: ReportCard(
+                    corporation: corporation,
+                  )),
+                ),
+              ),
+            ),
+          );
   }
 }
 
@@ -57,16 +72,14 @@ class ReportCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mainFontSize = Responsive.isDesktop(context) ? 28 : 12;
+    double mainFontSize = Responsive.isDesktop(context) ? 28 : 9;
+
     TextStyle reportTextStyle = TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize: mainFontSize - 6,
+        fontSize:
+            Responsive.isDesktop(context) ? mainFontSize - 8 : mainFontSize - 6,
         color: Colors.black);
 
-    TextStyle reportTextSmallStyle = TextStyle(
-        fontWeight: FontWeight.w700,
-        fontSize: mainFontSize - 8,
-        color: Colors.black);
     return Column(
       children: [
         if (Responsive.isDesktop(context))
@@ -93,7 +106,7 @@ class ReportCard extends StatelessWidget {
                     color: Colors.white),
                 child: Center(
                   child: Text(
-                    '프로젝트 완료 보고서',
+                    toTr('project_completion_report'),
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: mainFontSize,
@@ -115,7 +128,7 @@ class ReportCard extends StatelessWidget {
                     color: Colors.grey),
                 child: Center(
                   child: Text(
-                    '작성자 (계급 및 성명)',
+                    toTr('author'),
                     style: reportTextStyle,
                   ),
                 ),
@@ -152,7 +165,7 @@ class ReportCard extends StatelessWidget {
                     color: Colors.grey),
                 child: Center(
                   child: Text(
-                    '작성 일자',
+                    toTr('date_writed'),
                     style: reportTextStyle,
                   ),
                 ),
@@ -184,7 +197,7 @@ class ReportCard extends StatelessWidget {
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
                   child: Text(
-                    '프로젝트 명',
+                    toTr('project_name'),
                     style: reportTextStyle,
                   ),
                 ),
@@ -215,7 +228,8 @@ class ReportCard extends StatelessWidget {
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
-                  child: Text('수행 기간', style: reportTextStyle),
+                  child:
+                      Text(toTr('performance_period'), style: reportTextStyle),
                 ),
               ),
             ),
@@ -252,7 +266,7 @@ class ReportCard extends StatelessWidget {
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
-                  child: Text('담당 업무', style: reportTextStyle),
+                  child: Text(toTr('assigned_task'), style: reportTextStyle),
                 ),
               ),
             ),
@@ -267,7 +281,7 @@ class ReportCard extends StatelessWidget {
                     ),
                     color: Colors.white),
                 child: Center(
-                  child: Text('7'),
+                  child: Text('담당 업무', style: reportTextStyle),
                 ),
               ),
             ),
@@ -277,14 +291,41 @@ class ReportCard extends StatelessWidget {
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
+                child: Center(
+                  child: Text(toTr('operating_environment'),
+                      style: reportTextStyle),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 10,
+              mainAxisCellCount: 1,
+              child: Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 2),
+                      right: BorderSide(color: Colors.black, width: 2),
+                    ),
+                    color: Colors.white),
                 child: Center(
                   child: Text('운영 환경', style: reportTextStyle),
                 ),
               ),
             ),
             StaggeredGridTile.count(
+              crossAxisCellCount: 3,
+              mainAxisCellCount: 2,
+              child: Container(
+                decoration:
+                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
+                child: Center(
+                  child: Text(toTr('used_learned'), style: reportTextStyle),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: 2,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -292,25 +333,26 @@ class ReportCard extends StatelessWidget {
                       right: BorderSide(color: Colors.black, width: 2),
                     ),
                     color: Colors.white),
-                child: Center(
-                  child: Text('6', style: reportTextStyle),
-                ),
-              ),
-            ),
-            StaggeredGridTile.count(
-              crossAxisCellCount: 3,
-              mainAxisCellCount: 2,
-              child: Container(
-                decoration:
-                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
                   child: Text('사용한 것 (배운 것)', style: reportTextStyle),
                 ),
               ),
             ),
             StaggeredGridTile.count(
+              crossAxisCellCount: 3,
+              mainAxisCellCount: 1,
+              child: Container(
+                decoration:
+                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
+                child: Center(
+                  child: Text(toTr('problems_future_countermeasures'),
+                      style: reportTextStyle),
+                ),
+              ),
+            ),
+            StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 2,
+              mainAxisCellCount: 1,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -318,45 +360,19 @@ class ReportCard extends StatelessWidget {
                       right: BorderSide(color: Colors.black, width: 2),
                     ),
                     color: Colors.white),
-                child: Center(
-                  child: Text('6'),
-                ),
-              ),
-            ),
-            StaggeredGridTile.count(
-              crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
-              child: Container(
-                decoration:
-                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
                   child: Text('문제 점\n향후 대응방안', style: reportTextStyle),
                 ),
               ),
             ),
             StaggeredGridTile.count(
-              crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
-              child: Container(
-                decoration: const BoxDecoration(
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black, width: 2),
-                      right: BorderSide(color: Colors.black, width: 2),
-                    ),
-                    color: Colors.white),
-                child: Center(
-                  child: Text('61'),
-                ),
-              ),
-            ),
-            StaggeredGridTile.count(
               crossAxisCellCount: 3,
               mainAxisCellCount: 3,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
                 child: Center(
-                  child: Text('느낀점', style: reportTextStyle),
+                  child: Text(toTr('point_me_felt'), style: reportTextStyle),
                 ),
               ),
             ),
@@ -371,7 +387,7 @@ class ReportCard extends StatelessWidget {
                     ),
                     color: Colors.white),
                 child: Center(
-                  child: Text('7'),
+                  child: Text('느낀점', style: reportTextStyle),
                 ),
               ),
             ),
