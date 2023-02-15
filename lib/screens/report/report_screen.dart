@@ -77,7 +77,7 @@ class ReportCard extends StatelessWidget {
     TextStyle reportTextStyle = TextStyle(
         fontWeight: FontWeight.bold,
         fontSize:
-            Responsive.isDesktop(context) ? mainFontSize - 8 : mainFontSize - 6,
+            Responsive.isDesktop(context) ? mainFontSize - 8 : mainFontSize - 3,
         color: Colors.black);
 
     return Column(
