@@ -8,6 +8,7 @@ import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+import 'package:wonjongseo/screens/project_detail/components/project_detail_list.dart';
 import 'package:wonjongseo/screens/report/components/setting_card.dart';
 import 'package:get/get.dart';
 
@@ -80,12 +81,12 @@ class ReportCard extends StatelessWidget {
             ? 16
             : 28;
 
-    // num mainAxisCellCount = !Responsive.isMobile(context) ? 1 : 1.7;
     num mainAxisCellCount = Responsive.isMobile(context)
         ? 1.7
         : Responsive.isTablet(context)
             ? 2
             : 1;
+
     TextStyle reportTextStyle = TextStyle(
         fontWeight: FontWeight.bold,
         fontSize: Responsive.isMobile(context)
@@ -94,6 +95,9 @@ class ReportCard extends StatelessWidget {
                 ? mainFontSize - 4
                 : mainFontSize - 8,
         color: Colors.black);
+
+    double paddingValue =
+        Responsive.isMobile(context) ? defaultPadding / 3 : defaultPadding / 2;
 
     return Column(
       children: [
@@ -264,7 +268,7 @@ class ReportCard extends StatelessWidget {
                     TextSpan(
                         text: corporation.startDate.toString().substring(0, 7),
                         children: [
-                          const TextSpan(text: ' ~ '),
+                          const TextSpan(text: '  ~  '),
                           TextSpan(
                               text: corporation.endDate
                                   .toString()
@@ -296,7 +300,19 @@ class ReportCard extends StatelessWidget {
                     ),
                     color: Colors.white),
                 child: Center(
-                  child: Text('담당 업무', style: reportTextStyle),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                        corporation.assignedTask!.length,
+                        (index) => Padding(
+                              padding: EdgeInsets.only(bottom: paddingValue),
+                              child: Text(
+                                corporation.assignedTask![index],
+                                style: reportTextStyle,
+                              ),
+                            )),
+                  ),
                 ),
               ),
             ),
@@ -323,7 +339,19 @@ class ReportCard extends StatelessWidget {
                     ),
                     color: Colors.white),
                 child: Center(
-                  child: Text('운영 환경', style: reportTextStyle),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                        corporation.operatingEnvironment!.length,
+                        (index) => Padding(
+                              padding: EdgeInsets.only(bottom: paddingValue),
+                              child: Text(
+                                corporation.operatingEnvironment![index],
+                                style: reportTextStyle,
+                              ),
+                            )),
+                  ),
                 ),
               ),
             ),
@@ -349,7 +377,19 @@ class ReportCard extends StatelessWidget {
                     ),
                     color: Colors.white),
                 child: Center(
-                  child: Text('사용한 것 (배운 것)', style: reportTextStyle),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: List.generate(
+                        corporation.useIt!.length,
+                        (index) => Padding(
+                              padding: EdgeInsets.only(bottom: paddingValue),
+                              child: Text(
+                                '${index + 1}. ${corporation.useIt![index]}',
+                                style: reportTextStyle,
+                              ),
+                            )),
+                  ),
                 ),
               ),
             ),
