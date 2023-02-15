@@ -42,11 +42,11 @@ class MainScreen extends StatelessWidget {
             constraints: const BoxConstraints(maxWidth: maxWidth),
             child: Row(
               children: [
-                // if (Responsive.isDesktop(context))
-                //   const Expanded(
-                //     flex: 2,
-                //     child: SideMenu(),
-                //   ),
+                if (Responsive.isDesktop(context))
+                  const Expanded(
+                    flex: 2,
+                    child: SideMenu(),
+                  ),
                 const SizedBox(width: defaultPadding),
                 Expanded(flex: 7, child: body),
                 const SizedBox(width: defaultPadding)
