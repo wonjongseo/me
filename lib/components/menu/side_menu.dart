@@ -3,7 +3,6 @@ import 'package:wonjongseo/components/menu/coding.dart';
 import 'package:wonjongseo/components/menu/contacts.dart';
 import 'package:wonjongseo/components/menu/knowledges.dart';
 import 'package:wonjongseo/components/menu/my_info.dart';
-import 'package:wonjongseo/components/menu/skills.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/datas.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -32,8 +31,10 @@ class SideMenu extends StatelessWidget {
                         (index) => AreaInfoText(
                             title: infoList[index]['title']!,
                             text: infoList[index]['text']!)),
-                    const Skills(),
-                    const Coding(),
+                    AnimatedProgressIndicator(
+                        text: 'FrameWorks', list: frameWorkList),
+                    AnimatedProgressIndicator(
+                        text: 'Languages', list: langaugeList),
                     const Knowledges(),
                     const Divider(),
                     TextButton(

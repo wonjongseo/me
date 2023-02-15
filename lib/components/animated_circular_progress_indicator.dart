@@ -1,6 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
 
+class AnimatedCircularProgressIndicatorContainer extends StatelessWidget {
+  const AnimatedCircularProgressIndicatorContainer({
+    Key? key,
+    required this.percentage,
+    required this.label,
+  }) : super(key: key);
+
+  final double percentage;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        margin: const EdgeInsets.symmetric(horizontal: defaultPadding * 0.7),
+        child: AnimatedCircularProgressIndicator(
+            percentage: percentage, label: label),
+      ),
+    );
+  }
+}
+
 class AnimatedCircularProgressIndicator extends StatelessWidget {
   const AnimatedCircularProgressIndicator(
       {super.key, required this.percentage, required this.label});

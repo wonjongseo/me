@@ -6,31 +6,67 @@ import 'package:wonjongseo/components/animated_circular_progress_indicator.dart'
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/datas.dart';
 
-class Coding extends StatelessWidget {
-  const Coding({super.key});
+class AnimatedProgressIndicator extends StatefulWidget {
+  const AnimatedProgressIndicator(
+      {super.key, required this.text, required this.list});
 
+  final String text;
+  final List<Skill> list;
+
+  @override
+  State<AnimatedProgressIndicator> createState() =>
+      _AnimatedProgressIndicatorState();
+}
+
+class _AnimatedProgressIndicatorState extends State<AnimatedProgressIndicator> {
+  bool isShowMore = false;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Divider(),
+        const Divider(),
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            'Coding',
+            widget.text,
             style: sectionTitleStyle(context),
           ),
         ),
-        SingleChildScrollView(
-          child: Column(
-            children: List.generate(
-                codingList.length,
-                (index) => AnimatedLinearProgressIndicator(
-                    percentage: codingList[index]['value'] / 100,
-                    label: codingList[index]['label'])),
-          ),
-        )
+        isShowMore
+            ? Column(
+                children: List.generate(
+                    widget.list.length,
+                    (index) => AnimatedLinearProgressIndicator(
+                        percentage: widget.list[index].value / 100,
+                        label: widget.list[index].language)),
+              )
+            : Padding(
+                padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+                child: Row(
+                  children: List.generate(
+                      // widget.list.length > 3 ? 3 : widget.list.length,
+                      3,
+                      (index) => AnimatedCircularProgressIndicatorContainer(
+                          percentage: widget.list[index].value / 100,
+                          label: widget.list[index].language)),
+                ),
+              ),
+        TextButton(
+            onPressed: () {
+              setState(() {
+                isShowMore = !isShowMore;
+              });
+            },
+            child: isShowMore
+                ? const Text(
+                    'Fold...',
+                    style: TextStyle(color: primaryColor),
+                  )
+                : const Text(
+                    'Show More...',
+                    style: TextStyle(color: primaryColor),
+                  ))
       ],
     );
   }
