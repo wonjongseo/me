@@ -26,6 +26,7 @@ class SideMenu extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    const Contacts(),
                     ...List.generate(
                         infoList.length,
                         (index) => AreaInfoText(
@@ -57,7 +58,6 @@ class SideMenu extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const Contacts()
                   ],
                 ),
               ),

@@ -1,14 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:wonjongseo/screens/project_detail/components/project_detail_list.dart';
 import 'package:wonjongseo/screens/report/components/setting_card.dart';
 import 'package:get/get.dart';
 
@@ -100,6 +96,7 @@ class ReportCard extends StatelessWidget {
         Responsive.isMobile(context) ? defaultPadding / 3 : defaultPadding / 2;
 
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.end,
       children: [
         if (Responsive.isDesktop(context))
           Row(
@@ -473,6 +470,11 @@ class ReportCard extends StatelessWidget {
             // ),
           ],
         ),
+        const SizedBox(height: defaultPadding / 4),
+        Text(
+          'page 1',
+          style: TextStyle(color: Colors.black),
+        )
       ],
     );
   }

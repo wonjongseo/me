@@ -49,6 +49,7 @@ class ProjectImageSlider extends StatelessWidget {
                 carouselController: carouselController,
                 options: CarouselOptions(
                   autoPlay: true,
+                  autoPlayInterval: const Duration(seconds: 2),
                   aspectRatio: 2.0,
                   enlargeCenterPage: true,
                   height: 600,
@@ -92,7 +93,7 @@ class ProjectImageSlider extends StatelessWidget {
                   ),
                 ),
               ),
-              if (project.images.length <= 20)
+              if (project.images.length <= 18)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: project.images.asMap().entries.map((entry) {

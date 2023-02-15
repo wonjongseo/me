@@ -2,6 +2,7 @@ List<Map<String, String>> infoList = [
   {'title': 'Residence', 'text': 'programmer_residence'},
   {'title': 'City', 'text': 'programmer_city'},
   {'title': 'Age', 'text': 'programmer_age'},
+  {'title': 'Career', 'text': 'programmer_career'},
 ];
 List<Map<String, dynamic>> skillsList = [
   {'skillName': 'Flutter', 'skillLevel': 80},

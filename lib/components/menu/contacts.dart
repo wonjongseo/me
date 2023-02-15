@@ -13,8 +13,7 @@ class Contacts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: const EdgeInsets.only(top: defaultPadding / 2),
-      color: const Color(0xFF24242E),
+      margin: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       child: Row(
         children: [
           const Spacer(),

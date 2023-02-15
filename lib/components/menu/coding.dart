@@ -22,12 +22,14 @@ class Coding extends StatelessWidget {
             style: sectionTitleStyle(context),
           ),
         ),
-        Column(
-          children: List.generate(
-              codingList.length,
-              (index) => AnimatedLinearProgressIndicator(
-                  percentage: codingList[index]['value'] / 100,
-                  label: codingList[index]['label'])),
+        SingleChildScrollView(
+          child: Column(
+            children: List.generate(
+                codingList.length,
+                (index) => AnimatedLinearProgressIndicator(
+                    percentage: codingList[index]['value'] / 100,
+                    label: codingList[index]['label'])),
+          ),
         )
       ],
     );
