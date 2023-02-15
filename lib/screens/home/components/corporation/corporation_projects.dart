@@ -3,6 +3,7 @@ import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
+import 'package:wonjongseo/screens/report/report_screen.dart';
 import 'package:wonjongseo/utils/dialog.dart';
 import 'package:get/get.dart';
 
@@ -54,13 +55,15 @@ class CorporationProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        openProjectDialog(context, corporationProject, actions: [
-          IconButton(
-              onPressed: () {
-                Get.back();
-              },
-              icon: const Icon(Icons.arrow_back_ios))
-        ]);
+        openProjectDialog(context, corporationProject,
+            actions: [
+              IconButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  icon: const Icon(Icons.arrow_back_ios))
+            ],
+            child: ReportSceen(corporation: corporationProject));
       },
       child: Container(
         width: 350,

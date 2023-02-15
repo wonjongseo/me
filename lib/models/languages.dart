@@ -6,6 +6,15 @@ class Languagues extends Translations {
   @override
   Map<String, Map<String, String>> get keys => {
         'ko_KR': {
+          'description': '설명',
+          'corporation_project': '회사 프로젝트',
+          'read_more': '더보기',
+          'project_completion_report': '프로젝트 완료 보고서',
+          'project_name': '프로젝트 명',
+          'project_period': '수행 기간',
+          'project_assigned_task': '담당 업무',
+          'project_assigned_task': '운영 환경',
+
           'programmer_name': '원종서',
           'programmer_city': '도쿄',
           'programmer_residence': '일본',
@@ -61,6 +70,11 @@ class Languagues extends Translations {
         },
         /////////////////////////////////////////////////////
         'ja_JP': {
+          'description': '説明',
+          'corporation_project': '`会社のプロジェクト',
+          'read_more': 'もっとみる',
+          'project_completion_report': 'プロジェクト完了レポート',
+
           'programmer_name': 'ウォンジョンソ',
           'programmer_city': '東京',
           'programmer_residence': '日本',
@@ -123,6 +137,11 @@ class Languagues extends Translations {
         /////////////////////////////////////////////////////
         ///
         'en_US': {
+          'description': 'description',
+          'corporation_project': '`Corporation  Project',
+          'read_more': 'Read More',
+
+          'project_completion_report': 'Project Completion Report',
           'programmer_name': 'Jong seo Won',
           'programmer_city': 'Tokyo',
           'programmer_residence': 'Japan',

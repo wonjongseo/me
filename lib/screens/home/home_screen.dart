@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       isHome: true,
       body: SingleChildScrollView(
         child: Column(
-          children: [
+          children: const [
             HomeBanner(),
             CorporationProjects(),
             SizedBox(height: defaultPadding),

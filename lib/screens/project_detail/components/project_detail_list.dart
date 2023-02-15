@@ -7,11 +7,11 @@ class ProjectDetailList extends StatelessWidget {
     Key? key,
     required this.list,
     required this.detailTitle,
-    required this.projectIndex,
+    this.projectIndex,
   }) : super(key: key);
   final String detailTitle;
   final List<String> list;
-  final String projectIndex;
+  final String? projectIndex;
 
   @override
   Widget build(BuildContext context) {
