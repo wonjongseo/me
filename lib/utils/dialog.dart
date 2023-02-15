@@ -34,7 +34,7 @@ void openProjectDialog(BuildContext context, Corporation corporation,
     Get.dialog(AlertDialog(
       title: Text(corporation.name),
       content: SizedBox(
-        width: Responsive.isDesktop(context)
+        width: !Responsive.isMobile(context)
             ? MediaQuery.of(context).size.width - 300
             : null,
         child: child != null

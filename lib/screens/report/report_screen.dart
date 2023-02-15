@@ -6,7 +6,6 @@ import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
-import 'package:wonjongseo/screens/company/company_screen.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:wonjongseo/screens/report/components/setting_card.dart';
@@ -20,13 +19,16 @@ class ReportSceen extends StatelessWidget {
   final Corporation corporation;
   @override
   Widget build(BuildContext context) {
-    EdgeInsets paddingValue = Responsive.isDesktop(context)
+    EdgeInsets paddingValue = Responsive.isMobile(context)
         ? const EdgeInsets.symmetric(
-            horizontal: defaultPadding * 10, vertical: defaultPadding * 4)
-        : const EdgeInsets.symmetric(
-            horizontal: defaultPadding * 1, vertical: defaultPadding * 2);
+            horizontal: defaultPadding * 1, vertical: defaultPadding * 2)
+        : Responsive.isTablet(context)
+            ? const EdgeInsets.symmetric(
+                horizontal: defaultPadding * 3, vertical: defaultPadding * 2)
+            : const EdgeInsets.symmetric(
+                horizontal: defaultPadding * 10, vertical: defaultPadding * 4);
 
-    return GetPlatform.isMobile || Responsive.isMobile(context)
+    return !GetPlatform.isDesktop || !Responsive.isDesktop(context)
         ? MainScreen(
             body: SafeArea(
               child: Container(
@@ -72,12 +74,25 @@ class ReportCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double mainFontSize = Responsive.isDesktop(context) ? 28 : 9;
+    double mainFontSize = Responsive.isMobile(context)
+        ? 9
+        : Responsive.isTablet(context)
+            ? 16
+            : 28;
 
+    // num mainAxisCellCount = !Responsive.isMobile(context) ? 1 : 1.7;
+    num mainAxisCellCount = Responsive.isMobile(context)
+        ? 1.7
+        : Responsive.isTablet(context)
+            ? 2
+            : 1;
     TextStyle reportTextStyle = TextStyle(
         fontWeight: FontWeight.bold,
-        fontSize:
-            Responsive.isDesktop(context) ? mainFontSize - 8 : mainFontSize - 3,
+        fontSize: Responsive.isMobile(context)
+            ? mainFontSize - 2
+            : Responsive.isTablet(context)
+                ? mainFontSize - 4
+                : mainFontSize - 8,
         color: Colors.black);
 
     return Column(
@@ -92,7 +107,7 @@ class ReportCard extends StatelessWidget {
                       isOk: corporation.settings[index]['isOK'],
                     )),
           ),
-        if (Responsive.isDesktop(context))
+        if (!Responsive.isMobile(context))
           const SizedBox(height: defaultPadding / 2),
         StaggeredGrid.count(
           crossAxisCount: 13,
@@ -191,7 +206,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -205,7 +220,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -223,7 +238,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -235,7 +250,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -261,7 +276,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -272,7 +287,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -287,7 +302,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -299,7 +314,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -314,7 +329,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 2,
+              mainAxisCellCount: mainAxisCellCount * 2,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -325,7 +340,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 2,
+              mainAxisCellCount: mainAxisCellCount * 2,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -340,7 +355,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -352,7 +367,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 1,
+              mainAxisCellCount: mainAxisCellCount,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(
@@ -367,7 +382,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 3,
-              mainAxisCellCount: 3,
+              mainAxisCellCount: mainAxisCellCount * 3,
               child: Container(
                 decoration:
                     BoxDecoration(border: RBLBorder(), color: Colors.grey),
@@ -378,7 +393,7 @@ class ReportCard extends StatelessWidget {
             ),
             StaggeredGridTile.count(
               crossAxisCellCount: 10,
-              mainAxisCellCount: 3,
+              mainAxisCellCount: mainAxisCellCount * 3,
               child: Container(
                 decoration: const BoxDecoration(
                     border: Border(

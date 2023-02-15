@@ -89,7 +89,7 @@ class Languagues extends Translations {
 
           'assigned_task': '担当業務',
           'operating_environment': '運営環境',
-          'used_learned': '使ったこと（習った）',
+          'used_learned': '使ったこと(習った)',
           'problems_future_countermeasures': '問題点\n今後の対応策',
           'point_me_felt': '感じた点',
 

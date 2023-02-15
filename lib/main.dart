@@ -5,7 +5,6 @@ import 'package:wonjongseo/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/languages.dart';
-import 'package:wonjongseo/screens/company/company_screen.dart';
 import 'package:wonjongseo/screens/home/home_screen.dart';
 import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 import 'package:wonjongseo/screens/report/report_screen.dart';
@@ -50,7 +49,6 @@ class MyApp extends StatelessWidget {
                     corporation: corporation_projects[0],
                   )),
           GetPage(name: HOME_PATH, page: () => const HomeScreen()),
-          GetPage(name: COMPANY_PATH, page: () => CompanyScreen()),
           GetPage(
               name: PROJECT_DETAIL_PATH,
               page: () => const ProjectDetailScrenn()),
