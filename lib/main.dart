@@ -45,9 +45,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
           GetPage(
               name: REPORT_PATH,
-              page: () => ReportSceen(
-                    corporation: corporation_projects[0],
-                  )),
+              page: () => ReportSceen(corporation: corporation_projects[0])),
           GetPage(name: HOME_PATH, page: () => const HomeScreen()),
           GetPage(
               name: PROJECT_DETAIL_PATH,

@@ -25,8 +25,8 @@ class Languagues extends Translations {
           'programmer_name': '원종서',
           'programmer_city': '도쿄',
           'programmer_residence': '일본',
-          'programmer_age': '25',
-          'programmer_career': '1년',
+          'programmer_age': '1997년05월17일',
+          'academic_ability': '세종대학교(컴퓨터공학과)',
 
           'page_title': '지금 이순간에 최선을 다하자.',
 
@@ -108,8 +108,8 @@ class Languagues extends Translations {
           'programmer_name': 'ウォンジョンソ',
           'programmer_city': '東京',
           'programmer_residence': '日本',
-          'programmer_age': '25',
-          'programmer_career': '1年',
+          'programmer_age': '1997年05月17日',
+          'academic_ability': '世宗大学校(コンピューター工学科)',
 
           'page_title': '今この瞬間に集中しよう.',
 
@@ -120,7 +120,7 @@ class Languagues extends Translations {
 
           // ----------- 1 ------------
           'index_1_description':
-              'あなたはTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます. 内蔵された単語の他にも, 自分の単語を学んでテストすることもできる.',
+              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
           'index_1_specifications_0': 'マイボカの保存',
           'index_1_specifications_1': '言葉のようにトグルする',
           'index_1_specifications_2': '1日にtoeicの単語を勉強する',
@@ -192,8 +192,9 @@ class Languagues extends Translations {
           'programmer_name': 'Jong seo Won',
           'programmer_city': 'Tokyo',
           'programmer_residence': 'Japan',
-          'programmer_age': '25',
-          'programmer_career': '1 Year',
+
+          'programmer_age': '1997/05/17',
+          'academic_ability': 'Sejong University(Computer Engineering)',
 
           'page_title': 'Concentrate on this Moments.',
 

@@ -9,6 +9,31 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:wonjongseo/screens/home/components/area_info_text.dart';
 import 'package:wonjongseo/utils/dialog.dart';
 
+class Abouts extends StatelessWidget {
+  const Abouts({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
+          child: Text(
+            'About Me',
+            style: sectionTitleStyle(context),
+          ),
+        ),
+        ...List.generate(
+            infoList.length,
+            (index) => AreaInfoText(
+                title: infoList[index]['title']!,
+                text: infoList[index]['text']!)),
+      ],
+    );
+  }
+}
+
 class SideMenu extends StatelessWidget {
   const SideMenu({super.key});
 
@@ -26,11 +51,7 @@ class SideMenu extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Contacts(),
-                    ...List.generate(
-                        infoList.length,
-                        (index) => AreaInfoText(
-                            title: infoList[index]['title']!,
-                            text: infoList[index]['text']!)),
+                    // const Abouts(),
                     AnimatedProgressIndicator(
                         text: 'FrameWorks', list: frameWorkList),
                     AnimatedProgressIndicator(

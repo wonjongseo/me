@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:wonjongseo/screens/home/components/about_me_button.dart';
 import 'package:wonjongseo/utils/dialog.dart';
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
@@ -62,22 +64,8 @@ class HomeBanner extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    style: TextButton.styleFrom(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
-                      backgroundColor: primaryColor,
-                    ),
-                    onPressed: () {
-                      openDialog(title: 'EXPLORE NOW', content: 'Not Ready');
-                    },
-                    child: const Text(
-                      'EXPLORE NOW',
-                      style: TextStyle(color: darkColor),
-                    ),
-                  ),
+                // if (!Responsive.isMobileLarge(context))
+                const AboutMeButton(),
               ],
             ),
           ),

@@ -17,11 +17,15 @@ class FrameWork extends Skill {
 }
 
 List<Map<String, String>> infoList = [
+  {'title': 'Name', 'text': 'programmer_residence'},
   {'title': 'Residence', 'text': 'programmer_residence'},
-  {'title': 'City', 'text': 'programmer_city'},
+  // {'title': 'City', 'text': 'programmer_city'},
   {'title': 'Age', 'text': 'programmer_age'},
-  {'title': 'Career', 'text': 'programmer_career'},
+  {'title': 'Kakao / Line', 'text': 'visionwill'},
+  {'title': 'Email', 'text': 'visionwill3322@gmail.com'},
+  {'title': 'School', 'text': 'academic_ability'},
 ];
+
 List<FrameWork> frameWorkList = [
   FrameWork(language: 'Spring', value: 90),
   FrameWork(language: 'JPA', value: 70),

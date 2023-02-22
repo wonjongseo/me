@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/report/report_screen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void openDialog({title, content, List<Widget>? actions}) async {
   Get.dialog(AlertDialog(
@@ -12,6 +13,11 @@ void openDialog({title, content, List<Widget>? actions}) async {
   ));
 
   if (title == 'DOWNLOAD CV') {
+    launchUrl(
+      Uri.parse(
+          'https://drive.google.com/file/d/1qeLEwRzVHgQeDNT84ns9H4vZJy2ny6kp/view?usp=share_link'),
+    );
+    //https://drive.google.com/uc?id=1cF499U9Gd8tQi_DPP_h2ezwuQSvHJNFf&export=download
     await Future.delayed(const Duration(milliseconds: 700));
 
     if (Get.isDialogOpen != null) {
