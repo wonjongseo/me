@@ -18,7 +18,7 @@ class AboutMeButton extends StatelessWidget {
       style: TextButton.styleFrom(
         // padding: const EdgeInsets.symmetric(
         //     horizontal: defaultPadding, vertical: defaultPadding / 1.5),
-        padding: !Responsive.isMobileLarge(context)
+        padding: !Responsive.isMobile(context)
             ? const EdgeInsets.symmetric(
                 horizontal: defaultPadding * 2, vertical: defaultPadding)
             : const EdgeInsets.symmetric(
