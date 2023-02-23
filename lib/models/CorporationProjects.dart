@@ -21,23 +21,6 @@ class Corporation {
       required this.description});
 }
 
-/*
-
-調査分析 investigative analysis
-基本設定 basic configuration
-
-詳細設計 Detailed Design,
-製造単体、 Manufacturing single test,
-総合単体 Integrated single test,
-総合試験 Comprehensive test,
-運用業務 operational testing
-
-
-
-
-
- */
-
 final List<Corporation> corporation_projects = [
   Corporation(
     index: '0',
@@ -50,6 +33,7 @@ final List<Corporation> corporation_projects = [
       'AWS',
       'Docker',
     ],
+    pointMeFelt: 'point_me_felt_ans_0',
     assignedTask: ['Frontend', 'Backend'],
     operatingEnvironment: ['local', 'verfiy'],
     settings: [
