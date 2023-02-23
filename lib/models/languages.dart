@@ -38,7 +38,7 @@ class Languagues extends Translations {
 
           // ----------- 1 ------------
           'index_8_description':
-              '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있다.',
+              '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있습니다.',
           'index_8_specifications_0': '나의 단어 저장',
           'index_8_specifications_1': '단어 좋아요 기능',
           'index_8_specifications_2': '하루의 단어들 공부',
@@ -47,7 +47,7 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              '반려견을 잃어버리면 AI 기술을 이용하여 반려견의 특성을 분석해 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있다.',
+              '잃어버린 반려견을 펫 탐정소에 업로드 시키면 AI 기술을 이용하여 반려견의 특성을 분석해 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있습니다.',
           'index_7_specifications_0': '인증',
           'index_7_specifications_1': '게시글 업로드',
           'index_7_specifications_2': '게시글 보기',
@@ -149,7 +149,7 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              'ペットをなくなるとAI技術を利用してペットの特性を分析し,近隣ユーザーにペットに関する情報を提供し,ペットを失うことを防ぐことができる.',
+              'なくなったペットをペット探偵社に載せさせれば、AI技術を利用してペットの特性を分析し近隣ユーザーにペットに関する情報を提供しペットを失うことを防ぐことができます',
           'index_7_specifications_0': '認証',
           'index_7_specifications_1': '掲示板を乗せること',
           'index_7_specifications_2': '掲示板を見ること',
@@ -246,7 +246,7 @@ class Languagues extends Translations {
 
           // ----------- 1 ------------
           'index_8_description':
-              'If a dog is lost, AI technology can analyze the characteristics of the dog and provide information on the dog to nearby users to prevent the loss of the dog.',
+              'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
           'index_8_specifications_0': 'Saving My Voca',
           'index_8_specifications_1': 'Toggling like of a word',
           'index_8_specifications_2': 'Studying toeic words a day',
@@ -255,7 +255,7 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              'If a pet is lost, AI technology can analyze the characteristics of the pet and provide information on the pet to nearby users to prevent the loss of the pet.',
+              "If you let the lost pet go to a pet detective agency, you can use AI technology to analyze the pet's characteristics and provide information about the pet to neighboring users to prevent them from losing it.",
           'index_7_specifications_0': 'Authentication',
           'index_7_specifications_1': 'Uploading posts',
           'index_7_specifications_2': 'Watching posts',
