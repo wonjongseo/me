@@ -2,8 +2,9 @@ import 'package:get/get.dart';
 
 class Project {
   final String index, title, description;
-  final String? homepagePath, githubPath;
+
   final String? frontend, backend;
+  final String? homepagePath, githubPath;
   final List<String>? useThat;
   final List<String>? specifications;
   final List<String> images;
