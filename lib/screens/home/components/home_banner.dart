@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
-import 'package:wonjongseo/models/project.dart';
+import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/about_me_button.dart';
