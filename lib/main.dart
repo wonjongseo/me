@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:wonjongseo/constants.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/languages.dart';
@@ -30,15 +30,16 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: 'My name is Wonjongseo',
         theme: ThemeData.dark().copyWith(
-            primaryColor: primaryColor,
-            scaffoldBackgroundColor: bgColor,
-            canvasColor: bgColor,
-            textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-                .apply(bodyColor: Colors.white)
-                .copyWith(
-                  bodyText1: const TextStyle(color: bodyTextColor),
-                  bodyText2: const TextStyle(color: bodyTextColor),
-                )),
+          primaryColor: primaryColor,
+          scaffoldBackgroundColor: bgColor,
+          canvasColor: bgColor,
+          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+              .apply(bodyColor: Colors.white)
+              .copyWith(
+                bodyText1: const TextStyle(color: bodyTextColor),
+                bodyText2: const TextStyle(color: bodyTextColor),
+              ),
+        ),
         // initialRoute: '/test',
         initialRoute: SPLASH_PATH,
         getPages: [

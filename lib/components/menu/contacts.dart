@@ -32,7 +32,12 @@ class Contacts extends StatelessWidget {
           ),
           const SizedBox(width: defaultPadding / 3),
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              launchUrl(
+                Uri.parse('https://www.facebook.com/visionwill'),
+              );
+              //
+            },
             icon: SvgPicture.asset(
               "assets/icons/icons8-facebook.svg",
               color: Colors.grey,
@@ -42,7 +47,8 @@ class Contacts extends StatelessWidget {
           IconButton(
             onPressed: () {
               launchUrl(
-                Uri.parse('https://github.com/wonjongseo'),
+                Uri.parse(
+                    'https://woolly-clownfish-678.notion.site/Web-Developer-431e3c2297054ffda0f704f3fee5b8c9'),
               );
             },
             icon: SvgPicture.asset(

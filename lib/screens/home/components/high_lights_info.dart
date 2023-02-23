@@ -5,7 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
 
@@ -34,13 +34,6 @@ class HighLightsInfo extends StatelessWidget {
             ),
             label: "GitHub Projects",
           ),
-          // HeighLight(
-          //   counter: AnimatedCounter(
-          //     value: 13,
-          //     text: "K+",
-          //   ),
-          //   label: "Stars",
-          // ),
         ],
       ),
     );

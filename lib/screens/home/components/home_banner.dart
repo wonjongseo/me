@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/about_me_button.dart';
@@ -38,13 +38,17 @@ class HomeBanner extends StatelessWidget {
                   style: Responsive.isDesktop(context)
                       ? Theme.of(context).textTheme.headline3!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold)
-                      : Theme.of(context).textTheme.headline5!.copyWith(
-                          color: Colors.white, fontWeight: FontWeight.bold),
+                      : Theme.of(context).textTheme.headline6!.copyWith(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                          ),
                 ),
                 if (Responsive.isMobileLarge(context))
                   const SizedBox(height: defaultPadding / 2),
                 DefaultTextStyle(
-                  style: Theme.of(context).textTheme.subtitle1!,
+                  style: Responsive.isDesktop(context)
+                      ? Theme.of(context).textTheme.subtitle2!
+                      : Theme.of(context).textTheme.subtitle1!,
                   maxLines: 1,
                   child: Row(
                     children: [
@@ -85,6 +89,10 @@ class HomeBanner extends StatelessWidget {
 class MyBuildAnimatedText extends StatelessWidget {
   const MyBuildAnimatedText({super.key});
 
+/**
+ 9 - 0  -1  -> 8
+
+ */
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
@@ -92,11 +100,14 @@ class MyBuildAnimatedText extends StatelessWidget {
       animatedTexts: [
         ...List.generate(
             my_projects.length,
-            (index) => TyperAnimatedText(my_projects[index].title,
+            (index) => TyperAnimatedText(
+                my_projects[my_projects.length - index - 1].title,
                 speed: const Duration(milliseconds: 60))),
         ...List.generate(
             corporation_projects.length,
-            (index) => TyperAnimatedText(corporation_projects[index].source,
+            (index) => TyperAnimatedText(
+                corporation_projects[corporation_projects.length - index - 1]
+                    .source,
                 speed: const Duration(milliseconds: 60))),
       ],
     );

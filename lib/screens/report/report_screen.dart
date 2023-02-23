@@ -74,7 +74,7 @@ class ReportCard extends StatelessWidget {
     double mainFontSize = Responsive.isMobile(context)
         ? 9
         : Responsive.isTablet(context)
-            ? 16
+            ? 15
             : 28;
 
     num mainAxisCellCount = Responsive.isMobile(context)

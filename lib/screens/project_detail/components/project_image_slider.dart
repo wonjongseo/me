@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:wonjongseo/responsive.dart';
 
@@ -93,11 +93,11 @@ class ProjectImageSlider extends StatelessWidget {
                   ),
                 ),
               ),
-              if (project.images.length <= 18)
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: project.images.asMap().entries.map((entry) {
-                    return GestureDetector(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: project.images.asMap().entries.map((entry) {
+                  return Expanded(
+                    child: GestureDetector(
                       onTap: () => carouselController.animateToPage(entry.key),
                       child: Container(
                         width: 12.0,
@@ -113,9 +113,10 @@ class ProjectImageSlider extends StatelessWidget {
                                     .withOpacity(
                                         currentIndex == entry.key ? 0.9 : 0.4)),
                       ),
-                    );
-                  }).toList(),
-                )
+                    ),
+                  );
+                }).toList(),
+              )
             ],
           ),
         ),

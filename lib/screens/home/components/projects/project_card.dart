@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:get/get.dart';
 

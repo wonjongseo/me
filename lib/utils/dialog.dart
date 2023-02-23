@@ -5,33 +5,6 @@ import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/report/report_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void openDialog({title, content, List<Widget>? actions}) async {
-  Get.dialog(AlertDialog(
-    title: Text(title),
-    content: Text(content),
-    actions: actions,
-  ));
-
-  if (title == 'DOWNLOAD CV') {
-    launchUrl(
-      Uri.parse(
-          'https://drive.google.com/file/d/1qeLEwRzVHgQeDNT84ns9H4vZJy2ny6kp/view?usp=share_link'),
-    );
-    //https://drive.google.com/uc?id=1cF499U9Gd8tQi_DPP_h2ezwuQSvHJNFf&export=download
-    await Future.delayed(const Duration(milliseconds: 700));
-
-    if (Get.isDialogOpen != null) {
-      Get.back();
-    }
-
-    Get.snackbar(
-      'CV',
-      'Download is completed. (for test)',
-      snackPosition: SnackPosition.BOTTOM,
-    );
-  }
-}
-
 void openProjectDialog(BuildContext context, Corporation corporation,
     {List<Widget>? actions, Widget? child}) {
   if (GetPlatform.isMobile || Responsive.isMobile(context)) {

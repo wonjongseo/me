@@ -4,6 +4,7 @@ import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:get/route_manager.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:wonjongseo/screens/home/components/about_me_card.dart';
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
@@ -22,7 +23,7 @@ class AboutMeButton extends StatelessWidget {
             ? const EdgeInsets.symmetric(
                 horizontal: defaultPadding * 2, vertical: defaultPadding)
             : const EdgeInsets.symmetric(
-                horizontal: defaultPadding, vertical: defaultPadding / 1.5),
+                horizontal: defaultPadding, vertical: defaultPadding / 4),
         backgroundColor: primaryColor,
       ),
       onPressed: () {
@@ -75,18 +76,26 @@ class AboutMeButton extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          AboutMeCard(
+                          InkWellAboutMeCard(
                             icon: const Icon(Icons.call),
                             height: height,
-                            title: 'Line / Kakao',
-                            content: 'visionwill',
+                            title: 'Phone',
+                            content: '(+81)070-8544-9956',
+                            onTap: () {
+                              launchUrl(Uri.parse('tel:07085449956'));
+                            },
                           ),
                           const SizedBox(width: defaultPadding * 2),
-                          AboutMeCard(
+                          InkWellAboutMeCard(
                             icon: const Icon(Icons.email),
                             height: height,
                             title: 'Email',
                             content: 'visionwill3322@gmail.com',
+                            onTap: () {
+                              launchUrl(
+                                Uri.parse('mailto:visionwill3322@gmail.com'),
+                              );
+                            },
                           ),
                           const SizedBox(width: defaultPadding * 2),
                           AboutMeCard(
@@ -128,21 +137,29 @@ class AboutMeButton extends StatelessWidget {
                             content: toTr('programmer_residence'),
                           ),
                           const SizedBox(width: defaultPadding),
-                          AboutMeCard(
+                          InkWellAboutMeCard(
                             height: height / 1.5,
-                            title: 'Line / Kakao',
+                            title: 'Phone',
+                            content: '070-8544-9956',
                             icon: const Icon(Icons.call, size: 14),
-                            content: 'visionwill',
+                            onTap: () {
+                              // print('why');
+                              // launchUrl(Uri.parse('tel:07085449956'));
+                            },
                           ),
                         ],
                       ),
-
                       const SizedBox(height: defaultPadding),
-                      AboutMeCard(
+                      InkWellAboutMeCard(
                         height: height / 1.5,
                         title: 'Email',
                         icon: const Icon(Icons.email, size: 14),
                         content: 'visionwill3322@gmail.com',
+                        onTap: () async {
+                          await launchUrl(
+                            Uri.parse('mailto:visionwill3322@gmail.com'),
+                          );
+                        },
                       ),
                       const SizedBox(height: defaultPadding),
                       AboutMeCard(
@@ -151,32 +168,16 @@ class AboutMeButton extends StatelessWidget {
                         icon: const Icon(Icons.school, size: 14),
                         content: toTr('academic_ability'),
                       ),
-                      // Row(
-                      //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      //   children: [
-                      //     AboutMeCard(
-                      //       height: height / 1.5,
-                      //       title: 'Email',
-                      //       icon: const Icon(Icons.email),
-                      //       content: 'visionwill3322@gmail.com',
-                      //     ),
-                      //     const SizedBox(width: defaultPadding * 2),
-                      //     AboutMeCard(
-                      //       height: height / 1.5,
-                      //       title: 'Academic Ability',
-                      //       icon: const Icon(Icons.school),
-                      //       content: toTr('academic_ability'),
-                      //     ),
-                      //   ],
-                      // ),
                     ],
             ),
           ),
         ));
       },
-      child: const Text(
+      child: Text(
         'About Me!',
-        style: TextStyle(color: darkColor),
+        style: TextStyle(
+            color: darkColor,
+            fontSize: !Responsive.isMobile(context) ? 14 : 13),
       ),
     );
   }

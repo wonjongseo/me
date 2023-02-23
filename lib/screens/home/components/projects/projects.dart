@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/components/animated_counter.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
 import 'package:wonjongseo/screens/home/components/projects/project_card.dart';
@@ -35,29 +35,29 @@ class Projects extends StatelessWidget {
             itemCount: my_projects.length,
             crossAxisCount: 1,
             childAspectRatio: 2,
-            itemBuilder: (context, index) =>
-                ProjectCard(project: my_projects[index]),
+            itemBuilder: (context, index) => ProjectCard(
+                project: my_projects[my_projects.length - 1 - index]),
           ),
           mobileLarge: ProjectGridView(
             itemCount: my_projects.length,
             crossAxisCount: 1,
             childAspectRatio: 3,
-            itemBuilder: (context, index) =>
-                ProjectCard(project: my_projects[index]),
+            itemBuilder: (context, index) => ProjectCard(
+                project: my_projects[my_projects.length - 1 - index]),
           ),
           tablet: ProjectGridView(
             itemCount: my_projects.length,
             crossAxisCount: MediaQuery.of(context).size.width < 900 ? 2 : 3,
             childAspectRatio: MediaQuery.of(context).size.width < 900 ? 2 : 1.3,
-            itemBuilder: (context, index) =>
-                ProjectCard(project: my_projects[index]),
+            itemBuilder: (context, index) => ProjectCard(
+                project: my_projects[my_projects.length - 1 - index]),
           ),
           desktop: ProjectGridView(
             itemCount: my_projects.length,
             crossAxisCount: 3,
             childAspectRatio: 1.3,
-            itemBuilder: (context, index) =>
-                ProjectCard(project: my_projects[index]),
+            itemBuilder: (context, index) => ProjectCard(
+                project: my_projects[my_projects.length - 1 - index]),
           ),
         ),
       ],

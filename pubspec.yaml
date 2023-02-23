@@ -71,6 +71,7 @@ flutter:
     - assets/toeic/
     - assets/pet/
     - assets/shopping/
+    - assets/food_app/
     - assets/responsive/
     - assets/youtube/
     - assets/japan_java_swing/

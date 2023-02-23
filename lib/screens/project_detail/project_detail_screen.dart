@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';

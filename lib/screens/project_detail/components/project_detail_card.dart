@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/models/Project.dart';
+import 'package:wonjongseo/models/project.dart';
 import 'package:wonjongseo/screens/project_detail/components/homepage_lisk_card.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_detail_string.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_detail_list.dart';

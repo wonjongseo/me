@@ -10,10 +10,11 @@ class LanaguesSwitchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String locale = Get.locale!.toLanguageTag();
-
+    print(locale);
     return Row(
       children: [
-        if (locale != 'ko-KR')
+        // if (locale != 'ko-US' && locale != 'ko-KR')
+        if (!locale.contains('ko'))
           TextButton(
               onPressed: () {
                 Get.updateLocale(const Locale('ko', 'KR'));
@@ -22,7 +23,8 @@ class LanaguesSwitchCard extends StatelessWidget {
                 'KR',
                 style: TextStyle(color: primaryColor),
               )),
-        if (locale != 'en-US')
+        // if (locale != 'en-US')
+        if (!locale.contains('en'))
           TextButton(
               onPressed: () {
                 Get.updateLocale(const Locale('en', 'US'));
@@ -31,7 +33,8 @@ class LanaguesSwitchCard extends StatelessWidget {
                 'EN',
                 style: TextStyle(color: primaryColor),
               )),
-        if (locale != 'ja' && locale != 'ja-JP')
+        // if (locale != 'ja' && locale != 'ja-JP')
+        if (!locale.contains('ja'))
           TextButton(
               onPressed: () {
                 Get.updateLocale(const Locale('ja', 'JP'));
