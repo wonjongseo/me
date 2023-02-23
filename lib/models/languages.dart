@@ -108,7 +108,7 @@ class Languagues extends Translations {
 
         ////////////////////////////////////////////////////
         'ja_JP': {
-          'download_cv': 'CVの言語を選択してください',
+          'download_cv': 'CV 言語を選択してください',
           'description': '説明',
           'corporation_project': '`会社のプロジェクト',
           'read_more': 'もっとみる',
