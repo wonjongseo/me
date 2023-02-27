@@ -50,52 +50,25 @@ class AboutMeButton extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             height: height,
                             title: 'Name',
                             icon: const Icon(Icons.person),
                             content: toTr('programmer_name'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_name_ans')),
-                                ),
-                              ));
-                            },
                           ),
                           const SizedBox(width: defaultPadding * 2),
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             height: height,
                             title: 'Age',
                             icon: const Icon(Icons.calendar_month),
                             content: toTr('programmer_age'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_age_ans')),
-                                ),
-                              ));
-                            },
                           ),
                           const SizedBox(width: defaultPadding * 2),
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             icon: const Icon(Icons.home),
                             height: height,
                             title: 'Resident',
                             content: toTr('programmer_residence'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_city_ans')),
-                                ),
-                              ));
-                            },
                           ),
                         ],
                       ),
@@ -125,16 +98,11 @@ class AboutMeButton extends StatelessWidget {
                             },
                           ),
                           const SizedBox(width: defaultPadding * 2),
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             icon: const Icon(Icons.school),
                             height: height,
                             title: 'Academic Ability',
                             content: toTr('academic_ability'),
-                            onTap: () {
-                              launchUrl(
-                                Uri.parse('http://home.sejong.ac.kr/~cedpt/'),
-                              );
-                            },
                           ),
                         ],
                       ),
@@ -143,36 +111,18 @@ class AboutMeButton extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             height: height / 1.5,
                             title: 'Name',
                             icon: const Icon(Icons.person, size: 14),
                             content: toTr('programmer_name'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_name_ans')),
-                                ),
-                              ));
-                            },
                           ),
                           const SizedBox(width: defaultPadding),
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             height: height / 1.5,
                             title: 'Age',
                             icon: const Icon(Icons.calendar_month, size: 14),
                             content: toTr('programmer_age'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_age_ans')),
-                                ),
-                              ));
-                            },
                           ),
                         ],
                       ),
@@ -180,20 +130,11 @@ class AboutMeButton extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          InkWellAboutMeCard(
+                          AboutMeCard(
                             height: height / 1.5,
                             title: 'Resident',
                             icon: const Icon(Icons.home, size: 14),
                             content: toTr('programmer_residence'),
-                            onTap: () {
-                              Get.dialog(Dialog(
-                                child: Padding(
-                                  padding:
-                                      const EdgeInsets.all(defaultPadding * 2),
-                                  child: Text(toTr('programmer_city_ans')),
-                                ),
-                              ));
-                            },
                           ),
                           const SizedBox(width: defaultPadding),
                           InkWellAboutMeCard(
@@ -221,16 +162,11 @@ class AboutMeButton extends StatelessWidget {
                         },
                       ),
                       const SizedBox(height: defaultPadding),
-                      InkWellAboutMeCard(
+                      AboutMeCard(
                         height: height / 1.5,
                         title: 'Academic Ability',
                         icon: const Icon(Icons.school, size: 14),
                         content: toTr('academic_ability'),
-                        onTap: () {
-                          launchUrl(
-                            Uri.parse('http://home.sejong.ac.kr/~cedpt/'),
-                          );
-                        },
                       ),
                     ],
             ),

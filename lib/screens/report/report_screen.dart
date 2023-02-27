@@ -390,65 +390,59 @@ class ReportCard extends StatelessWidget {
                 ),
               ),
             ),
-            if (corporation.problemsFutureCountermeasures != null)
-              StaggeredGridTile.count(
-                crossAxisCellCount: 3,
-                mainAxisCellCount: mainAxisCellCount * 2,
-                child: Container(
-                  decoration:
-                      BoxDecoration(border: RBLBorder(), color: Colors.grey),
-                  child: Center(
-                    child: Text(toTr('problems_future_countermeasures'),
-                        style: reportTextStyle),
-                  ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 3,
+              mainAxisCellCount: mainAxisCellCount,
+              child: Container(
+                decoration:
+                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
+                child: Center(
+                  child: Text(toTr('problems_future_countermeasures'),
+                      style: reportTextStyle),
                 ),
               ),
-            if (corporation.problemsFutureCountermeasures != null)
-              StaggeredGridTile.count(
-                crossAxisCellCount: 10,
-                mainAxisCellCount: mainAxisCellCount * 2,
-                child: Container(
-                  decoration: const BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Colors.black, width: 2),
-                        right: BorderSide(color: Colors.black, width: 2),
-                      ),
-                      color: Colors.white),
-                  child: Center(
-                    child: Text(corporation.problemsFutureCountermeasures!,
-                        style: reportTextStyle),
-                  ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 10,
+              mainAxisCellCount: mainAxisCellCount,
+              child: Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 2),
+                      right: BorderSide(color: Colors.black, width: 2),
+                    ),
+                    color: Colors.white),
+                child: Center(
+                  child: Text('문제 점\n향후 대응방안', style: reportTextStyle),
                 ),
               ),
-            if (corporation.pointMeFelt != null)
-              StaggeredGridTile.count(
-                crossAxisCellCount: 3,
-                mainAxisCellCount: mainAxisCellCount * 3,
-                child: Container(
-                  decoration:
-                      BoxDecoration(border: RBLBorder(), color: Colors.grey),
-                  child: Center(
-                    child: Text(toTr('point_me_felt'), style: reportTextStyle),
-                  ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 3,
+              mainAxisCellCount: mainAxisCellCount * 3,
+              child: Container(
+                decoration:
+                    BoxDecoration(border: RBLBorder(), color: Colors.grey),
+                child: Center(
+                  child: Text(toTr('point_me_felt'), style: reportTextStyle),
                 ),
               ),
-            if (corporation.pointMeFelt != null)
-              StaggeredGridTile.count(
-                crossAxisCellCount: 10,
-                mainAxisCellCount: mainAxisCellCount * 3,
-                child: Container(
-                  decoration: const BoxDecoration(
-                      border: Border(
-                        bottom: BorderSide(color: Colors.black, width: 2),
-                        right: BorderSide(color: Colors.black, width: 2),
-                      ),
-                      color: Colors.white),
-                  child: Center(
-                    child: Text(toTr(corporation.pointMeFelt!),
-                        style: reportTextStyle),
-                  ),
+            ),
+            StaggeredGridTile.count(
+              crossAxisCellCount: 10,
+              mainAxisCellCount: mainAxisCellCount * 3,
+              child: Container(
+                decoration: const BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.black, width: 2),
+                      right: BorderSide(color: Colors.black, width: 2),
+                    ),
+                    color: Colors.white),
+                child: Center(
+                  child: Text('느낀점', style: reportTextStyle),
                 ),
               ),
+            ),
             // StaggeredGridTile.count(
             //   crossAxisCellCount: 3,
             //   mainAxisCellCount: 2,
