@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wonjongseo/constants.dart';
@@ -32,10 +33,13 @@ class CVDownloadCard extends StatelessWidget {
                       if (Get.isDialogOpen != null) {
                         Get.back();
                       }
-                      launchUrl(
-                        Uri.parse(
-                            'https://drive.google.com/file/d/1QrnK16kLDcR9CxuMcTf2wYvCTmDbCwpC/view?usp=share_link'),
-                      );
+
+                      print('aaaaa' + dotenv.get('JP_CV_PATH'));
+
+                      launchUrl(Uri.parse(dotenv.get('JP_CV_PATH'))
+                          // Uri.parse(
+                          //     'https://drive.google.com/file/d/1QrnK16kLDcR9CxuMcTf2wYvCTmDbCwpC/view?usp=share_link'),
+                          );
 
                       Get.snackbar(
                         'CV',
@@ -43,7 +47,7 @@ class CVDownloadCard extends StatelessWidget {
                         snackPosition: SnackPosition.BOTTOM,
                       );
                     },
-                    child: Text('JP')),
+                    child: const Text('JP')),
                 const SizedBox(width: defaultPadding / 3),
                 ElevatedButton(
                     style:

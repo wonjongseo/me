@@ -9,8 +9,10 @@ import 'package:wonjongseo/screens/home/home_screen.dart';
 import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 import 'package:wonjongseo/screens/report/report_screen.dart';
 import 'package:wonjongseo/screens/splash/splash_screen.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  await dotenv.load(fileName: '.env');
   runApp(const MyApp());
 }
 
