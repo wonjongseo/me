@@ -294,4 +294,17 @@ List<Project> my_projects = [
         'assets/responsive/10.png',
         'assets/responsive/10.png',
       ]),
+  Project(
+      index: '10',
+      title: "JLPT App",
+      description: "JLPT App created by Flutter",
+      frontend: 'Flutter',
+      specifications: [
+        'Saving My Voca',
+        'Studying JLPT Words and Grammars',
+        'Testing JLPT words and Grammars',
+      ],
+      githubPath: 'https://wonjongseo.github.io/#/home',
+      useThat: ['get', 'hive', 'animate_do'],
+      images: []),
 ];
