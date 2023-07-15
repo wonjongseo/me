@@ -20,37 +20,42 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-        scrollBehavior: GetPlatform.isDesktop
-            ? const MaterialScrollBehavior()
-                .copyWith(dragDevices: {PointerDeviceKind.mouse})
-            : null,
-        translations: Languagues(),
-        locale: Get.deviceLocale,
-        fallbackLocale: const Locale('en', 'US'),
-        debugShowCheckedModeBanner: false,
-        title: 'My name is Wonjongseo',
-        theme: ThemeData.dark().copyWith(
-          primaryColor: primaryColor,
-          scaffoldBackgroundColor: bgColor,
-          canvasColor: bgColor,
-          textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-              .apply(bodyColor: Colors.white)
-              .copyWith(
-                bodyText1: const TextStyle(color: bodyTextColor),
-                bodyText2: const TextStyle(color: bodyTextColor),
-              ),
+      scrollBehavior: GetPlatform.isDesktop
+          ? const MaterialScrollBehavior()
+              .copyWith(dragDevices: {PointerDeviceKind.mouse})
+          : null,
+      translations: Languagues(),
+      locale: Get.deviceLocale,
+      fallbackLocale: const Locale('en', 'US'),
+      debugShowCheckedModeBanner: false,
+      title: 'My name is Wonjongseo',
+      theme: ThemeData.dark().copyWith(
+        primaryColor: primaryColor,
+        scaffoldBackgroundColor: bgColor,
+        canvasColor: bgColor,
+        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+            .apply(bodyColor: Colors.white)
+            .copyWith(
+              bodyLarge: const TextStyle(color: bodyTextColor),
+              bodyMedium: const TextStyle(color: bodyTextColor),
+            ),
+      ),
+      // initialRoute: '/test',
+      initialRoute: SPLASH_PATH,
+      getPages: [
+        GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
+        GetPage(
+            name: REPORT_PATH,
+            page: () => ReportSceen(corporation: corporation_projects[0])),
+        GetPage(
+          name: HOME_PATH,
+          page: () => const HomeScreen(),
         ),
-        // initialRoute: '/test',
-        initialRoute: SPLASH_PATH,
-        getPages: [
-          GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
-          GetPage(
-              name: REPORT_PATH,
-              page: () => ReportSceen(corporation: corporation_projects[0])),
-          GetPage(name: HOME_PATH, page: () => const HomeScreen()),
-          GetPage(
-              name: PROJECT_DETAIL_PATH,
-              page: () => const ProjectDetailScrenn()),
-        ]);
+        GetPage(
+          name: PROJECT_DETAIL_PATH,
+          page: () => const ProjectDetailScrenn(),
+        ),
+      ],
+    );
   }
 }

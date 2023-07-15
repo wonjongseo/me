@@ -92,7 +92,7 @@ class InkWellAboutMeCard extends StatefulWidget {
 
 class _InkWellAboutMeCardState extends State<InkWellAboutMeCard> {
   bool isHover = false;
-  Duration duration = const Duration(milliseconds: 200);
+  // Duration duration = const Duration(milliseconds: 200);
   final defaultCardShadow = BoxShadow(
     offset: const Offset(0, 20),
     blurRadius: 50,
@@ -108,8 +108,7 @@ class _InkWellAboutMeCardState extends State<InkWellAboutMeCard> {
             isHover = value;
           });
         },
-        child: AnimatedContainer(
-          duration: duration,
+        child: Container(
           height: widget.height,
           width: double.infinity,
           decoration: BoxDecoration(
@@ -135,7 +134,7 @@ class _InkWellAboutMeCardState extends State<InkWellAboutMeCard> {
                     Text(
                       widget.title,
                       style: !Responsive.isMobile(context)
-                          ? Theme.of(context).textTheme.subtitle1!
+                          ? Theme.of(context).textTheme.titleMedium!
                           : Theme.of(context)
                               .textTheme
                               .titleSmall!

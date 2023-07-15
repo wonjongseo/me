@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:get/get.dart';
@@ -25,8 +24,8 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome to My Friends',
-              style: Theme.of(context).textTheme.subtitle1,
+              'Welcome to Jongseo\'s word!!',
+              style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: defaultPadding),
             TweenAnimationBuilder(

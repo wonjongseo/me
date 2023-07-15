@@ -17,8 +17,6 @@ class AboutMeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: TextButton.styleFrom(
-        // padding: const EdgeInsets.symmetric(
-        //     horizontal: defaultPadding, vertical: defaultPadding / 1.5),
         padding: !Responsive.isMobile(context)
             ? const EdgeInsets.symmetric(
                 horizontal: defaultPadding * 2, vertical: defaultPadding)
@@ -240,8 +238,9 @@ class AboutMeButton extends StatelessWidget {
       child: Text(
         'About Me!',
         style: TextStyle(
-            color: darkColor,
-            fontSize: !Responsive.isMobile(context) ? 14 : 13),
+          color: darkColor,
+          fontSize: !Responsive.isMobile(context) ? 14 : 13,
+        ),
       ),
     );
   }

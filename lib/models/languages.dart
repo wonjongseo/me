@@ -259,6 +259,13 @@ class Languagues extends Translations {
           'page_title': 'Concentrate on this Moments.',
           'point_me_felt_ans_0':
               'I can feel about Importance of specifications',
+
+          // ----------- 0 ------------
+          'index_10_description':
+              "This Application is Japanese word App that help people who is studying JLPT Test.",
+          'index_10_specifications_0': 'aaa',
+          'index_10_specifications_1': 'Supporting multi lanagues',
+
           // ----------- 0 ------------
           'index_9_description':
               "It is Full-stack developer Won Jong seo's responsive web portfolio.'",

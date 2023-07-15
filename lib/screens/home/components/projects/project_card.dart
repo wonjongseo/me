@@ -20,7 +20,7 @@ class ProjectCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(project.title!,
+            Text(project.title,
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: sectionTitleStyle(context)),
