@@ -22,20 +22,14 @@ class Languagues extends Translations {
           'used_learned': '사용한 것 (배운 것)',
           'problems_future_countermeasures': '문제점\n향후 대응방안',
           'point_me_felt': '느낀점',
-          'point_me_felt_ans_0': '개발에 있어서 사양서가 얼마나 중요한지 느낄 수 있었다.',
 
           'programmer_name': '원종서',
-          'programmer_name_ans': '안녕! 내 이름은 원종서야!',
           'programmer_city': '도쿄',
-          'programmer_city_ans': '안녕! 나는 일본에 살고 있어!',
           'programmer_residence': '일본',
           'programmer_age': '1997년05월17일',
-          'programmer_age_ans': '안녕! 1997년05월17일에 태어났어!',
           'academic_ability': '세종대학교\n(컴퓨터공학과)',
-          'academic_ability_ans': '안녕! 나는 세종대학교 컴퓨터공학과를 졸업했어!',
-          'phone_ans': '안녕! 나의 전화번호는 070-8544-9956',
+
           'page_title': '지금 이순간에 최선을 다하자.',
-          'email_ans': '안녕! 나의 이메일은 visionwill3322@gmail.com 이야!',
 
           // ----------- 0 ------------v
           'index_9_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
@@ -132,20 +126,12 @@ class Languagues extends Translations {
           'point_me_felt': '感じた点',
 
           'programmer_name': 'ウォンジョンソ',
-          'programmer_name_ans': '初めまして！ ウォンジョンソと申します！',
           'programmer_city': '東京',
-          'programmer_city_ans': '初めまして！ 私は東京に住んでいます！',
           'programmer_residence': '日本',
           'programmer_age': '1997年05月17日',
-          'programmer_age_ans ': '初めまして！ 私は1997年05月17日に生まれました!',
           'academic_ability': '世宗大学校\n(コンピューター工学科)',
-          'academic_ability_ans': '初めまして！ 私は世宗大学校((コンピューター工学科))を卒業しました！',
-          'phone_ans': '初めまして！ 私の電話番号は070-8544-9956です!',
-          "email_ans": '初めまして！ 私のメールアドレスはvisionwill3322@gmail.comです!',
 
           'page_title': '今この瞬間に集中しよう.',
-
-          'point_me_felt_ans_0': '開発にとって仕様書が本当に大切なことを感じられた.',
 
           // ----------- 0 ------------v
           'index_9_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
@@ -154,7 +140,7 @@ class Languagues extends Translations {
 
           // ----------- 1 ------------
           'index_8_description':
-              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます.',
+              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
           'index_8_specifications_0': 'マイボカの保存',
           'index_8_specifications_1': '言葉のようにトグルする',
           'index_8_specifications_2': '1日にtoeicの単語を勉強する',
@@ -244,19 +230,14 @@ class Languagues extends Translations {
           'point_me_felt': 'Point me felt',
 
           'programmer_name': 'Jong seo Won',
-          'programmer_name_ans': 'Hello! My name is Jong seo -Won!',
           'programmer_city': 'Tokyo',
-          'programmer_city_ans': 'Hello! I live in japan!',
           'programmer_residence': 'Japan',
 
           'programmer_age': '1997/05/17',
-          'programmer_age_ans': 'Hello! My Brithday is 1997/05/17!',
           'academic_ability': 'Sejong University\n(Computer Engineering)',
-          'academic_ability_ans':
-              'Hello! I gradurated from Sejong University (Computer Engineering)',
-          'phone_ans': 'Hello! My Phonenumber is 070-8544-9956!',
-          'email_ans': 'Hello! My Email Address is visionwill3322@gmail.com',
+
           'page_title': 'Concentrate on this Moments.',
+<<<<<<< HEAD
           'point_me_felt_ans_0':
               'I can feel about Importance of specifications',
 
@@ -265,6 +246,8 @@ class Languagues extends Translations {
               "This Application is Japanese word App that help people who is studying JLPT Test.",
           'index_10_specifications_0': 'aaa',
           'index_10_specifications_1': 'Supporting multi lanagues',
+=======
+>>>>>>> refs/remotes/origin/main
 
           // ----------- 0 ------------
           'index_9_description':

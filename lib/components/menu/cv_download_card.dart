@@ -34,7 +34,7 @@ class CVDownloadCard extends StatelessWidget {
                       }
                       launchUrl(
                         Uri.parse(
-                            'https://drive.google.com/file/d/1QrnK16kLDcR9CxuMcTf2wYvCTmDbCwpC/view?usp=share_link'),
+                            'https://drive.google.com/file/d/1WBDTx4fk_hDNugmmmvMT-GL_cWm-ERrW/view?usp=share_link'),
                       );
 
                       Get.snackbar(
@@ -43,7 +43,7 @@ class CVDownloadCard extends StatelessWidget {
                         snackPosition: SnackPosition.BOTTOM,
                       );
                     },
-                    child: Text('JP')),
+                    child: const Text('JP')),
                 const SizedBox(width: defaultPadding / 3),
                 ElevatedButton(
                     style:
@@ -57,7 +57,7 @@ class CVDownloadCard extends StatelessWidget {
 
                       launchUrl(
                         Uri.parse(
-                            'https://drive.google.com/file/d/19wa6yqFgyrttf5GIks0Bj_nA4GEw5zSd/view?usp=share_link'),
+                            'https://drive.google.com/file/d/1qc6FCrPhYRqUystbCvJKMqMtBmzdfTrK/view?usp=share_link'),
                       );
                       Get.snackbar(
                         'CV',
@@ -65,25 +65,29 @@ class CVDownloadCard extends StatelessWidget {
                         snackPosition: SnackPosition.BOTTOM,
                       );
                     },
-                    child: Text('EN')),
+                    child: const Text('EN')),
                 const SizedBox(width: defaultPadding / 3),
                 ElevatedButton(
                     style:
                         ElevatedButton.styleFrom(backgroundColor: primaryColor),
                     onPressed: () async {
-                      // await Future.delayed(const Duration(milliseconds: 700));
+                      await Future.delayed(const Duration(milliseconds: 700));
 
-                      // if (Get.isDialogOpen != null) {
-                      //   Get.back();
-                      // }
+                      if (Get.isDialogOpen != null) {
+                        Get.back();
+                      }
 
+                      launchUrl(
+                        Uri.parse(
+                            'https://drive.google.com/file/d/1AzFYklrefC1jAzEcqHaCH7L7J8AKqyZo/view?usp=share_link'),
+                      );
                       Get.snackbar(
                         'CV',
-                        'Download is failed. (NOT YET)',
+                        'Download is completed.',
                         snackPosition: SnackPosition.BOTTOM,
                       );
                     },
-                    child: Text('KO')),
+                    child: const Text('KO')),
               ],
             ),
             actions: [

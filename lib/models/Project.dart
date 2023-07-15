@@ -267,6 +267,7 @@ List<Project> my_projects = [
         'assets/toeic/13.jpg',
       ]),
   Project(
+<<<<<<< HEAD
     index: '9',
     title: "Responsive Portfolio Web",
     description: "",
@@ -324,4 +325,46 @@ List<Project> my_projects = [
       'assets/responsive/10.png',
     ],
   ),
+=======
+      index: '9',
+      title: "Responsive Portfolio Web",
+      description: "",
+      frontend: 'Flutter',
+      specifications: [
+        'Responsive Web Page',
+        'Supporting multi lanauge',
+      ],
+      githubPath: 'https://github.com/wonjongseo/me',
+      useThat: [
+        'get',
+        'carousel_slider',
+        'animated_text_kit',
+      ],
+      images: [
+        'assets/responsive/1.png',
+        'assets/responsive/2.png',
+        'assets/responsive/3.png',
+        'assets/responsive/4.png',
+        'assets/responsive/5.png',
+        'assets/responsive/6.png',
+        'assets/responsive/7.png',
+        'assets/responsive/8.png',
+        'assets/responsive/9.png',
+        'assets/responsive/10.png',
+        'assets/responsive/10.png',
+      ]),
+  Project(
+      index: '10',
+      title: "JLPT App",
+      description: "JLPT App created by Flutter",
+      frontend: 'Flutter',
+      specifications: [
+        'Saving My Voca',
+        'Studying JLPT Words and Grammars',
+        'Testing JLPT words and Grammars',
+      ],
+      githubPath: 'https://wonjongseo.github.io/#/home',
+      useThat: ['get', 'hive', 'animate_do'],
+      images: []),
+>>>>>>> refs/remotes/origin/main
 ];
