@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 import 'package:wonjongseo/models/CorporationProjects.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/screens/home/home_screen.dart';
@@ -35,14 +35,14 @@ class MyApp extends StatelessWidget {
         primaryColor: primaryColor,
         scaffoldBackgroundColor: bgColor,
         canvasColor: bgColor,
-        textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
-            .apply(bodyColor: Colors.white)
-            .copyWith(
-              bodyLarge: const TextStyle(color: bodyTextColor),
-              bodyMedium: const TextStyle(color: bodyTextColor),
-            ),
+        // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+        //  textTheme:
+        //     .apply(bodyColor: Colors.white)
+        //     .copyWith(
+        //       bodyLarge: const TextStyle(color: bodyTextColor),
+        //       bodyMedium: const TextStyle(color: bodyTextColor),
+        //     ),
       ),
-      // initialRoute: '/test',
       initialRoute: SPLASH_PATH,
       getPages: [
         GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),

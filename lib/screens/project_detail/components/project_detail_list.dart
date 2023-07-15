@@ -20,10 +20,12 @@ class ProjectDetailList extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          detailTitle,
+          detailTitle == 'Specifications'
+              ? '$detailTitle (${list.length})'
+              : detailTitle,
           style: sectionTitleStyle(context).copyWith(fontSize: 16),
         ),
-        const SizedBox(height: defaultPadding / 4),
+        const SizedBox(height: defaultPadding / 2),
         if (!Responsive.isDesktop(context))
           ...List.generate(
             list.length,
@@ -36,58 +38,79 @@ class ProjectDetailList extends StatelessWidget {
                 style: const TextStyle(fontSize: 12),
               ),
             ),
-          ),
-        if (Responsive.isDesktop(context) && list.length <= 10)
-          ...List.generate(
-            list.length,
-            (index) => Padding(
-              padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-              child: Text(
-                detailTitle == 'Specifications'
-                    ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
-                    : '${index + 1}. ${list[index]}',
-                style: const TextStyle(fontSize: 12),
+          )
+        else
+          SizedBox(
+            height: 200,
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: List.generate(
+                  list.length,
+                  (index) => Padding(
+                    padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+                    child: Text(
+                      detailTitle == 'Specifications'
+                          ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
+                          : '${index + 1}. ${list[index]}',
+                      style: const TextStyle(fontSize: 12),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-        if (Responsive.isDesktop(context) && list.length > 10)
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: List.generate(
-                    10,
-                    (index) => Padding(
-                      padding:
-                          const EdgeInsets.only(bottom: defaultPadding / 2),
-                      child: Text(
-                        detailTitle == 'Specifications'
-                            ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
-                            : '${index + 1}. ${list[index]}',
-                        style: const TextStyle(fontSize: 12),
-                      ),
-                    ),
-                  )),
-              const SizedBox(width: defaultPadding),
-              Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: List.generate(
-                    list.length - 10,
-                    (index) => Padding(
-                      padding:
-                          const EdgeInsets.only(bottom: defaultPadding / 2),
-                      child: Text(
-                        detailTitle == 'Specifications'
-                            ? '${index + 10 + 1}. ${toTr('index_${projectIndex}_specifications_${index + 10}')}'
-                            : '${index + 10 + 1}. ${list[index + 10]}',
-                        style: const TextStyle(fontSize: 12),
-                      ),
-                    ),
-                  ))
-            ],
-          ),
         const SizedBox(height: defaultPadding * 2),
+        // ...List.generate(
+        //   list.length,
+        //   (index) => Padding(
+        //     padding: const EdgeInsets.only(bottom: defaultPadding / 2),
+        //     child: Text(
+        //       detailTitle == 'Specifications'
+        //           ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
+        //           : '${index + 1}. ${list[index]}',
+        //       style: const TextStyle(fontSize: 12),
+        //     ),
+        //   ),
+        // ),
+
+        // if (Responsive.isDesktop(context) && list.length > 10)
+        //   Row(
+        //     crossAxisAlignment: CrossAxisAlignment.start,
+        //     children: [
+        //       Column(
+        //           crossAxisAlignment: CrossAxisAlignment.start,
+        //           children: List.generate(
+        //             10,
+        //             (index) => Padding(
+        //               padding:
+        //                   const EdgeInsets.only(bottom: defaultPadding / 2),
+        //               child: Text(
+        //                 detailTitle == 'Specifications'
+        //                     ? '${index + 1}. ${toTr('index_${projectIndex}_specifications_$index')}'
+        //                     : '${index + 1}. ${list[index]}',
+        //                 style: const TextStyle(fontSize: 12),
+        //               ),
+        //             ),
+        //           )),
+        //       const SizedBox(width: defaultPadding * 2),
+        //       Column(
+        //           crossAxisAlignment: CrossAxisAlignment.start,
+        //           children: List.generate(
+        //             list.length - 10,
+        //             (index) => Padding(
+        //               padding:
+        //                   const EdgeInsets.only(bottom: defaultPadding / 2),
+        //               child: Text(
+        //                 detailTitle == 'Specifications'
+        //                     ? '${index + 10 + 1}. ${toTr('index_${projectIndex}_specifications_${index + 10}')}'
+        //                     : '${index + 10 + 1}. ${list[index + 10]}',
+        //                 style: const TextStyle(fontSize: 12),
+        //               ),
+        //             ),
+        //           ))
+        //     ],
+        //   ),
       ],
     );
   }

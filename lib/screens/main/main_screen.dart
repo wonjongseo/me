@@ -11,8 +11,7 @@ class MainScreen extends StatelessWidget {
   final Widget body;
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-
+    print('isHome: ${isHome}');
     return Scaffold(
       appBar: !Responsive.isDesktop(context)
           ? AppBar(

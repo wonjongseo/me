@@ -19,9 +19,9 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return MainScreen(
       isHome: true,
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             HomeBanner(),
             CorporationProjects(),
             SizedBox(height: defaultPadding),

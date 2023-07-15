@@ -41,6 +41,16 @@ class ProjectDetailCard extends StatelessWidget {
                 projectTitle: project.title,
                 text: 'Try It',
                 path: project.homepagePath!),
+          if (project.iosUrl != null)
+            HomePageLinkCard(
+                projectTitle: project.title,
+                text: 'Go To Download (IOS)',
+                path: project.iosUrl!),
+          if (project.iosUrl != null)
+            HomePageLinkCard(
+                projectTitle: project.title,
+                text: 'Go To Download (Android)',
+                path: project.iosUrl!),
           if (project.specifications != null)
             ProjectDetailList(
               detailTitle: 'Specifications',

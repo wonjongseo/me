@@ -11,6 +11,7 @@ import 'package:get/get.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_detail_card.dart';
 
 import 'package:wonjongseo/screens/project_detail/components/project_image_slider.dart';
+import 'package:wonjongseo/utils/language_switch_card.dart';
 
 const String PROJECT_DETAIL_PATH = '/detail';
 
@@ -56,11 +57,18 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(top: defaultPadding * 2),
-                    child: Text(
-                      project.title,
-                      style: sectionTitleStyle(context).copyWith(
-                        fontSize: 30,
-                      ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const BackButton(),
+                        Text(
+                          project.title,
+                          style: sectionTitleStyle(context).copyWith(
+                            fontSize: 30,
+                          ),
+                        ),
+                        const LanaguesSwitchCard()
+                      ],
                     ),
                   ),
                   const Spacer(flex: 1),
@@ -69,19 +77,22 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      ProjectImageSlider(
-                          carouselController: carouselController,
-                          setState: changeIndexOfSlider,
+                      Expanded(
+                        child: ProjectImageSlider(
+                            carouselController: carouselController,
+                            setState: changeIndexOfSlider,
+                            project: project,
+                            currentIndex: currentIndex),
+                      ),
+                      Expanded(
+                        child: ProjectDetailCard(
                           project: project,
-                          currentIndex: currentIndex),
-                      const SizedBox(width: defaultPadding * 2),
-                      ProjectDetailCard(
-                        project: project,
-                        width: MediaQuery.of(context).size.width * 0.2,
+                          width: MediaQuery.of(context).size.width * 0.2,
+                        ),
                       )
                     ],
                   ),
-                  const Spacer(flex: 1),
+                  // const Spacer(flex: 1),
                 ],
               ),
             )
