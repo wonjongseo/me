@@ -20,7 +20,7 @@ class Contacts extends StatelessWidget {
             padding: EdgeInsets.zero,
             onPressed: () {
               launchUrl(
-                Uri.parse('https://www.instagram.com/w_jong_s/'),
+                Uri.parse('https://www.instagram.com/jxngseo/'),
               );
             },
             icon: SvgPicture.asset(
@@ -40,6 +40,7 @@ class Contacts extends StatelessWidget {
             icon: SvgPicture.asset(
               "assets/icons/icons8-facebook.svg",
               color: Colors.grey,
+              width: 30,
             ),
           ),
           const SizedBox(width: defaultPadding / 3),
@@ -53,6 +54,7 @@ class Contacts extends StatelessWidget {
             icon: SvgPicture.asset(
               "assets/icons/icons8-notion.svg",
               color: Colors.grey,
+              width: 30,
             ),
           ),
           const SizedBox(width: defaultPadding / 3),
@@ -65,6 +67,7 @@ class Contacts extends StatelessWidget {
             icon: SvgPicture.asset(
               "assets/icons/icons8-github.svg",
               color: Colors.grey,
+              width: 30,
             ),
           ),
           const Spacer(),
