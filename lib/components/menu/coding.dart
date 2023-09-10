@@ -38,6 +38,7 @@ class _AnimatedProgressIndicatorState extends State<AnimatedProgressIndicator> {
                 children: List.generate(
                     widget.list.length,
                     (index) => AnimatedLinearProgressIndicator(
+                        imageUrl: widget.list[index].image,
                         percentage: widget.list[index].value / 100,
                         label: widget.list[index].language)),
               )
@@ -45,7 +46,6 @@ class _AnimatedProgressIndicatorState extends State<AnimatedProgressIndicator> {
                 padding: const EdgeInsets.symmetric(vertical: defaultPadding),
                 child: Row(
                   children: List.generate(
-                      // widget.list.length > 3 ? 3 : widget.list.length,
                       3,
                       (index) => AnimatedCircularProgressIndicatorContainer(
                           percentage: widget.list[index].value / 100,

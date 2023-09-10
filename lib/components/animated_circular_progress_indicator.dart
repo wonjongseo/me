@@ -61,7 +61,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
         ),
         const SizedBox(height: defaultPadding / 2),
         Text(
-          label!,
+          label,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
           style: sectionTitleStyle(context),
@@ -73,10 +73,14 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
 
 class AnimatedLinearProgressIndicator extends StatelessWidget {
   const AnimatedLinearProgressIndicator(
-      {super.key, required this.percentage, required this.label});
+      {super.key,
+      required this.percentage,
+      required this.label,
+      required this.imageUrl});
 
   final double percentage;
   final String label;
+  final String imageUrl;
 
   @override
   Widget build(BuildContext context) {
@@ -91,9 +95,18 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    label,
-                    style: const TextStyle(color: Colors.white),
+                  Row(
+                    children: [
+                      Text(
+                        label,
+                        style: const TextStyle(color: Colors.white),
+                      ),
+                      Image.asset(
+                        imageUrl,
+                        fit: BoxFit.fill,
+                        width: 20,
+                      )
+                    ],
                   ),
                   Text("${(value * 100).toInt()}%")
                 ],
