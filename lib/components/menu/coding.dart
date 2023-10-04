@@ -4,7 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/components/animated_circular_progress_indicator.dart';
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/datas.dart';
+import 'package:wonjongseo/data/datas.dart';
 
 class AnimatedProgressIndicator extends StatefulWidget {
   const AnimatedProgressIndicator(

@@ -1,15 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/responsive.dart';
+import 'package:wonjongseo/screens/home/home_screen.dart';
 import 'package:wonjongseo/screens/main/main_screen.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:get/get.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_detail_card.dart';
-
+import 'package:wonjongseo/data/project_data.dart';
 import 'package:wonjongseo/screens/project_detail/components/project_image_slider.dart';
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
@@ -60,14 +58,16 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const BackButton(),
+                        IconButton(
+                            onPressed: () => Get.toNamed(HOME_PATH),
+                            icon: const Icon(Icons.people)),
                         Text(
                           project.title,
                           style: sectionTitleStyle(context).copyWith(
                             fontSize: 30,
                           ),
                         ),
-                        const LanaguesSwitchCard()
+                        LanaguesSwitchCard()
                       ],
                     ),
                   ),
@@ -92,7 +92,7 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                       )
                     ],
                   ),
-                  // const Spacer(flex: 1),
+                  const Spacer(flex: 1),
                 ],
               ),
             )

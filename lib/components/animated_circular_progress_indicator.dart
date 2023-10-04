@@ -101,6 +101,7 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                         label,
                         style: const TextStyle(color: Colors.white),
                       ),
+                      const SizedBox(width: 20),
                       Image.asset(
                         imageUrl,
                         fit: BoxFit.fill,

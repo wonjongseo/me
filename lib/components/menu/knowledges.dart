@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:wonjongseo/datas.dart';
+import 'package:wonjongseo/data/datas.dart';
 
 class Knowledges extends StatelessWidget {
   const Knowledges({super.key});

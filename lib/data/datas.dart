@@ -36,11 +36,9 @@ List<FrameWork> frameWorkList = [
   FrameWork(
       image: '$imageUrl/icons8-spring-48.png', language: 'JPA', value: 70),
   FrameWork(
-      image: '$imageUrl/icons8-nodejs-48.png', language: 'Express', value: 80),
+      image: '$imageUrl/icons8-nodejs-48.png', language: 'NodeJs', value: 80),
   FrameWork(
-      image: '$imageUrl/icons8-spring-48.png',
-      language: 'Apollo Server',
-      value: 60),
+      image: '$imageUrl/icons8-graphql-48.png', language: 'GraphQL', value: 60),
   FrameWork(
       image: '$imageUrl/icons8-flutter-48.png', language: 'Flutter', value: 80),
   FrameWork(
@@ -56,7 +54,7 @@ List<FrameWork> frameWorkList = [
 List<Language> langaugeList = [
   Language(image: '$imageUrl/icons8-cプログラミング-48.png', language: 'C', value: 80),
   Language(image: '$imageUrl/icons8-c++-48.png', language: 'C++', value: 80),
-  Language(image: '$imageUrl/icons8-java.png', language: 'Java', value: 80),
+  Language(image: '$imageUrl/icons8-java-48.png', language: 'Java', value: 80),
   Language(
       image: '$imageUrl/icons8-javascript-48.png',
       language: 'JavaScript',
@@ -68,4 +66,10 @@ List<Language> langaugeList = [
   Language(image: '$imageUrl/icons8-css-48.png', language: 'CSS', value: 80),
 ];
 
-List<String> knowledges = ['Git', 'Aws', 'Heroku', 'Netlify'];
+List<String> knowledges = [
+  'Git',
+  'Aws',
+  'Heroku',
+  'Netlify',
+  'Adobe Premiere Pro'
+];

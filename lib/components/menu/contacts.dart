@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'package:wonjongseo/constants.dart';
+import 'package:wonjongseo/responsive.dart';
 
 class Contacts extends StatelessWidget {
   const Contacts({
@@ -11,6 +12,11 @@ class Contacts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double iconSize = 30;
+    double iconMargin =
+        Responsive.isMobile(context) || Responsive.isMobileLarge(context)
+            ? defaultPadding / 4
+            : defaultPadding / 3;
     return Container(
       margin: const EdgeInsets.symmetric(vertical: defaultPadding / 2),
       child: Row(
@@ -24,12 +30,12 @@ class Contacts extends StatelessWidget {
               );
             },
             icon: SvgPicture.asset(
+              width: iconSize,
               "assets/icons/icons8-instagram.svg",
-              width: 30,
               color: Colors.grey,
             ),
           ),
-          const SizedBox(width: defaultPadding / 3),
+          SizedBox(width: iconMargin),
           IconButton(
             onPressed: () {
               launchUrl(
@@ -38,12 +44,12 @@ class Contacts extends StatelessWidget {
               //
             },
             icon: SvgPicture.asset(
+              width: iconSize,
               "assets/icons/icons8-facebook.svg",
               color: Colors.grey,
-              width: 30,
             ),
           ),
-          const SizedBox(width: defaultPadding / 3),
+          SizedBox(width: iconMargin),
           IconButton(
             onPressed: () {
               launchUrl(
@@ -52,12 +58,12 @@ class Contacts extends StatelessWidget {
               );
             },
             icon: SvgPicture.asset(
+              width: iconSize,
               "assets/icons/icons8-notion.svg",
               color: Colors.grey,
-              width: 30,
             ),
           ),
-          const SizedBox(width: defaultPadding / 3),
+          SizedBox(width: iconMargin),
           IconButton(
             onPressed: () {
               launchUrl(
@@ -65,9 +71,22 @@ class Contacts extends StatelessWidget {
               );
             },
             icon: SvgPicture.asset(
+              width: iconSize,
               "assets/icons/icons8-github.svg",
               color: Colors.grey,
-              width: 30,
+            ),
+          ),
+          SizedBox(width: iconMargin),
+          IconButton(
+            onPressed: () {
+              launchUrl(
+                Uri.parse('https://www.youtube.com/@jongseokun'),
+              );
+            },
+            icon: SvgPicture.asset(
+              width: iconSize,
+              "assets/icons/icons8-youtube.svg",
+              color: Colors.grey,
             ),
           ),
           const Spacer(),

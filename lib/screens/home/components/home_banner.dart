@@ -7,7 +7,9 @@ import 'package:wonjongseo/models/Project.dart';
 import 'package:wonjongseo/models/languages.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/about_me_button.dart';
-import 'package:wonjongseo/utils/dialog.dart';
+
+import 'package:wonjongseo/data/project_data.dart';
+
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
 class HomeBanner extends StatelessWidget {

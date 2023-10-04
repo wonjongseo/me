@@ -19,14 +19,16 @@ class Responsive extends StatelessWidget {
   static bool isMobileLarge(BuildContext context) =>
       MediaQuery.of(context).size.width <= 700;
   static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width < 1024;
+      MediaQuery.of(context).size.width < 1030;
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1024;
+      MediaQuery.of(context).size.width >= 1030;
 
   @override
   Widget build(BuildContext context) {
     final Size _size = MediaQuery.of(context).size;
-    if (_size.width >= 1024) {
+    print('screen width : ${_size.width}');
+    print('screen height : ${_size.height}');
+    if (_size.width >= 1030) {
       print('desktop');
       return desktop;
     } else if (_size.width >= 700 && tablet != null) {

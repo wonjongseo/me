@@ -31,26 +31,16 @@ class Languagues extends Translations {
 
           'page_title': '지금 이순간에 최선을 다하자.',
 
-          'index_10_description': "일본어 공부하면서 한자 바로 볼 수 있는 일본어 단어앱(+문법)",
+          // 종각앱
+          'index_10_description': 'JLPT 시험을 준비하는 사람에게 유용한 어플리케이션',
+          'index_10_specifications_0': 'N1급~N5급 단어/문법/한자 학습 기능',
+          'index_10_specifications_1': 'N1급~N5급 단어/문법/한자 테스트 기능',
+          'index_10_specifications_2': '일본어, 한국어 음성 기능 (자동 재생 기능)',
+          'index_10_specifications_3': '모르는 단어 자동저장 기능',
+          'index_10_specifications_4': '엑셀 데이터 종각앱 저장 기능',
 
-          'index_10_specifications_0': 'N1급~N5급 단어 학습 (1급 데이터는 일부만 표시)',
-          'index_10_specifications_1': '일본어, 한국어 음성 기능',
-          'index_10_specifications_2': '자동 듣기 기능',
-          'index_10_specifications_3':
-              '테스트 기능 [단어의 의미 (사지선다형) + 단어의 읽는 법 (주관식)]',
-          'index_10_specifications_4': '각 단어의 한자 [읽는 법, 훈독, 음독] 보기',
-          'index_10_specifications_5': 'N1급~N3급 문법 학습 (1급 데이터는 일부만 표시)',
-          'index_10_specifications_6': '문법 예제 보기 / 듣기',
-          'index_10_specifications_7': '테스트 기능',
-          'index_10_specifications_8': 'N1~N5급 한자 학습 (1급 데이터는 일부만 표시)',
-          'index_10_specifications_9': '일본어 음성 기능',
-          'index_10_specifications_10': '테스트 기능',
-          'index_10_specifications_11': '한자 [읽는 법, 훈독, 음독] 보기',
-          'index_10_specifications_12': '한자 획수 보기',
-          'index_10_specifications_13': '직접 나만의 단어 저장',
-          'index_10_specifications_14':
-              'JLPT 단어 혹은 JLPT 한자를 학습 중 모르는 단어를 저장하여 반복 학습',
           // ----------- 0 ------------v
+
           'index_9_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
           'index_9_specifications_0': '반응형 웹 페이지',
           'index_9_specifications_1': '여러 언어 지원',
@@ -155,24 +145,15 @@ class Languagues extends Translations {
 
           'page_title': '今この瞬間に集中しよう.',
 
-          'index_10_description': "일본어 공부하면서 한자 바로 볼 수 있는 일본어 단어앱(+문법)",
+          'index_10_description': 'JLPT試験を準備する方々に有用なアプリケーション',
+          'index_10_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
+          'index_10_specifications_1': 'N1級~N5級の単語・文法・漢字のテスト機能',
+          'index_10_specifications_2': '日本語・韓国語の音声機能(自動再生機能)',
+          'index_10_specifications_3': '知らない単語を自動保存機能',
+          'index_10_specifications_4': 'エクセルのデータをジョンガックアプリに保存',
 
-          'index_10_specifications_0': 'N1級~N5級単語学習(1級データは一部のみ表示)',
-          'index_10_specifications_1': '日本語、韓国語音声機能',
-          'index_10_specifications_2': '自動リスニング機能',
-          'index_10_specifications_3': 'テスト機能 [単語の意味(四肢選択肢)+単語の読み方(主観式)]',
-          'index_10_specifications_4': '各単語の漢字[読み方、訓読、音読]を見る',
-          'index_10_specifications_5': 'N1級~N3級文法学習(1級データは一部のみ表示)',
-          'index_10_specifications_6': '文法例を見る/聞く',
-          'index_10_specifications_7': 'テスト機能',
-          'index_10_specifications_8': 'N1~N5級漢字学習（1級データは一部のみ表示）',
-          'index_10_specifications_9': '日本語音声機能',
-          'index_10_specifications_10': 'テスト機能',
-          'index_10_specifications_11': '漢字[読み方、訓読、音読] 見る',
-          'index_10_specifications_12': '漢字画数を見る',
-          'index_10_specifications_13': '直接自分だけの単語を保存',
-          'index_10_specifications_14': 'JLPT単語またはJLPT漢字を学習中に知らない単語を保存して繰り返し学習',
           // ----------- 0 ------------v
+
           'index_9_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
           'index_9_specifications_0': '反応型のウェブページ',
           'index_9_specifications_1': 'マルチ言語を支援',
@@ -284,31 +265,17 @@ class Languagues extends Translations {
 
           // ----------- 0 ------------
           'index_10_description':
-              "This Application is Japanese word App that help people who is studying JLPT Test.",
-
+              'Application useful to those preparing for the JLPT exam',
           'index_10_specifications_0':
-              'N1 to N5 level word learning (only some of the first level data are displayed)',
-          'index_10_specifications_1': 'Japanese and Korean voice functions',
-          'index_10_specifications_2': 'Automatic listening function',
+              'Function to N1 to N5 learn level words/grammar/Chinese character function',
+          'index_10_specifications_1':
+              'Function to N1 to test N5 word/grammar/Chinese character function',
+          'index_10_specifications_2':
+              'Function to listen Japanese, Korean voice function (auto-play function)',
           'index_10_specifications_3':
-              'Test function [Meaning of words (plural) + how to read words (subjective)]',
+              'Function to save Automatically  unknown words',
           'index_10_specifications_4':
-              'View the Chinese characters of each word [Reading, Teaching, Reading]',
-          'index_10_specifications_5':
-              'N1 to N3 level grammar learning (only some of the first level data are displayed)',
-          'index_10_specifications_6': 'View/Listen to Grammar Examples',
-          'index_10_specifications_7': 'Test functionality',
-          'index_10_specifications_8':
-              'Learning Chinese characters of N1 to N5 (only some of the first-class data are displayed)',
-          'index_10_specifications_9': 'Japanese voice function',
-          'index_10_specifications_10': 'Test function',
-          'index_10_specifications_11':
-              'Chinese characters [Reading, Teaching, Reading]',
-          'index_10_specifications_12':
-              'Viewing the number of strokes in Chinese characters',
-          'index_10_specifications_13': 'Save your own words yourself',
-          'index_10_specifications_14':
-              'Repeat learning by saving words that you don\'t know while learning JLPT words or JLPT Chinese characters',
+              'Function to save excel data into jonggack-app',
           // ----------- 0 ------------
           'index_9_description':
               "It is Full-stack developer Won Jong seo's responsive web portfolio.'",
@@ -316,7 +283,7 @@ class Languagues extends Translations {
           'index_9_specifications_1': 'Supporting multi lanagues',
 
           // ----------- 1 ------------
-          'index_8_description':
+          'ㅜindex_8_description':
               'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
 
           'index_8_specifications_0': 'About 1500 TOEIC word learning',

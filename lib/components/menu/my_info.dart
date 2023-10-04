@@ -35,7 +35,7 @@ class MyInfo extends StatelessWidget {
                 height: 1.5,
               ),
             ),
-            const Spacer(flex: 2)
+            const Spacer(flex: 1)
           ],
         ),
       ),

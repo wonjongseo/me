@@ -6,7 +6,7 @@ import 'package:wonjongseo/components/menu/knowledges.dart';
 import 'package:wonjongseo/components/menu/my_info.dart';
 
 import 'package:wonjongseo/constants.dart';
-import 'package:wonjongseo/datas.dart';
+import 'package:wonjongseo/data/datas.dart';
 
 import 'package:wonjongseo/screens/home/components/area_info_text.dart';
 
@@ -15,6 +15,7 @@ class Abouts extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('asdfdsf');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
