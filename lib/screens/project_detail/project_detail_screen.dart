@@ -58,16 +58,14 @@ class _ProjectDetailScrennState extends State<ProjectDetailScrenn> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        IconButton(
-                            onPressed: () => Get.toNamed(HOME_PATH),
-                            icon: const Icon(Icons.people)),
+                        const BackButton(),
                         Text(
                           project.title,
                           style: sectionTitleStyle(context).copyWith(
                             fontSize: 30,
                           ),
                         ),
-                        LanaguesSwitchCard()
+                        const LanaguesSwitchCard()
                       ],
                     ),
                   ),

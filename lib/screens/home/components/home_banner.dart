@@ -38,9 +38,9 @@ class HomeBanner extends StatelessWidget {
                 Text(
                   toTr('page_title'),
                   style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.headline3!.copyWith(
+                      ? Theme.of(context).textTheme.displaySmall!.copyWith(
                           color: Colors.white, fontWeight: FontWeight.bold)
-                      : Theme.of(context).textTheme.headline6!.copyWith(
+                      : Theme.of(context).textTheme.titleLarge!.copyWith(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
                           ),

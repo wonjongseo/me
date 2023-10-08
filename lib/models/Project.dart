@@ -10,11 +10,13 @@ class Project {
   final List<String>? specifications;
   final List<String> images;
 
+  final bool? isApp;
   Project(
       {required this.index,
       required this.title,
       required this.description,
       required this.images,
+      this.isApp,
       this.homepagePath,
       this.frontend,
       this.backend,
