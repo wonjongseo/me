@@ -49,8 +49,8 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(height: defaultPadding / 2),
                 DefaultTextStyle(
                   style: Responsive.isDesktop(context)
-                      ? Theme.of(context).textTheme.subtitle2!
-                      : Theme.of(context).textTheme.subtitle1!,
+                      ? Theme.of(context).textTheme.titleSmall!
+                      : Theme.of(context).textTheme.titleMedium!,
                   maxLines: 1,
                   child: Row(
                     children: [
@@ -69,8 +69,8 @@ class HomeBanner extends StatelessWidget {
                     ],
                   ),
                 ),
-                const SizedBox(height: defaultPadding),
-                // if (!Responsive.isMobileLarge(context))
+                if (!Responsive.isMobile(context))
+                  const SizedBox(height: defaultPadding),
                 const AboutMeButton(),
               ],
             ),

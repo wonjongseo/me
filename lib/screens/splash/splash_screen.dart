@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:get/get.dart';
 import 'package:wonjongseo/screens/home/home_screen.dart';
+import 'package:wonjongseo/utils/utilsFunction.dart';
 
 const String SPLASH_PATH = '/splash';
 
@@ -18,20 +19,20 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
-    print('Get.deviceLocale : ${Get.deviceLocale.toString()}');
-
+    String deviceLan = getDeviceLocale();
     String welcomeText = '';
-    switch (Get.deviceLocale.toString()) {
-      case "ko_KR":
+
+    switch (deviceLan) {
+      case "Korean":
         welcomeText = "종서의 세계에 오신것을 환영합니다!!";
         break;
 
-      case "en_US":
+      case "English":
         welcomeText = "Welcome to Jongseo\'s word!!";
 
         break;
 
-      case "ja_US":
+      case "Japanese":
         welcomeText = "ようこそジョンソの世界に！！";
         break;
     }

@@ -30,7 +30,7 @@ final kDefaultCardShadow =
 
 class _AboutMeCardState extends State<AboutMeCard> {
   bool isHover = false;
-  Duration hoverDuration = Duration(microseconds: 200);
+  Duration hoverDuration = const Duration(microseconds: 200);
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -43,18 +43,20 @@ class _AboutMeCardState extends State<AboutMeCard> {
       },
       child: AnimatedContainer(
         duration: hoverDuration,
-        height: widget.height / 1.5,
+        // height: widget.height / 1.35,
         padding: const EdgeInsets.symmetric(
-            horizontal: defaultPadding * 1.5, vertical: defaultPadding),
+            horizontal: defaultPadding * 1.3, vertical: defaultPadding),
         decoration: BoxDecoration(
           color: primaryColor,
           borderRadius: BorderRadius.all(Radius.circular(8)),
           boxShadow: [
             if (isHover) kDefaultCardShadow,
-            BoxShadow(color: Colors.grey, blurRadius: 2.2, offset: Offset(5, 5))
+            const BoxShadow(
+                color: Colors.grey, blurRadius: 2.2, offset: Offset(5, 5))
           ],
         ),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Row(
               children: [
