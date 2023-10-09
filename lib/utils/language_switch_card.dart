@@ -33,7 +33,6 @@ class LanaguesSwitchCard extends StatelessWidget {
                 'EN',
                 style: TextStyle(color: primaryColor),
               )),
-        // if (locale != 'ja' && locale != 'ja-JP')
         if (!locale.contains('ja'))
           TextButton(
               onPressed: () {

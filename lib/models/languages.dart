@@ -143,7 +143,7 @@ class Languagues extends Translations {
           'programmer_age': '1997年05月17日',
           'academic_ability': '世宗大学校\n(コンピューター工学科)',
 
-          'page_title': '今この瞬間に集中しよう.',
+          'page_title': '今、この瞬間に集中しよう.',
 
           'index_10_description': 'JLPT試験を準備する方々に有用なアプリケーション',
           'index_10_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
@@ -252,7 +252,7 @@ class Languagues extends Translations {
           'problems_future_countermeasures': 'Problems\nFuture Countermeasures',
           'point_me_felt': 'Point me felt',
 
-          'programmer_name': 'Jong seo Won',
+          'programmer_name': 'Jongseo Won',
           'programmer_city': 'Tokyo',
           'programmer_residence': 'Japan',
 

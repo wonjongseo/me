@@ -2,67 +2,87 @@ import 'package:flutter/material.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/responsive.dart';
 
-class AboutMeCard extends StatelessWidget {
-  const AboutMeCard({
-    Key? key,
-    required this.height,
-    required this.title,
-    required this.content,
-    required this.icon,
-  }) : super(key: key);
+class AboutMeCard extends StatefulWidget {
+  const AboutMeCard(
+      {Key? key,
+      required this.height,
+      required this.title,
+      required this.content,
+      required this.iconData,
+      this.onTap,
+      this.contextSize = 20,
+      this.textSize = 16})
+      : super(key: key);
 
   final double height;
   final String title;
   final String content;
-  final Icon icon;
+  final IconData iconData;
+  final double contextSize;
+  final double textSize;
+  final Function()? onTap;
+  @override
+  State<AboutMeCard> createState() => _AboutMeCardState();
+}
+
+final kDefaultCardShadow =
+    BoxShadow(offset: Offset(0, 20), blurRadius: 50, color: Colors.red);
+
+class _AboutMeCardState extends State<AboutMeCard> {
+  bool isHover = false;
+  Duration hoverDuration = Duration(microseconds: 200);
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: height,
-        width: double.infinity,
+    return InkWell(
+      hoverColor: Colors.transparent,
+      onTap: widget.onTap != null ? widget.onTap! : () {},
+      onHover: (value) {
+        setState(() {
+          isHover = value;
+        });
+      },
+      child: AnimatedContainer(
+        duration: hoverDuration,
+        height: widget.height / 1.5,
+        padding: const EdgeInsets.symmetric(
+            horizontal: defaultPadding * 1.5, vertical: defaultPadding),
         decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 2),
-            color: secondaryColor,
-            borderRadius: BorderRadius.circular(10.0)),
+          color: primaryColor,
+          borderRadius: BorderRadius.all(Radius.circular(8)),
+          boxShadow: [
+            if (isHover) kDefaultCardShadow,
+            BoxShadow(color: Colors.grey, blurRadius: 2.2, offset: Offset(5, 5))
+          ],
+        ),
         child: Column(
           children: [
-            Padding(
-              padding: EdgeInsets.only(
-                  top: !Responsive.isMobile(context)
-                      ? defaultPadding
-                      : defaultPadding / 1.5),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  icon,
-                  SizedBox(
-                      width: !Responsive.isMobile(context)
-                          ? defaultPadding / 3
-                          : defaultPadding / 4),
-                  Text(
-                    title,
-                    style: !Responsive.isMobile(context)
-                        ? Theme.of(context).textTheme.subtitle1!
-                        : Theme.of(context)
-                            .textTheme
-                            .titleSmall!
-                            .copyWith(fontSize: 13),
+            Row(
+              children: [
+                Icon(
+                  widget.iconData,
+                  color: bodyTextColor,
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  widget.title,
+                  style: TextStyle(
+                    color: bodyTextColor,
+                    fontSize: widget.textSize,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
-            const Spacer(),
+            SizedBox(height: Responsive.isMobile(context) ? 10 : 30),
             Text(
-              content,
-              style: !Responsive.isMobile(context)
-                  ? Theme.of(context).textTheme.subtitle2!
-                  : Theme.of(context)
-                      .textTheme
-                      .titleSmall!
-                      .copyWith(fontSize: 12),
+              widget.content,
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                  fontSize:
+                      isHover ? widget.contextSize * 1.1 : widget.contextSize,
+                  letterSpacing: Responsive.isMobile(context) ? null : 1.5),
             ),
-            const Spacer(),
+            SizedBox(height: Responsive.isMobile(context) ? 3 : 10),
           ],
         ),
       ),

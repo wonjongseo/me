@@ -18,20 +18,38 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
+    print('Get.deviceLocale : ${Get.deviceLocale.toString()}');
+
+    String welcomeText = '';
+    switch (Get.deviceLocale.toString()) {
+      case "ko_KR":
+        welcomeText = "종서의 세계에 오신것을 환영합니다!!";
+        break;
+
+      case "en_US":
+        welcomeText = "Welcome to Jongseo\'s word!!";
+
+        break;
+
+      case "ja_US":
+        welcomeText = "ようこそジョンソの世界に！！";
+        break;
+    }
+
     return Scaffold(
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Welcome to Jongseo\'s word!!',
+              welcomeText,
               style: Theme.of(context).textTheme.titleMedium,
             ),
             const SizedBox(height: defaultPadding),
             TweenAnimationBuilder(
               curve: Curves.fastOutSlowIn,
               tween: Tween<double>(begin: 0, end: 1),
-              duration: defaultDuration,
+              duration: defaultDuration * 1.5,
               onEnd: goTo,
               builder: (context, value, child) {
                 return Column(

@@ -97,16 +97,16 @@ class AnimatedLinearProgressIndicator extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        label,
-                        style: const TextStyle(color: Colors.white),
-                      ),
-                      const SizedBox(width: 20),
                       Image.asset(
                         imageUrl,
                         fit: BoxFit.fill,
                         width: 20,
-                      )
+                      ),
+                      const SizedBox(width: 20),
+                      Text(
+                        label,
+                        style: const TextStyle(color: Colors.white),
+                      ),
                     ],
                   ),
                   Text("${(value * 100).toInt()}%")
