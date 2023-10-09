@@ -20,13 +20,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Locale locale = Locale('ja', 'JP');
     return GetMaterialApp(
       scrollBehavior: GetPlatform.isDesktop
           ? const MaterialScrollBehavior()
               .copyWith(dragDevices: {PointerDeviceKind.mouse})
           : null,
       translations: Languagues(),
-      locale: Get.deviceLocale,
+      // locale: Get.deviceLocale,
+      locale: locale,
       fallbackLocale: const Locale('en', 'US'),
       debugShowCheckedModeBanner: false,
       title: 'My name is Wonjongseo',

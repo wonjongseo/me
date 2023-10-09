@@ -2,20 +2,16 @@ import 'package:get/get.dart';
 
 String getDeviceLocale() {
   String deviceLan = '';
-  switch (Get.deviceLocale.toString()) {
-    case "ko_KR":
-      deviceLan = "Korean";
-      break;
 
-    case "en":
-      deviceLan = "English";
+  String locale = Get.locale!.toLanguageTag();
 
-      break;
+  if (!locale.contains('ko')) deviceLan = "Korean";
 
-    case "ja_US":
-      deviceLan = "Japanese";
-      break;
-  }
+  if (!locale.contains('en')) deviceLan = "English";
+
+  if (!locale.contains('ja')) deviceLan = "Japanese";
+
+  print('deviceLan : ${deviceLan}');
 
   return deviceLan;
 }

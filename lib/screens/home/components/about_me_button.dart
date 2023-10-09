@@ -178,28 +178,9 @@ class AboutMeContainer extends StatelessWidget {
                         delay: const Duration(milliseconds: 1000),
                         child: AboutMeCard(
                           onTap: () {
-                            String deviceLan = getDeviceLocale();
-                            String url = '';
-
-                            switch (deviceLan) {
-                              case "Korean":
-                                url =
-                                    "https://www.google.com/search?q=%EC%84%B8%EC%A2%85%EB%8C%80%ED%95%99%EA%B5%90+%EC%84%B8%EA%B3%84%EC%88%9C%EC%9C%84&oq=%EC%84%B8%EC%A2%85%EB%8C%80%ED%95%99%EA%B5%90+%EC%84%B8%EA%B3%84%EC%88%9C%EC%9C%84&aqs=chrome..69i57.4888j0j4&sourceid=chrome&ie=UTF-8";
-                                break;
-
-                              case "English":
-                                url =
-                                    "https://www.google.com/search?q=Sejong+University+World+Ranking&oq=Sejong+University+World+Ranking&aqs=chrome..69i57.341j0j4&sourceid=chrome&ie=UTF-8";
-
-                                break;
-
-                              case "Japanese":
-                                url =
-                                    'https://www.google.com/search?q=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1+%E4%B8%96%E7%95%8C%E4%BD%95%E4%BD%8D&sca_esv=571840155&sxsrf=AM9HkKnheZChjJFsscXEECFrGsBnEYkc4Q%3A1696849102625&ei=ztwjZdLhJejQ2roP49OVyAo&oq=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1%E3%80%80%E4%B8%96%E7%95%8C%E3%81%AA%E3%82%93&gs_lp=Egxnd3Mtd2l6LXNlcnAiHuS4luWul-Wkp-WtpuagoeOAgOS4lueVjOOBquOCkyoCCAAyBRAhGKABSM1RULAqWP5FcAJ4AZABAJgB8QGgAY8MqgEGMC4xMC4xuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICBRAAGIAEwgIEEAAYHsICBhAAGB4YD8ICBRAAGKIEwgIIEAAYiQUYogTiAwQYACBBiAYBkAYK&sclient=gws-wiz-serp';
-                                break;
-                            }
                             launchUrl(
-                              Uri.parse(url),
+                              Uri.parse(
+                                  'https://www.google.com/search?q=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1+%E4%B8%96%E7%95%8C%E4%BD%95%E4%BD%8D&sca_esv=571840155&sxsrf=AM9HkKnheZChjJFsscXEECFrGsBnEYkc4Q%3A1696849102625&ei=ztwjZdLhJejQ2roP49OVyAo&oq=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1%E3%80%80%E4%B8%96%E7%95%8C%E3%81%AA%E3%82%93&gs_lp=Egxnd3Mtd2l6LXNlcnAiHuS4luWul-Wkp-WtpuagoeOAgOS4lueVjOOBquOCkyoCCAAyBRAhGKABSM1RULAqWP5FcAJ4AZABAJgB8QGgAY8MqgEGMC4xMC4xuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICBRAAGIAEwgIEEAAYHsICBhAAGB4YD8ICBRAAGKIEwgIIEAAYiQUYogTiAwQYACBBiAYBkAYK&sclient=gws-wiz-serp'),
                             );
                           },
                           iconData: Icons.school,
@@ -332,29 +313,9 @@ class AboutMeContainer extends StatelessWidget {
                   delay: const Duration(milliseconds: 1000),
                   child: AboutMeCard(
                     onTap: () {
-                      String deviceLan = getDeviceLocale();
-                      String url = '';
-
-                      switch (deviceLan) {
-                        case "Korean":
-                          print('aa;');
-                          url =
-                              "https://www.google.com/search?q=%EC%84%B8%EC%A2%85%EB%8C%80%ED%95%99%EA%B5%90+%EC%84%B8%EA%B3%84%EC%88%9C%EC%9C%84&oq=%EC%84%B8%EC%A2%85%EB%8C%80%ED%95%99%EA%B5%90+%EC%84%B8%EA%B3%84%EC%88%9C%EC%9C%84&aqs=chrome..69i57.4888j0j4&sourceid=chrome&ie=UTF-8";
-                          break;
-
-                        case "English":
-                          url =
-                              "https://www.google.com/search?q=Sejong+University+World+Ranking&oq=Sejong+University+World+Ranking&aqs=chrome..69i57.341j0j4&sourceid=chrome&ie=UTF-8";
-
-                          break;
-
-                        case "Japanese":
-                          url =
-                              'https://www.google.com/search?q=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1+%E4%B8%96%E7%95%8C%E4%BD%95%E4%BD%8D&sca_esv=571840155&sxsrf=AM9HkKnheZChjJFsscXEECFrGsBnEYkc4Q%3A1696849102625&ei=ztwjZdLhJejQ2roP49OVyAo&oq=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1%E3%80%80%E4%B8%96%E7%95%8C%E3%81%AA%E3%82%93&gs_lp=Egxnd3Mtd2l6LXNlcnAiHuS4luWul-Wkp-WtpuagoeOAgOS4lueVjOOBquOCkyoCCAAyBRAhGKABSM1RULAqWP5FcAJ4AZABAJgB8QGgAY8MqgEGMC4xMC4xuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICBRAAGIAEwgIEEAAYHsICBhAAGB4YD8ICBRAAGKIEwgIIEAAYiQUYogTiAwQYACBBiAYBkAYK&sclient=gws-wiz-serp';
-                          break;
-                      }
                       launchUrl(
-                        Uri.parse(url),
+                        Uri.parse(
+                            'https://www.google.com/search?q=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1+%E4%B8%96%E7%95%8C%E4%BD%95%E4%BD%8D&sca_esv=571840155&sxsrf=AM9HkKnheZChjJFsscXEECFrGsBnEYkc4Q%3A1696849102625&ei=ztwjZdLhJejQ2roP49OVyAo&oq=%E4%B8%96%E5%AE%97%E5%A4%A7%E5%AD%A6%E6%A0%A1%E3%80%80%E4%B8%96%E7%95%8C%E3%81%AA%E3%82%93&gs_lp=Egxnd3Mtd2l6LXNlcnAiHuS4luWul-Wkp-WtpuagoeOAgOS4lueVjOOBquOCkyoCCAAyBRAhGKABSM1RULAqWP5FcAJ4AZABAJgB8QGgAY8MqgEGMC4xMC4xuAEDyAEA-AEBwgIKEAAYRxjWBBiwA8ICBRAAGIAEwgIEEAAYHsICBhAAGB4YD8ICBRAAGKIEwgIIEAAYiQUYogTiAwQYACBBiAYBkAYK&sclient=gws-wiz-serp'),
                       );
                     },
                     height: height / 1.1,
