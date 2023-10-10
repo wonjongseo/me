@@ -7,8 +7,6 @@ import 'package:get/route_manager.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wonjongseo/screens/home/components/about_me_card.dart';
-import 'package:wonjongseo/utils/language_switch_card.dart';
-import 'package:wonjongseo/utils/utilsFunction.dart';
 
 class AboutMeButton extends StatelessWidget {
   const AboutMeButton({
@@ -30,6 +28,7 @@ class AboutMeButton extends StatelessWidget {
         var height = MediaQuery.of(context).size.height * 0.2;
 
         Get.dialog(AlertDialog(
+          shadowColor: Colors.transparent,
           backgroundColor: Colors.transparent,
           contentPadding: EdgeInsets.zero,
           content: AboutMeContainer(height: height),
@@ -57,10 +56,7 @@ class AboutMeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.transparent,
-        // color: Colors.red,
-      ),
+      decoration: const BoxDecoration(color: Colors.transparent),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -91,7 +87,7 @@ class AboutMeContainer extends StatelessWidget {
                     const SizedBox(width: defaultPadding * 2),
                     Expanded(
                       child: FadeInDown(
-                        delay: Duration(milliseconds: 200),
+                        delay: const Duration(milliseconds: 200),
                         child: AboutMeCard(
                           onTap: () {
                             Get.dialog(AlertDialog(

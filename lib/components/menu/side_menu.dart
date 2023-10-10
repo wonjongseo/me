@@ -26,6 +26,7 @@ class SideMenu extends StatelessWidget {
               child: SingleChildScrollView(
                 padding: const EdgeInsets.all(defaultPadding),
                 child: Column(
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const CVDownloadCard(),

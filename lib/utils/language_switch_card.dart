@@ -20,7 +20,7 @@ class LanaguesSwitchCard extends StatelessWidget {
                 Get.updateLocale(const Locale('ko', 'KR'));
               },
               child: const Text(
-                'KR',
+                'Korean',
                 style: TextStyle(color: primaryColor),
               )),
         // if (locale != 'en-US')
@@ -30,7 +30,7 @@ class LanaguesSwitchCard extends StatelessWidget {
                 Get.updateLocale(const Locale('en', 'US'));
               },
               child: const Text(
-                'EN',
+                'English',
                 style: TextStyle(color: primaryColor),
               )),
         if (!locale.contains('ja'))
@@ -39,7 +39,7 @@ class LanaguesSwitchCard extends StatelessWidget {
                 Get.updateLocale(const Locale('ja', 'JP'));
               },
               child: const Text(
-                'JP',
+                'Japanese',
                 style: TextStyle(color: primaryColor),
               ))
       ],
