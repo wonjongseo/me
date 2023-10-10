@@ -3,6 +3,8 @@ import 'package:wonjongseo/components/menu/side_menu.dart';
 import 'package:wonjongseo/constants.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:get/get.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 import 'package:wonjongseo/utils/language_switch_card.dart';
 
 class MainScreen extends StatelessWidget {
@@ -15,7 +17,7 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: !Responsive.isDesktop(context)
           ? AppBar(
-              actions: [LanaguesSwitchCard()],
+              actions: [const LanaguesSwitchCard()],
               backgroundColor: bgColor,
               elevation: isHome == true ? 1 : 0,
               leading: isHome != null
@@ -27,11 +29,13 @@ class MainScreen extends StatelessWidget {
                         icon: const Icon(Icons.menu),
                       ),
                     )
-                  : IconButton(
-                      onPressed: () {
-                        Get.back();
-                      },
-                      icon: const Icon(Icons.home)),
+                  : kIsWeb
+                      ? null
+                      : IconButton(
+                          onPressed: () {
+                            Get.back();
+                          },
+                          icon: const Icon(Icons.home)),
             )
           : null,
       drawer: const SideMenu(),

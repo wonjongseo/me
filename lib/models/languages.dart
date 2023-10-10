@@ -59,7 +59,7 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              '잃어버린 반려견을 펫 탐정소에 업로드 시키면 AI 기술을 이용하여 반려견의 특성을 분석해 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있습니다.',
+              '잃어버린 반려견을 이 앱에 업로드 시키면 AI 기술을 이용하여 반려견의 특성을 분석해 이 앱을 설치한 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있습니다.',
           'index_7_specifications_0': '인증',
           'index_7_specifications_1': '게시글 업로드',
           'index_7_specifications_2': '게시글 보기',
@@ -172,14 +172,14 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              'なくなったペットをペット探偵社に載せさせれば、AI技術を利用してペットの特性を分析し近隣ユーザーにペットに関する情報を提供しペットを失うことを防ぐことができます',
+              'なくしたたペットをこのアプリで載せれば、AI技術を利用してペットの特性を分析し、このアプリをインストールした近隣ユーザーにペットに関する情報を提供し、ペットを失うことを防ぐことができますできます。',
           'index_7_specifications_0': '認証',
           'index_7_specifications_1': '掲示板を乗せること',
-          'index_7_specifications_2': '掲示板を見ること',
-          'index_7_specifications_3': '近隣ユーザーにメッセージを送ること',
+          'index_7_specifications_2': '掲示板を観ること',
+          'index_7_specifications_3': '近隣ユーザーにアラムメッセージを送ること',
           'index_7_specifications_4': 'イメージを分析',
 
-          'index_6_description': 'Flutterの実力を上がるためのウォンードアプリ',
+          'index_6_description': 'Flutterの実力を上がるためのウォンフードアプリ',
           'index_6_specifications_0': 'スプラッシュページ',
           'index_6_specifications_1': 'ログリンページ',
           'index_6_specifications_2': 'バスワードのお忘れページ',
@@ -297,7 +297,7 @@ class Languagues extends Translations {
 
           // ----------- 2 ------------
           'index_7_description':
-              "If you let the lost pet go to a pet detective agency, you can use AI technology to analyze the pet's characteristics and provide information about the pet to neighboring users to prevent them from losing it.",
+              "If you upload the images of the lost pet to this application, you can use AI technology to analyze the pet's characteristics and provide information about the pet to neighboring users how installs this application to prevent your pet from losing it.",
           'index_7_specifications_0': 'Authentication',
           'index_7_specifications_1': 'Uploading posts',
           'index_7_specifications_2': 'Watching posts',

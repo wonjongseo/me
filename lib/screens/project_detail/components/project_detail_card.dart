@@ -27,10 +27,10 @@ class ProjectDetailCard extends StatelessWidget {
           const SizedBox(height: defaultPadding * 2),
           if (project.frontend != null)
             ProjectDetailString(
-                detailTitle: project.frontend!, title: 'Front end'),
+                detailTitle: project.frontend!, title: 'Frontend'),
           if (project.backend != null)
             ProjectDetailString(
-                detailTitle: project.backend!, title: 'Back end'),
+                detailTitle: project.backend!, title: 'Backend'),
           if (project.githubPath != null)
             HomePageLinkCard(
                 projectTitle: project.title,
@@ -39,12 +39,12 @@ class ProjectDetailCard extends StatelessWidget {
           if (project.androidUrl != null)
             HomePageLinkCard(
                 projectTitle: project.title,
-                text: 'Download App for Android',
+                text: 'Download The App for Android',
                 path: project.androidUrl!),
           if (project.appleUrl != null)
             HomePageLinkCard(
                 projectTitle: project.title,
-                text: 'Download App for IOS',
+                text: 'Download The App for IOS',
                 path: project.appleUrl!),
           if (project.homepagePath != null)
             HomePageLinkCard(
