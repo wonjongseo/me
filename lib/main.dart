@@ -9,6 +9,7 @@ import 'package:wonjongseo/screens/project_detail/project_detail_screen.dart';
 import 'package:wonjongseo/screens/report/report_screen.dart';
 import 'package:wonjongseo/screens/splash/splash_screen.dart';
 import 'package:flutter_web_plugins/url_strategy.dart';
+import 'package:wonjongseo/screens/upload/upload_project.dart';
 
 void main() {
   usePathUrlStrategy();
@@ -47,6 +48,8 @@ class MyApp extends StatelessWidget {
       initialRoute: SPLASH_PATH,
       getPages: [
         GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
+        GetPage(
+            name: UploadProject.pathName, page: () => const UploadProject()),
         GetPage(
             name: REPORT_PATH,
             page: () => ReportSceen(corporation: corporation_projects[0])),

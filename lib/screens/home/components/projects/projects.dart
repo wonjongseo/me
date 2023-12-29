@@ -6,6 +6,8 @@ import 'package:wonjongseo/data/project_data.dart';
 import 'package:wonjongseo/responsive.dart';
 import 'package:wonjongseo/screens/home/components/high_light/high_light.dart';
 import 'package:wonjongseo/screens/home/components/projects/project_card.dart';
+import 'package:get/get.dart';
+import 'package:wonjongseo/screens/upload/upload_project.dart';
 
 class Projects extends StatelessWidget {
   const Projects({super.key});
@@ -25,9 +27,27 @@ class Projects extends StatelessWidget {
             label: "GitHub Projects",
           ),
         ),
-        Text(
-          'My Projects',
-          style: sectionTitleStyle(context),
+        Row(
+          children: [
+            Text(
+              'My Projects',
+              style: sectionTitleStyle(context),
+            ),
+            // if (Responsive.isDesktop(context)) ...[
+            //   const SizedBox(width: 20),
+            //   ElevatedButton.icon(
+            //     style: ElevatedButton.styleFrom(backgroundColor: primaryColor),
+            //     onPressed: () {
+            //       Get.toNamed(UploadProject.pathName);
+            //     },
+            //     icon: const Icon(Icons.add, color: darkColor),
+            //     label: const Text(
+            //       'Add a Project',
+            //       style: TextStyle(color: darkColor),
+            //     ),
+            //   )
+            // ]
+          ],
         ),
         const SizedBox(height: defaultPadding),
         Responsive(

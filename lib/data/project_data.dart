@@ -247,7 +247,7 @@ List<Project> my_projects = [
   //     ],
   //     isApp: true),
   Project(
-      index: '9',
+      index: '8',
       title: "Responsive Portfolio Web",
       description: "",
       frontend: 'Flutter',
@@ -276,7 +276,7 @@ List<Project> my_projects = [
       ],
       isApp: true),
   Project(
-      index: '10',
+      index: '9',
       title: "JLPT Jonggack ",
       description: "",
       frontend: 'Flutter',

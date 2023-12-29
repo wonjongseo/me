@@ -32,30 +32,30 @@ class Languagues extends Translations {
           'page_title': '지금 이순간에 최선을 다하자.',
 
           // 종각앱
-          'index_10_description': 'JLPT 시험을 준비하는 사람에게 유용한 어플리케이션',
-          'index_10_specifications_0': 'N1급~N5급 단어/문법/한자 학습 기능',
-          'index_10_specifications_1': 'N1급~N5급 단어/문법/한자 테스트 기능',
-          'index_10_specifications_2': '일본어, 한국어 음성 기능 (자동 재생 기능)',
-          'index_10_specifications_3': '모르는 단어 자동저장 기능',
-          'index_10_specifications_4': '엑셀 데이터 종각앱 저장 기능',
+          'index_9_description': 'JLPT 시험을 준비하는 사람에게 유용한 어플리케이션',
+          'index_9_specifications_0': 'N1급~N5급 단어/문법/한자 학습 기능',
+          'index_9_specifications_1': 'N1급~N5급 단어/문법/한자 테스트 기능',
+          'index_9_specifications_2': '일본어, 한국어 음성 기능 (자동 재생 기능)',
+          'index_9_specifications_3': '모르는 단어 자동저장 기능',
+          'index_9_specifications_4': '엑셀 데이터 종각앱 저장 기능',
 
           // ----------- 0 ------------v
 
-          'index_9_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
-          'index_9_specifications_0': '반응형 웹 페이지',
-          'index_9_specifications_1': '여러 언어 지원',
+          'index_8_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
+          'index_8_specifications_0': '반응형 웹 페이지',
+          'index_8_specifications_1': '여러 언어 지원',
 
           // ----------- 1 ------------
-          'index_8_description':
-              '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있습니다.',
+          // 'index_8_description':
+          // '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있습니다.',
 
-          'index_8_specifications_1': '약 1500개의 토익 단어 학습',
-          'index_8_specifications_2': '발음 듣기',
-          'index_8_specifications_3': '주관식 테스트 기능',
-          'index_8_specifications_4': '객관식 테스트 기능',
-          'index_8_specifications_5': '단어 자동 재생',
-          'index_8_specifications_6': '나만의 단어 저장 기능',
-          'index_8_specifications_7': 'Excel 파일 데이터를 TOEIC 종각에 저장 기능',
+          // 'index_8_specifications_1': '약 1500개의 토익 단어 학습',
+          // 'index_8_specifications_2': '발음 듣기',
+          // 'index_8_specifications_3': '주관식 테스트 기능',
+          // 'index_8_specifications_4': '객관식 테스트 기능',
+          // 'index_8_specifications_5': '단어 자동 재생',
+          // 'index_8_specifications_6': '나만의 단어 저장 기능',
+          // 'index_8_specifications_7': 'Excel 파일 데이터를 TOEIC 종각에 저장 기능',
 
           // ----------- 2 ------------
           'index_7_description':
@@ -145,30 +145,30 @@ class Languagues extends Translations {
 
           'page_title': '今、この瞬間に集中しよう.',
 
-          'index_10_description': 'JLPT試験を準備する方々に有用なアプリケーション',
-          'index_10_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
-          'index_10_specifications_1': 'N1級~N5級の単語・文法・漢字のテスト機能',
-          'index_10_specifications_2': '日本語・韓国語の音声機能(自動再生機能)',
-          'index_10_specifications_3': '知らない単語を自動保存機能',
-          'index_10_specifications_4': 'エクセルのデータをジョンガックアプリに保存',
+          'index_9_description': 'JLPT試験を準備する方々に有用なアプリケーション',
+          'index_9_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
+          'index_9_specifications_1': 'N1級~N5級の単語・文法・漢字のテスト機能',
+          'index_9_specifications_2': '日本語・韓国語の音声機能(自動再生機能)',
+          'index_9_specifications_3': '知らない単語を自動保存機能',
+          'index_9_specifications_4': 'エクセルのデータをジョンガックアプリに保存',
 
           // ----------- 0 ------------v
 
-          'index_9_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
-          'index_9_specifications_0': '反応型のウェブページ',
-          'index_9_specifications_1': 'マルチ言語を支援',
+          'index_8_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
+          'index_8_specifications_0': '反応型のウェブページ',
+          'index_8_specifications_1': 'マルチ言語を支援',
 
           // ----------- 1 ------------
-          'index_8_description':
-              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
+          // 'index_8_description':
+          //     '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
 
-          'index_8_specifications_0': '約1500 TOEIC単語学習',
-          'index_8_specifications_1': '発音を聴くこと',
-          'index_8_specifications_2': '主観テスト機能',
-          'index_8_specifications_3': '多肢選択テスト機能',
-          'index_8_specifications_4': '自動ワード再生',
-          'index_8_specifications_5': '私自身のワードストレージ機能',
-          'index_8_specifications_6': 'ExcelファイルデータをTOEICの縦角度に保存可能',
+          // 'index_8_specifications_0': '約1500 TOEIC単語学習',
+          // 'index_8_specifications_1': '発音を聴くこと',
+          // 'index_8_specifications_2': '主観テスト機能',
+          // 'index_8_specifications_3': '多肢選択テスト機能',
+          // 'index_8_specifications_4': '自動ワード再生',
+          // 'index_8_specifications_5': '私自身のワードストレージ機能',
+          // 'index_8_specifications_6': 'ExcelファイルデータをTOEICの縦角度に保存可能',
 
           // ----------- 2 ------------
           'index_7_description':
@@ -264,36 +264,36 @@ class Languagues extends Translations {
               'I can feel about Importance of specifications',
 
           // ----------- 0 ------------
-          'index_10_description':
+          'index_9_description':
               'Application useful to those preparing for the JLPT exam',
-          'index_10_specifications_0':
+          'index_9_specifications_0':
               'Function to N1 to N5 learn level words/grammar/Chinese character function',
-          'index_10_specifications_1':
+          'index_9_specifications_1':
               'Function to N1 to test N5 word/grammar/Chinese character function',
-          'index_10_specifications_2':
+          'index_9_specifications_2':
               'Function to listen Japanese, Korean voice function (auto-play function)',
-          'index_10_specifications_3':
+          'index_9_specifications_3':
               'Function to save Automatically  unknown words',
-          'index_10_specifications_4':
+          'index_9_specifications_4':
               'Function to save excel data into jonggack-app',
           // ----------- 0 ------------
-          'index_9_description':
+          'index_8_description':
               "It is Full-stack developer Won Jong seo's responsive web portfolio.'",
-          'index_9_specifications_0': 'Responsive Web Page',
-          'index_9_specifications_1': 'Supporting multi lanagues',
+          'index_8_specifications_0': 'Responsive Web Page',
+          'index_8_specifications_1': 'Supporting multi lanagues',
 
           // ----------- 1 ------------
-          'ㅜindex_8_description':
-              'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
+          // 'index_8_description':
+          // 'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
 
-          'index_8_specifications_0': 'About 1500 TOEIC word learning',
-          'index_8_specifications_1': 'Listening to pronunciation',
-          'index_8_specifications_2': 'Subjective test function',
-          'index_8_specifications_3': 'Multiple choice test function',
-          'index_8_specifications_4': 'Automatic word playback',
-          'index_8_specifications_5': 'My own word storage function',
-          'index_8_specifications_6':
-              'Ability to save Excel file data to TOEIC longitudinal angles',
+          // 'index_8_specifications_0': 'About 1500 TOEIC word learning',
+          // 'index_8_specifications_1': 'Listening to pronunciation',
+          // 'index_8_specifications_2': 'Subjective test function',
+          // 'index_8_specifications_3': 'Multiple choice test function',
+          // 'index_8_specifications_4': 'Automatic word playback',
+          // 'index_8_specifications_5': 'My own word storage function',
+          // 'index_8_specifications_6':
+          // 'Ability to save Excel file data to TOEIC longitudinal angles',
 
           // ----------- 2 ------------
           'index_7_description':
