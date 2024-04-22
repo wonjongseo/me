@@ -47,7 +47,7 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: SPLASH_PATH,
       getPages: [
-        GetPage(name: SPLASH_PATH, page: () => const SplashScreen()),
+        GetPage(name: SPLASH_PATH, page: () => SplashScreen()),
         GetPage(
             name: UploadProject.pathName, page: () => const UploadProject()),
         GetPage(
