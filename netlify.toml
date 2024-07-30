@@ -1,3 +1,7 @@
+[[plugins]]
+package = "netlify-plugin-flutter"
+   [plugins.inputs]
+    channel = "stable"
 [build]
-  command = "if cd flutter; then git pull && cd ..; else git clone https://github.com/flutter/flutter.git; fi && flutter/bin/flutter config --enable-web && flutter/bin/flutter build web --release"
-  publish = "build/web"
+command = "flutter build web --release"
+publish = "build/web"
