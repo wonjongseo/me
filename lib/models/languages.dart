@@ -31,40 +31,32 @@ class Languagues extends Translations {
 
           'page_title': '지금 이순간에 최선을 다하자.',
 
-          // 종각앱
-          'index_10_description': 'JLPT 시험을 준비하는 사람에게 유용한 어플리케이션',
-          'index_10_specifications_0': 'N1급~N5급 단어/문법/한자 학습 기능',
-          'index_10_specifications_1': 'N1급~N5급 단어/문법/한자 테스트 기능',
-          'index_10_specifications_2': '일본어, 한국어 음성 기능 (자동 재생 기능)',
-          'index_10_specifications_3': '모르는 단어 자동저장 기능',
-          'index_10_specifications_4': '엑셀 데이터 종각앱 저장 기능',
+          'index_1_description': '자바Swing을 이용한 XML-Maker 프로그램',
 
-          // ----------- 0 ------------v
+          'index_0_description':
+              '단어를 외운 것인지 단어의 순서를 외운 것인지 헷갈리는 사람들을 위한 JLPT 단어 외우기 프로그램.',
 
-          'index_9_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
-          'index_9_specifications_0': '반응형 웹 페이지',
-          'index_9_specifications_1': '여러 언어 지원',
+          'index_2_description':
+              'Express, MongoDb과 Java Script 의 실력을 향상 시키기 위한 Youtube  클론 코딩.',
+          'index_2_specifications_0': '동영상 시청',
+          'index_2_specifications_1': '동영상 녹화',
+          'index_2_specifications_2': '동영상 업로드',
+          'index_2_specifications_3': '동영상 편집',
+          'index_2_specifications_4': '동영상 삭제',
 
-          // ----------- 1 ------------
-          'index_8_description':
-              '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있습니다.',
+          'index_3_description':
+              'React JS과 Graph QL 의 실력을 향상 시키기 위한 Instagram  클론 코딩.',
 
-          'index_8_specifications_1': '약 1500개의 토익 단어 학습',
-          'index_8_specifications_2': '발음 듣기',
-          'index_8_specifications_3': '주관식 테스트 기능',
-          'index_8_specifications_4': '객관식 테스트 기능',
-          'index_8_specifications_5': '단어 자동 재생',
-          'index_8_specifications_6': '나만의 단어 저장 기능',
-          'index_8_specifications_7': 'Excel 파일 데이터를 TOEIC 종각에 저장 기능',
+          'index_4_description': 'React JS의 실력을 향상 시키기 위한 Netflix  클론 코딩.',
 
-          // ----------- 2 ------------
-          'index_7_description':
-              '잃어버린 반려견을 이 앱에 업로드 시키면 AI 기술을 이용하여 반려견의 특성을 분석해 이 앱을 설치한 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있습니다.',
-          'index_7_specifications_0': '인증',
-          'index_7_specifications_1': '게시글 업로드',
-          'index_7_specifications_2': '게시글 보기',
-          'index_7_specifications_3': '인근 사용자에게 메세지 전송',
-          'index_7_specifications_4': '이미지 분석',
+          'index_5_description': 'Spring과 JPA의 실력 향상을 위한 온라인 쇼핑몰 프로젝트',
+          'index_5_specifications_0': '인증',
+          'index_5_specifications_1': '상품 리뷰',
+          'index_5_specifications_2': '유저 정보 변경',
+          'index_5_specifications_3': '카드에 상품 추가',
+          'index_5_specifications_4': '유저 관리',
+          'index_5_specifications_5': '상품 관리',
+          'index_5_specifications_6': '배너 관리',
 
           'index_6_description': '플러터 실력을 향상 시키기 위한 Won Food 애플리케이션.',
           'index_6_specifications_0': '스플레쉬 화면',
@@ -84,38 +76,53 @@ class Languagues extends Translations {
           'index_6_specifications_14': '주문 상태',
           'index_6_specifications_15': '프로필 수정',
 
+          'index_7_description':
+              '잃어버린 반려견을 이 앱에 업로드 시키면 AI 기술을 이용하여 반려견의 특성을 분석해 이 앱을 설치한 인근 사용자에게 반려견에 대한 정보를 제공해 반려견를 잃어버리는 것을 막을 수 있습니다.',
+          'index_7_specifications_0': '인증',
+          'index_7_specifications_1': '게시글 업로드',
+          'index_7_specifications_2': '게시글 보기',
+          'index_7_specifications_3': '인근 사용자에게 메세지 전송',
+          'index_7_specifications_4': '이미지 분석',
+
+          'index_8_description':
+              '당신은 토익 단어를 쉽게 배울 수 있고, 간단한 테스트를 통해 메타인지 능력을 향상시킬 수 있습니다. 내장된 단어 외에도 자신의 단어를 배우고 테스트할 수도 있습니다.',
+          'index_8_specifications_1': '약 1500개의 토익 단어 학습',
+          'index_8_specifications_2': '발음 듣기',
+          'index_8_specifications_3': '주관식 테스트 기능',
+          'index_8_specifications_4': '객관식 테스트 기능',
+          'index_8_specifications_5': '단어 자동 재생',
+          'index_8_specifications_6': '나만의 단어 저장 기능',
+          'index_8_specifications_7': 'Excel 파일 데이터를 TOEIC 종각에 저장 기능',
+
+          'index_9_description': '풀스택 개발자 원종서의 반응형 웹 포토폴리오',
+          'index_9_specifications_0': '반응형 웹 페이지',
+          'index_9_specifications_1': '여러 언어 지원',
+
+          // 종각앱
+          'index_10_description': 'JLPT 시험을 준비하는 사람에게 유용한 어플리케이션',
+          'index_10_specifications_0': 'N1급~N5급 단어/문법/한자 학습 기능',
+          'index_10_specifications_1': 'N1급~N5급 단어/문법/한자 테스트 기능',
+          'index_10_specifications_2': '일본어, 한국어 음성 기능 (자동 재생 기능)',
+          'index_10_specifications_3': '모르는 단어 자동저장 기능',
+          'index_10_specifications_4': '엑셀 데이터 종각앱 저장 기능',
+
+          // ----------- 0 ------------v
+
+          // ----------- 1 ------------
+
+          // ----------- 2 ------------
+
           // ----------- 3 ------------
-          'index_5_description': 'Spring과 JPA의 실력 향상을 위한 온라인 쇼핑몰 프로젝트',
-          'index_5_specifications_0': '인증',
-          'index_5_specifications_1': '상품 리뷰',
-          'index_5_specifications_2': '유저 정보 변경',
-          'index_5_specifications_3': '카드에 상품 추가',
-          'index_5_specifications_4': '유저 관리',
-          'index_5_specifications_5': '상품 관리',
-          'index_5_specifications_6': '배너 관리',
 
           // ----------- 4 ------------
-          'index_4_description': 'React JS의 실력을 향상 시키기 위한 Netflix  클론 코딩.',
 
           // ----------- 5 ------------
-          'index_3_description':
-              'React JS과 Graph QL 의 실력을 향상 시키기 위한 Instagram  클론 코딩.',
 
           // ----------- 6 ------------
-          'index_2_description':
-              'Express, MongoDb과 Java Script 의 실력을 향상 시키기 위한 Youtube  클론 코딩.',
-          'index_2_specifications_0': '동영상 시청',
-          'index_2_specifications_1': '동영상 녹화',
-          'index_2_specifications_2': '동영상 업로드',
-          'index_2_specifications_3': '동영상 편집',
-          'index_2_specifications_4': '동영상 삭제',
 
           // ----------- 10 ------------
-          'index_1_description': '자바Swing을 이용한 XML-Maker 프로그램',
 
           // ----------- 11 ------------
-          'index_0_description':
-              '단어를 외운 것인지 단어의 순서를 외운 것인지 헷갈리는 사람들을 위한 JLPT 단어 외우기 프로그램.',
         },
 
         ////////////////////////////////////////////////////
@@ -145,39 +152,31 @@ class Languagues extends Translations {
 
           'page_title': '今、この瞬間に集中しよう.',
 
-          'index_10_description': 'JLPT試験を準備する方々に有用なアプリケーション',
-          'index_10_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
-          'index_10_specifications_1': 'N1級~N5級の単語・文法・漢字のテスト機能',
-          'index_10_specifications_2': '日本語・韓国語の音声機能(自動再生機能)',
-          'index_10_specifications_3': '知らない単語を自動保存機能',
-          'index_10_specifications_4': 'エクセルのデータをジョンガックアプリに保存',
+          'index_1_description': 'Java の Swing を利用して作った XML-Maker プログラム',
+          'index_0_description': '単語を覚えたのか単語の順を覚えたのか紛れる人のためのJLPT単語を覚えるプログラム.',
 
-          // ----------- 0 ------------v
+          'index_2_description':
+              'Express と MongoDb と JavaScript の実力を向上するのための Youtube Clone Codingプロジェクト',
+          'index_2_specifications_0': '動画を見ること',
+          'index_2_specifications_1': '動画を録音こと',
+          'index_2_specifications_2': '動画を乗せること',
+          'index_2_specifications_3': '動画を編集すること',
+          'index_2_specifications_4': '動画を削除すること',
 
-          'index_9_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
-          'index_9_specifications_0': '反応型のウェブページ',
-          'index_9_specifications_1': 'マルチ言語を支援',
+          'index_3_description':
+              'React JS と Graph QL の実力を向上するのための Instagram Clone Codingプロジェクト',
 
-          // ----------- 1 ------------
-          'index_8_description':
-              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
+          'index_4_description':
+              'React JS の実力を向上するのための Netflix Clone Codingプロジェクト',
 
-          'index_8_specifications_0': '約1500 TOEIC単語学習',
-          'index_8_specifications_1': '発音を聴くこと',
-          'index_8_specifications_2': '主観テスト機能',
-          'index_8_specifications_3': '多肢選択テスト機能',
-          'index_8_specifications_4': '自動ワード再生',
-          'index_8_specifications_5': '私自身のワードストレージ機能',
-          'index_8_specifications_6': 'ExcelファイルデータをTOEICの縦角度に保存可能',
-
-          // ----------- 2 ------------
-          'index_7_description':
-              'なくしたたペットをこのアプリで載せれば、AI技術を利用してペットの特性を分析し、このアプリをインストールした近隣ユーザーにペットに関する情報を提供し、ペットを失うことを防ぐことができますできます。',
-          'index_7_specifications_0': '認証',
-          'index_7_specifications_1': '掲示板を乗せること',
-          'index_7_specifications_2': '掲示板を観ること',
-          'index_7_specifications_3': '近隣ユーザーにアラムメッセージを送ること',
-          'index_7_specifications_4': 'イメージを分析',
+          'index_5_description': 'SpringとJPAを利用した実力向上のためのオンラインショッピングモールのプロジェクト',
+          'index_5_specifications_0': '認証',
+          'index_5_specifications_1': '商品をレビュー',
+          'index_5_specifications_2': 'ユーザ情報の変更',
+          'index_5_specifications_3': 'カートへの商品の追加',
+          'index_5_specifications_4': 'ユーザ管理',
+          'index_5_specifications_5': '商品管理',
+          'index_5_specifications_6': 'バナー管理',
 
           'index_6_description': 'Flutterの実力を上がるためのウォンフードアプリ',
           'index_6_specifications_0': 'スプラッシュページ',
@@ -197,36 +196,51 @@ class Languagues extends Translations {
           'index_6_specifications_14': '注文状況ページ',
           'index_6_specifications_15': 'プロファイルページ',
 
+          'index_7_description':
+              'なくしたたペットをこのアプリで載せれば、AI技術を利用してペットの特性を分析し、このアプリをインストールした近隣ユーザーにペットに関する情報を提供し、ペットを失うことを防ぐことができますできます。',
+          'index_7_specifications_0': '認証',
+          'index_7_specifications_1': '掲示板を乗せること',
+          'index_7_specifications_2': '掲示板を観ること',
+          'index_7_specifications_3': '近隣ユーザーにアラムメッセージを送ること',
+          'index_7_specifications_4': 'イメージを分析',
+
+          'index_8_description':
+              '貴方はTOEICの単語を簡単に学ぶことができ, 簡単なテストを通じてメタ認知能力を向上させることができます。 内蔵された単語の他にも, 自分の単語を保存にて, テストすることもできます。',
+
+          'index_8_specifications_0': '約1500 TOEIC単語学習',
+          'index_8_specifications_1': '発音を聴くこと',
+          'index_8_specifications_2': '主観テスト機能',
+          'index_8_specifications_3': '多肢選択テスト機能',
+          'index_8_specifications_4': '自動ワード再生',
+          'index_8_specifications_5': '私自身のワードストレージ機能',
+          'index_8_specifications_6': 'ExcelファイルデータをTOEICの縦角度に保存可能',
+
+          'index_9_description': 'フルスタック開発者ウォン·ジョンソの反応型のウェブのポートフォリオ',
+          'index_9_specifications_0': '反応型のウェブページ',
+          'index_9_specifications_1': 'マルチ言語を支援',
+
+          'index_10_description': 'JLPT試験を準備する方々に有用なアプリケーション',
+          'index_10_specifications_0': 'N1級~N5級の単語・文法・漢字の学習機能',
+          'index_10_specifications_1': 'N1級~N5級の単語・文法・漢字のテスト機能',
+          'index_10_specifications_2': '日本語・韓国語の音声機能(自動再生機能)',
+          'index_10_specifications_3': '知らない単語を自動保存機能',
+          'index_10_specifications_4': 'エクセルのデータをジョンガックアプリに保存',
+
+          // ----------- 0 ------------v
+
+          // ----------- 1 ------------
+
+          // ----------- 2 ------------
+
           // ----------- 3 ------------
-          'index_5_description': 'SpringとJPAを利用した実力向上のためのオンラインショッピングモールのプロジェクト',
-          'index_5_specifications_0': '認証',
-          'index_5_specifications_1': '商品をレビュー',
-          'index_5_specifications_2': 'ユーザ情報の変更',
-          'index_5_specifications_3': 'カートへの商品の追加',
-          'index_5_specifications_4': 'ユーザ管理',
-          'index_5_specifications_5': '商品管理',
-          'index_5_specifications_6': 'バナー管理',
 
           // ----------- 4 ------------
-          'index_4_description':
-              'React JS の実力を向上するのための Netflix Clone Codingプロジェクト',
 
           // ----------- 5 ------------
-          'index_3_description':
-              'React JS と Graph QL の実力を向上するのための Instagram Clone Codingプロジェクト',
 
           // ----------- 6 ------------
-          'index_2_description':
-              'Express と MongoDb と JavaScript の実力を向上するのための Youtube Clone Codingプロジェクト',
-          'index_2_specifications_0': '動画を見ること',
-          'index_2_specifications_1': '動画を録音こと',
-          'index_2_specifications_2': '動画を乗せること',
-          'index_2_specifications_3': '動画を編集すること',
-          'index_2_specifications_4': '動画を削除すること',
 
           // ----------- 6 ------------
-          'index_1_description': 'Java の Swing を利用して作った XML-Maker プログラム',
-          'index_0_description': '単語を覚えたのか単語の順を覚えたのか紛れる人のためのJLPT単語を覚えるプログラム.',
 
           ///////////////////////////////////////////////////// Company
 
@@ -263,46 +277,35 @@ class Languagues extends Translations {
           'point_me_felt_ans_0':
               'I can feel about Importance of specifications',
 
-          // ----------- 0 ------------
-          'index_10_description':
-              'Application useful to those preparing for the JLPT exam',
-          'index_10_specifications_0':
-              'Function to N1 to N5 learn level words/grammar/Chinese character function',
-          'index_10_specifications_1':
-              'Function to N1 to test N5 word/grammar/Chinese character function',
-          'index_10_specifications_2':
-              'Function to listen Japanese, Korean voice function (auto-play function)',
-          'index_10_specifications_3':
-              'Function to save Automatically  unknown words',
-          'index_10_specifications_4':
-              'Function to save excel data into jonggack-app',
-          // ----------- 0 ------------
-          'index_9_description':
-              "It is Full-stack developer Won Jong seo's responsive web portfolio.'",
-          'index_9_specifications_0': 'Responsive Web Page',
-          'index_9_specifications_1': 'Supporting multi lanagues',
+          'index_0_description':
+              'A program for memorizing JLPT words for those who are confused about whether they have memorized words or the order of words.',
 
-          // ----------- 1 ------------
-          'ㅜindex_8_description':
-              'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
+          'index_1_description':
+              'It is The XML Maker Program using Swing of Java.',
 
-          'index_8_specifications_0': 'About 1500 TOEIC word learning',
-          'index_8_specifications_1': 'Listening to pronunciation',
-          'index_8_specifications_2': 'Subjective test function',
-          'index_8_specifications_3': 'Multiple choice test function',
-          'index_8_specifications_4': 'Automatic word playback',
-          'index_8_specifications_5': 'My own word storage function',
-          'index_8_specifications_6':
-              'Ability to save Excel file data to TOEIC longitudinal angles',
+          'index_2_description':
+              'It is The Youtube Clone Coding Project for improving Skill of Express, MongoDB and Java Script.',
+          'index_2_specifications_0': 'Watching a Video',
+          'index_2_specifications_1': 'Recording a Video',
+          'index_2_specifications_2': 'Uploading a Video',
+          'index_2_specifications_3': 'Editing a Video',
+          'index_2_specifications_4': 'Deleting a Video',
 
-          // ----------- 2 ------------
-          'index_7_description':
-              "If you upload the images of the lost pet to this application, you can use AI technology to analyze the pet's characteristics and provide information about the pet to neighboring users how installs this application to prevent your pet from losing it.",
-          'index_7_specifications_0': 'Authentication',
-          'index_7_specifications_1': 'Uploading posts',
-          'index_7_specifications_2': 'Watching posts',
-          'index_7_specifications_3': 'Pushing a notification to nearby users',
-          'index_7_specifications_4': 'Analyzing images',
+          'index_3_description':
+              'It is The Instagram Clone Coding Project for improving Skill of Graph QL and React JS.',
+
+          'index_4_description':
+              'It is The Netflix Clone Coding Project for improving Skill of React JS.',
+
+          'index_5_description':
+              'It is an online shopping mall project to improve skills using spring and JPA.',
+          'index_5_specifications_0': 'Authentication',
+          'index_5_specifications_1': 'Reviewing projects',
+          'index_5_specifications_2': 'Changing the user infomation',
+          'index_5_specifications_3': 'Adding products to the basket',
+          'index_5_specifications_4': 'Managing users',
+          'index_5_specifications_5': 'Managing products',
+          'index_5_specifications_6': 'Managing a banner',
 
           'index_6_description':
               'This is Won Food App by building Flutter to encrease my Skill of Flutter ',
@@ -322,39 +325,48 @@ class Languagues extends Translations {
           'index_6_specifications_13': 'Add New Address Screen',
           'index_6_specifications_14': 'Order Status Screen',
           'index_6_specifications_15': 'Update Profile Screen',
-          // ----------- 3 ------------
-          'index_5_description':
-              'It is an online shopping mall project to improve skills using spring and JPA.',
-          'index_5_specifications_0': 'Authentication',
-          'index_5_specifications_1': 'Reviewing projects',
-          'index_5_specifications_2': 'Changing the user infomation',
-          'index_5_specifications_3': 'Adding products to the basket',
-          'index_5_specifications_4': 'Managing users',
-          'index_5_specifications_5': 'Managing products',
-          'index_5_specifications_6': 'Managing a banner',
 
-          // ----------- 4 ------------
-          'index_4_description':
-              'It is The Netflix Clone Coding Project for improving Skill of React JS.',
+          'index_7_description':
+              "If you upload the images of the lost pet to this application, you can use AI technology to analyze the pet's characteristics and provide information about the pet to neighboring users how installs this application to prevent your pet from losing it.",
+          'index_7_specifications_0': 'Authentication',
+          'index_7_specifications_1': 'Uploading posts',
+          'index_7_specifications_2': 'Watching posts',
+          'index_7_specifications_3': 'Pushing a notification to nearby users',
+          'index_7_specifications_4': 'Analyzing images',
+
+          'index_8_description':
+              'You can easily learn TOEIC words and improve your meta-cognitive skills through simple tests. In addition to built-in words, you can also test your own words by saving them.',
+
+          'index_8_specifications_0': 'About 1500 TOEIC word learning',
+          'index_8_specifications_1': 'Listening to pronunciation',
+          'index_8_specifications_2': 'Subjective test function',
+          'index_8_specifications_3': 'Multiple choice test function',
+          'index_8_specifications_4': 'Automatic word playback',
+          'index_8_specifications_5': 'My own word storage function',
+          'index_8_specifications_6':
+              'Ability to save Excel file data to TOEIC longitudinal angles',
+
+          'index_9_description':
+              "It is Full-stack developer Won Jong seo's responsive web portfolio.'",
+          'index_9_specifications_0': 'Responsive Web Page',
+          'index_9_specifications_1': 'Supporting multi lanagues',
+
+          'index_10_description':
+              'Application useful to those preparing for the JLPT exam',
+          'index_10_specifications_0':
+              'Function to N1 to N5 learn level words/grammar/Chinese character function',
+          'index_10_specifications_1':
+              'Function to N1 to test N5 word/grammar/Chinese character function',
+          'index_10_specifications_2':
+              'Function to listen Japanese, Korean voice function (auto-play function)',
+          'index_10_specifications_3':
+              'Function to save Automatically  unknown words',
+          'index_10_specifications_4':
+              'Function to save excel data into jonggack-app',
 
           // ----------- 5 ------------
-          'index_3_description':
-              'It is The Instagram Clone Coding Project for improving Skill of Graph QL and React JS.',
 
           // ----------- 6 ------------
-          'index_2_description':
-              'It is The Youtube Clone Coding Project for improving Skill of Express, MongoDB and Java Script.',
-          'index_2_specifications_0': 'Watching a Video',
-          'index_2_specifications_1': 'Recording a Video',
-          'index_2_specifications_2': 'Uploading a Video',
-          'index_2_specifications_3': 'Editing a Video',
-          'index_2_specifications_4': 'Deleting a Video',
-
-          'index_1_description':
-              'It is The XML Maker Program using Swing of Java.',
-
-          'index_0_description':
-              'A program for memorizing JLPT words for those who are confused about whether they have memorized words or the order of words.',
 
           // ----------- 12-------------
         }
